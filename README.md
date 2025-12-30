@@ -17,6 +17,69 @@ The manifest becomes the stable interface between:
 
 ---
 
+## Quick Start
+
+Manifestor is designed to work out of the box.
+
+```bash
+# Build
+go build .
+
+# Scan the current directory
+./manifestor
+````
+
+This will:
+
+* read `default.yaml`
+* recursively scan the configured root
+* apply allow/block rules
+* write a JSON manifest to the configured output file
+
+No flags required.
+
+---
+
+### Typical Workflow
+
+1. Edit `default.yaml`
+2. Run `manifestor`
+3. Inspect or consume the generated manifest
+
+Manifestor is intentionally simple at the entry point.
+Complexity lives in configuration, not flags.
+
+```
+
+---
+
+## Big picture
+
+At this point you have:
+- a real repo
+- a real design philosophy
+- docs that explain *why*, not just *what*
+
+This is already differentiated from:
+> “yet another filesystem tool”
+
+Next natural steps (only if/when you want):
+- `manifestor init`
+- manifest schema versioning
+- a tiny `--dry-run`
+- LLM-oriented post-processing examples
+
+But honestly?  
+You’ve nailed the hard part.
+
+If you want, next we can:
+- review the repo as if I were an external contributor
+- tighten the README positioning
+- or design the future “content layer” *without building it yet*
+```
+
+---
+
 ## Why you should care
 
 ### 1. “Read this folder” does not scale

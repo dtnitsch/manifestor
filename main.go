@@ -15,7 +15,7 @@ func main() {
         Level: slog.LevelInfo,
     }))
 
-	configPath := "mnifestor.yaml"
+	configPath := "manifestor.yaml"
 	cfg, err := config.Load(logger, configPath) 
     if err != nil {
         logger.Error("failed to load config", "error", err, "path", configPath)
