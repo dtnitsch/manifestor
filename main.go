@@ -50,6 +50,11 @@ func run(logger *slog.Logger, cfg *config.Config) error {
         return err
     }
 
+	skippedCount := len(manifest.Skipped)
+	if skippedCount > 0 {
+		logger.Info("skipped directories", "count", skippedCount, "list", manifest.PrettySkipped())
+	}
+
     return output.WriteJSON(cfg.Output.File, manifest)
 }
 

@@ -1,12 +1,12 @@
 {
   "root": ".",
-  "generated_at": "2025-12-30T21:15:40.677124Z",
+  "generated_at": "2025-12-30T21:32:17.401112Z",
   "nodes": [
     {
       "path": ".",
       "is_dir": true,
       "inode": 67006342,
-      "mtime_unix": 1767126969,
+      "mtime_unix": 1767130334,
       "file_count": 11,
       "subdir_count": 3
     },
@@ -109,7 +109,7 @@
       "path": "internal/manifest/manifest.go",
       "is_dir": false,
       "inode": 67017972,
-      "mtime_unix": 1767129076
+      "mtime_unix": 1767130196
     },
     {
       "path": "internal/manifest/node.go",
@@ -159,19 +159,19 @@
       "path": "internal/scanner/scanner.go",
       "is_dir": false,
       "inode": 67018403,
-      "mtime_unix": 1767129293
+      "mtime_unix": 1767129343
     },
     {
       "path": "main.go",
       "is_dir": false,
       "inode": 67015194,
-      "mtime_unix": 1767128514
+      "mtime_unix": 1767130225
     },
     {
       "path": "manifest.json",
       "is_dir": false,
       "inode": 67053613,
-      "mtime_unix": 1767126969
+      "mtime_unix": 1767130311
     },
     {
       "path": "manifestor.example.yaml",

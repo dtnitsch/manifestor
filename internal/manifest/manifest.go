@@ -18,3 +18,13 @@ type SkippedEntry struct {
     Reason string `json:"reason"`
     Rule   string `json:"rule,omitempty"`
 }
+
+func (m *Manifest) PrettySkipped() []string {
+	output := make([]string, len(m.Skipped))
+
+	for i,s := range m.Skipped {
+		output[i] = s.Path
+	}
+
+	return output
+}
