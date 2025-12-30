@@ -38,6 +38,8 @@ filters:
     # Common heavy or unsafe directories
     - pattern: "node_modules"
       type: "basename"
+    - pattern: ".git"
+      type: "basename"
     - pattern: "vendor"
       type: "basename"
     - pattern: "dist"

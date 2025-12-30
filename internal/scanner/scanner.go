@@ -8,8 +8,8 @@ import (
     "syscall"
     "time"
 
+    "github.com/dtnitsch/manifestor/internal/filter"
     "github.com/dtnitsch/manifestor/internal/manifest"
-
 )
 
 func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
@@ -17,6 +17,8 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
         Root:      s.opts.Root,
         Generated: time.Now().UTC(),
     }
+
+	s.skipped = make(map[string]manifest.SkippedEntry)
 
     err := filepath.WalkDir(s.opts.Root, func(path string, d os.DirEntry, err error) error {
         if err != nil {
@@ -32,6 +34,8 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 
         // Apply filters
         if s.filters.Blocked(path, d) {
+		    s.recordSkip(path, d, "blocked by filter", s.filters.MatchedRule(path, d))
+
             if d.IsDir() {
                 return filepath.SkipDir
             }
@@ -72,6 +76,26 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
         return nil, err
     }
 
+	// Adding skip details for output
+	for _, s := range s.skipped {
+		m.Skipped = append(m.Skipped, s)
+	}
+
     return m, nil
+}
+
+func (s *Scanner) recordSkip(path string, d os.DirEntry, reason string, rule *filter.Rule) {
+	entry := manifest.SkippedEntry{
+		Path:   path,
+		IsDir:  d.IsDir(),
+		Reason: reason,
+	}
+
+	if rule != nil {
+		entry.Rule = string(rule.Type) + ":" + rule.Pattern
+	}
+
+	// De-dupe automatically
+	s.skipped[path] = entry
 }
 
