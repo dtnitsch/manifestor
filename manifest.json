@@ -1,20 +1,20 @@
 {
   "root": ".",
-  "generated_at": "2025-12-30T19:49:41.907024Z",
+  "generated_at": "2025-12-30T20:10:34.704538Z",
   "nodes": [
     {
       "path": ".",
       "is_dir": true,
       "inode": 67006342,
-      "mtime_unix": 1767123967,
-      "file_count": 11,
+      "mtime_unix": 1767125429,
+      "file_count": 10,
       "subdir_count": 3
     },
     {
       "path": ".git",
       "is_dir": true,
       "inode": 67038887,
-      "mtime_unix": 1767124065,
+      "mtime_unix": 1767124473,
       "file_count": 5,
       "subdir_count": 5
     },
@@ -22,7 +22,7 @@
       "path": ".git/COMMIT_EDITMSG",
       "is_dir": false,
       "inode": 67039244,
-      "mtime_unix": 1767123994
+      "mtime_unix": 1767124472
     },
     {
       "path": ".git/HEAD",
@@ -136,8 +136,8 @@
     {
       "path": ".git/index",
       "is_dir": false,
-      "inode": 67039215,
-      "mtime_unix": 1767123994
+      "inode": 67041576,
+      "mtime_unix": 1767124472
     },
     {
       "path": ".git/info",
@@ -164,7 +164,7 @@
       "path": ".git/logs/HEAD",
       "is_dir": false,
       "inode": 67039373,
-      "mtime_unix": 1767124002
+      "mtime_unix": 1767124473
     },
     {
       "path": ".git/logs/refs",
@@ -184,7 +184,7 @@
       "path": ".git/logs/refs/heads/main",
       "is_dir": false,
       "inode": 67039376,
-      "mtime_unix": 1767124002
+      "mtime_unix": 1767124473
     },
     {
       "path": ".git/logs/refs/remotes",
@@ -204,14 +204,14 @@
       "path": ".git/logs/refs/remotes/origin/main",
       "is_dir": false,
       "inode": 67040099,
-      "mtime_unix": 1767124065
+      "mtime_unix": 1767124475
     },
     {
       "path": ".git/objects",
       "is_dir": true,
       "inode": 67038919,
-      "mtime_unix": 1767123998,
-      "subdir_count": 29
+      "mtime_unix": 1767124473,
+      "subdir_count": 34
     },
     {
       "path": ".git/objects/03",
@@ -230,14 +230,33 @@
       "path": ".git/objects/10",
       "is_dir": true,
       "inode": 67039366,
-      "mtime_unix": 1767123998,
-      "file_count": 1
+      "mtime_unix": 1767124458,
+      "file_count": 2
+    },
+    {
+      "path": ".git/objects/10/43ef0d8aa5bf2c6173b391994ea998c656d71e",
+      "is_dir": false,
+      "inode": 67041512,
+      "mtime_unix": 1767124458
     },
     {
       "path": ".git/objects/10/57c7e129ef2d6159d39085329491337edaad88",
       "is_dir": false,
       "inode": 67039367,
       "mtime_unix": 1767123998
+    },
+    {
+      "path": ".git/objects/1c",
+      "is_dir": true,
+      "inode": 67041515,
+      "mtime_unix": 1767124458,
+      "file_count": 1
+    },
+    {
+      "path": ".git/objects/1c/e5cb741fa154c8370251f502a3d65acace48d3",
+      "is_dir": false,
+      "inode": 67041516,
+      "mtime_unix": 1767124458
     },
     {
       "path": ".git/objects/1e",
@@ -264,6 +283,19 @@
       "is_dir": false,
       "inode": 67039241,
       "mtime_unix": 1767123994
+    },
+    {
+      "path": ".git/objects/30",
+      "is_dir": true,
+      "inode": 67041600,
+      "mtime_unix": 1767124473,
+      "file_count": 1
+    },
+    {
+      "path": ".git/objects/30/e5d261cdc58c0a311583d3455f064a89c243dd",
+      "is_dir": false,
+      "inode": 67041601,
+      "mtime_unix": 1767124473
     },
     {
       "path": ".git/objects/44",
@@ -451,14 +483,20 @@
       "path": ".git/objects/87",
       "is_dir": true,
       "inode": 67039058,
-      "mtime_unix": 1767123984,
-      "file_count": 1
+      "mtime_unix": 1767124472,
+      "file_count": 2
+    },
+    {
+      "path": ".git/objects/87/7db8afe6d111dc7e058802c0ce5683c5badf9d",
+      "is_dir": false,
+      "inode": 67041581,
+      "mtime_unix": 1767124472
     },
     {
       "path": ".git/objects/87/a1d09c8f4a56ee3898932b0932ff8eb2fdbefd",
       "is_dir": false,
       "inode": 67039059,
-      "mtime_unix": 1767123984
+      "mtime_unix": 1767124458
     },
     {
       "path": ".git/objects/8f",
@@ -472,6 +510,19 @@
       "is_dir": false,
       "inode": 67039035,
       "mtime_unix": 1767123984
+    },
+    {
+      "path": ".git/objects/9e",
+      "is_dir": true,
+      "inode": 67041577,
+      "mtime_unix": 1767124472,
+      "file_count": 1
+    },
+    {
+      "path": ".git/objects/9e/71d9cae860d12a79fe1394dd720ec38d67cb61",
+      "is_dir": false,
+      "inode": 67041578,
+      "mtime_unix": 1767124472
     },
     {
       "path": ".git/objects/a6",
@@ -498,6 +549,19 @@
       "is_dir": false,
       "inode": 67039043,
       "mtime_unix": 1767123984
+    },
+    {
+      "path": ".git/objects/c2",
+      "is_dir": true,
+      "inode": 67041523,
+      "mtime_unix": 1767124458,
+      "file_count": 1
+    },
+    {
+      "path": ".git/objects/c2/bba1000c51df07d31ebdd698c3db951e2dc23a",
+      "is_dir": false,
+      "inode": 67041524,
+      "mtime_unix": 1767124458
     },
     {
       "path": ".git/objects/ca",
@@ -537,6 +601,19 @@
       "is_dir": false,
       "inode": 67039039,
       "mtime_unix": 1767123984
+    },
+    {
+      "path": ".git/objects/da",
+      "is_dir": true,
+      "inode": 67041519,
+      "mtime_unix": 1767124458,
+      "file_count": 1
+    },
+    {
+      "path": ".git/objects/da/b6c6774500c63f1364d8db98370546a14b400a",
+      "is_dir": false,
+      "inode": 67041520,
+      "mtime_unix": 1767124458
     },
     {
       "path": ".git/objects/e7",
@@ -587,14 +664,14 @@
       "path": ".git/refs/heads",
       "is_dir": true,
       "inode": 67038916,
-      "mtime_unix": 1767124002,
+      "mtime_unix": 1767124473,
       "file_count": 1
     },
     {
       "path": ".git/refs/heads/main",
       "is_dir": false,
-      "inode": 67039452,
-      "mtime_unix": 1767124002
+      "inode": 67041605,
+      "mtime_unix": 1767124473
     },
     {
       "path": ".git/refs/remotes",
@@ -607,14 +684,14 @@
       "path": ".git/refs/remotes/origin",
       "is_dir": true,
       "inode": 67040095,
-      "mtime_unix": 1767124065,
+      "mtime_unix": 1767124475,
       "file_count": 1
     },
     {
       "path": ".git/refs/remotes/origin/main",
       "is_dir": false,
-      "inode": 67040096,
-      "mtime_unix": 1767124065
+      "inode": 67041623,
+      "mtime_unix": 1767124475
     },
     {
       "path": ".git/refs/tags",
@@ -644,13 +721,26 @@
       "path": "README.md",
       "is_dir": false,
       "inode": 67007029,
-      "mtime_unix": 1767119472
+      "mtime_unix": 1767124448
+    },
+    {
+      "path": "config.yaml",
+      "is_dir": false,
+      "inode": 67015277,
+      "mtime_unix": 1767121466
     },
     {
       "path": "docs",
       "is_dir": true,
       "inode": 67006420,
-      "mtime_unix": 1767119423
+      "mtime_unix": 1767124230,
+      "file_count": 1
+    },
+    {
+      "path": "docs/design.md",
+      "is_dir": false,
+      "inode": 67040547,
+      "mtime_unix": 1767124273
     },
     {
       "path": "go.mod",
@@ -740,7 +830,7 @@
       "path": "internal/scanner/ignore.go",
       "is_dir": false,
       "inode": 67020036,
-      "mtime_unix": 1767123518
+      "mtime_unix": 1767125286
     },
     {
       "path": "internal/scanner/metadata.go",
@@ -764,13 +854,7 @@
       "path": "main.go",
       "is_dir": false,
       "inode": 67015194,
-      "mtime_unix": 1767124166
-    },
-    {
-      "path": "manifest.json",
-      "is_dir": false,
-      "inode": 67036567,
-      "mtime_unix": 1767123788
+      "mtime_unix": 1767125414
     },
     {
       "path": "manifestor.example.yaml",
@@ -779,13 +863,7 @@
       "mtime_unix": 1767123717
     },
     {
-      "path": "manifestor.yaml",
-      "is_dir": false,
-      "inode": 67015277,
-      "mtime_unix": 1767121466
-    },
-    {
-      "path": "negative-learning.mf",
+      "path": "negative-learning.md",
       "is_dir": false,
       "inode": 67006475,
       "mtime_unix": 1767119454

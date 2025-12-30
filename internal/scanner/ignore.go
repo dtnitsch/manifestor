@@ -1,6 +1,7 @@
 package scanner
 
 import (
+	"os"
     "path/filepath"
     "strings"
 
@@ -8,11 +9,13 @@ import (
 
 )
 
-func (f FilterSet) Blocked(path string, _ any) bool {
+func (f FilterSet) Blocked(path string, d os.DirEntry) bool {
+	base := filepath.Base(path)
+
     for _, r := range f.Block {
-        if match(r, path) {
+        if matchDir(r, path, base, d) {
             for _, a := range f.Allow {
-                if match(a, path) {
+                if matchDir(a, path, base, d) {
                     return false
                 }
             }
@@ -22,10 +25,10 @@ func (f FilterSet) Blocked(path string, _ any) bool {
     return false
 }
 
-func match(r filter.Rule, path string) bool {
+func matchDir(r filter.Rule, path, base string, d os.DirEntry) bool {
     switch r.Type {
     case filter.Basename:
-        return filepath.Base(path) == r.Pattern
+        return d.IsDir() && base == r.Pattern
     case filter.Path:
         return strings.HasPrefix(path, r.Pattern)
     default:
