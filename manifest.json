@@ -1,13 +1,13 @@
 {
   "root": ".",
-  "generated_at": "2025-12-30T21:32:17.401112Z",
+  "generated_at": "2025-12-30T23:04:48.592258Z",
   "nodes": [
     {
       "path": ".",
       "is_dir": true,
       "inode": 67006342,
-      "mtime_unix": 1767130334,
-      "file_count": 11,
+      "mtime_unix": 1767131654,
+      "file_count": 14,
       "subdir_count": 3
     },
     {
@@ -38,7 +38,7 @@
       "path": "config.yaml",
       "is_dir": false,
       "inode": 67015277,
-      "mtime_unix": 1767126971
+      "mtime_unix": 1767135874
     },
     {
       "path": "docs",
@@ -51,7 +51,7 @@
       "path": "docs/design.md",
       "is_dir": false,
       "inode": 67040547,
-      "mtime_unix": 1767124273
+      "mtime_unix": 1767135103
     },
     {
       "path": "go.mod",
@@ -83,7 +83,7 @@
       "path": "internal/config/config.go",
       "is_dir": false,
       "inode": 67023072,
-      "mtime_unix": 1767126892
+      "mtime_unix": 1767135706
     },
     {
       "path": "internal/filter",
@@ -109,7 +109,7 @@
       "path": "internal/manifest/manifest.go",
       "is_dir": false,
       "inode": 67017972,
-      "mtime_unix": 1767130196
+      "mtime_unix": 1767130632
     },
     {
       "path": "internal/manifest/node.go",
@@ -134,14 +134,20 @@
       "path": "internal/scanner",
       "is_dir": true,
       "inode": 67015625,
-      "mtime_unix": 1767121883,
-      "file_count": 4
+      "mtime_unix": 1767135452,
+      "file_count": 6
     },
     {
       "path": "internal/scanner/ignore.go",
       "is_dir": false,
       "inode": 67020036,
       "mtime_unix": 1767125286
+    },
+    {
+      "path": "internal/scanner/invariants.go",
+      "is_dir": false,
+      "inode": 67097143,
+      "mtime_unix": 1767135220
     },
     {
       "path": "internal/scanner/metadata.go",
@@ -159,19 +165,31 @@
       "path": "internal/scanner/scanner.go",
       "is_dir": false,
       "inode": 67018403,
-      "mtime_unix": 1767129343
+      "mtime_unix": 1767130499
+    },
+    {
+      "path": "internal/scanner/scanner_skip_test.go",
+      "is_dir": false,
+      "inode": 67098943,
+      "mtime_unix": 1767135816
     },
     {
       "path": "main.go",
       "is_dir": false,
       "inode": 67015194,
-      "mtime_unix": 1767130225
+      "mtime_unix": 1767135422
     },
     {
       "path": "manifest.json",
       "is_dir": false,
       "inode": 67053613,
-      "mtime_unix": 1767130311
+      "mtime_unix": 1767130921
+    },
+    {
+      "path": "manifestor",
+      "is_dir": false,
+      "inode": 67087841,
+      "mtime_unix": 1767130662
     },
     {
       "path": "manifestor.example.yaml",
@@ -184,6 +202,18 @@
       "is_dir": false,
       "inode": 67006475,
       "mtime_unix": 1767119454
+    },
+    {
+      "path": "todos.old.yaml",
+      "is_dir": false,
+      "inode": 67091113,
+      "mtime_unix": 1767131499
+    },
+    {
+      "path": "todos.yaml",
+      "is_dir": false,
+      "inode": 67092710,
+      "mtime_unix": 1767131654
     }
   ],
   "skipped": [

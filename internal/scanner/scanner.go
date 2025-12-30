@@ -5,6 +5,7 @@ import (
     "fmt"
     "os"
     "path/filepath"
+	"sort"
     "syscall"
     "time"
 
@@ -21,8 +22,10 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 	s.skipped = make(map[string]manifest.SkippedEntry)
 
     err := filepath.WalkDir(s.opts.Root, func(path string, d os.DirEntry, err error) error {
+		norm := s.normalizePath(path)
+
         if err != nil {
-            return fmt.Errorf("walk %q: %w", path, err)
+            return fmt.Errorf("walk %q: %w", norm, err)
         }
 
         // Context cancellation
@@ -33,8 +36,8 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
         }
 
         // Apply filters
-        if s.filters.Blocked(path, d) {
-		    s.recordSkip(path, d, "blocked by filter", s.filters.MatchedRule(path, d))
+        if s.filters.Blocked(norm, d) {
+			s.recordSkip(norm, d, "blocked by filter", s.filters.MatchedRule(norm, d))
 
             if d.IsDir() {
                 return filepath.SkipDir
@@ -44,11 +47,11 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 
         info, err := d.Info()
         if err != nil {
-            return fmt.Errorf("stat %q: %w", path, err)
+            return fmt.Errorf("stat %q: %w", norm, err)
         }
 
         node := &manifest.Node{
-            Path:  path,
+            Path:  norm,
             IsDir: d.IsDir(),
         }
 
@@ -76,10 +79,19 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
         return nil, err
     }
 
-	// Adding skip details for output
-	for _, s := range s.skipped {
-		m.Skipped = append(m.Skipped, s)
+	// Cleanup of skipped things
+	if len(s.skipped) > 0 {
+		// Adding skip details for output
+		for _, s := range s.skipped {
+			m.Skipped = append(m.Skipped, s)
+		}
+
+		// Sort Skipped deterministically
+		sort.Slice(m.Skipped, func(i, j int) bool {
+			return m.Skipped[i].Path < m.Skipped[j].Path
+		})
 	}
+
 
     return m, nil
 }
@@ -98,4 +110,24 @@ func (s *Scanner) recordSkip(path string, d os.DirEntry, reason string, rule *fi
 	// De-dupe automatically
 	s.skipped[path] = entry
 }
+
+func (s *Scanner) normalizePath(path string) string {
+	// Convert to relative path
+	rel, err := filepath.Rel(s.opts.Root, path)
+	if err != nil {
+		// Extremely defensive: fallback to original
+		return filepath.Clean(path)
+	}
+
+	rel = filepath.Clean(rel)
+
+	// filepath.Rel(".", ".") returns "."
+	// filepath.Rel(".", "./foo") returns "foo"
+	if rel == "" {
+		return "."
+	}
+
+	return rel
+}
+
 

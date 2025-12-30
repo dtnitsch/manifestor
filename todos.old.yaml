@@ -1,0 +1,24 @@
+p0:
+  - Add deterministic sorting for nodes and skipped entries
+  - Add directory rollup size stats (total, min, max, avg, median)
+  - Add derived directory IDs (path-hash based)
+  - Add summary section to manifest
+
+p1:
+  - Add LLM-friendly output mode
+  - Add relative path output option
+  - Add directory rollup suppression of child files
+  - Add manifest schema versioning
+
+p2:
+  - Add manifest diff output
+  - Add incremental scan support
+  - Add explain command (why path is missing)
+  - Add semantic directory tagging
+
+p3:
+  - Parallel directory scanning
+  - Watch mode
+  - Pluggable collectors
+  - Windows support
+

@@ -73,6 +73,22 @@ This avoids glob explosion, hidden magic, and unbounded traversal.
 
 ---
 
+### Skipped Directories
+
+When a directory is skipped by a filter rule:
+
+- The directory itself is recorded once in `manifest.skipped`
+- The scanner does not descend into the directory
+- No child files or directories are recorded
+- No child skipped entries are emitted
+
+This behavior is intentional and guarantees:
+- deterministic output
+- bounded manifest size
+- clear explainability of omissions
+
+---
+ 
 ## Non-Goals (v0.x)
 
 Manifestor intentionally does **not**:

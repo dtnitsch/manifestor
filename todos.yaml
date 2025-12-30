@@ -1,0 +1,74 @@
+project: scanner
+version: 0.2
+last_updated: 2025-12-30
+
+priorities:
+  p0:
+    description: "Must-have for next release; unlocks real reasoning value"
+    items:
+      - id: rollup-size-stats
+        title: "Directory size statistics"
+        details:
+          - total_size_bytes
+          - min_file_size
+          - max_file_size
+          - mean_file_size
+          - median_file_size
+        rationale: "Enables cost estimation, monster file detection, ingestion safety"
+
+      - id: rollup-size-buckets
+        title: "File size buckets"
+        details:
+          - "<1KB"
+          - "1KB-1MB"
+          - "1MB-10MB"
+          - ">10MB"
+        rationale: "Fast binary/blob detection without rescanning"
+
+      - id: rollup-activity-span
+        title: "Modification time span"
+        details:
+          - oldest_mtime
+          - newest_mtime
+          - span_seconds
+        rationale: "Identifies active vs dead directories"
+
+  p1:
+    description: "High signal, low additional cost"
+    items:
+      - id: extension-entropy
+        title: "Extension entropy metric"
+        rationale: "Detects mixed-modality directories and summarization complexity"
+
+      - id: structure-depth
+        title: "Directory depth metrics"
+        details:
+          - max_depth
+          - avg_depth
+        rationale: "Distinguishes wide vs deep trees for chunking strategies"
+
+  p2:
+    description: "Nice to have; supports smarter routing later"
+    items:
+      - id: text-binary-ratio
+        title: "Text vs binary file counts"
+        rationale: "Prevents wasted LLM tokens; improves ingestion decisions"
+
+      - id: largest-files
+        title: "Top-N largest files"
+        details:
+          - limit: 3
+        rationale: "Explains skewed stats and aids human debugging"
+
+  p3:
+    description: "Deferred / future"
+    items:
+      - id: hotspot-score
+        title: "Heuristic hotspot score"
+        rationale: "Useful for UI and triage but requires tuning"
+
+notes:
+  - "All rollup metrics must be derivable in a single scan pass"
+  - "No file content reads beyond stat() in v0.2"
+  - "Rollup must remain cheap enough to run on large repos"
+

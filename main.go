@@ -2,12 +2,13 @@ package main
 
 import (
 	"context"
-    "log/slog"
-    "os"
+	"fmt"
+	"log/slog"
+	"os"
 
-    "github.com/dtnitsch/manifestor/internal/config"
-    "github.com/dtnitsch/manifestor/internal/output"
-    "github.com/dtnitsch/manifestor/internal/scanner"
+	"github.com/dtnitsch/manifestor/internal/config"
+	"github.com/dtnitsch/manifestor/internal/output"
+	"github.com/dtnitsch/manifestor/internal/scanner"
 )
 
 func main() {
@@ -50,9 +51,14 @@ func run(logger *slog.Logger, cfg *config.Config) error {
         return err
     }
 
+	// Double check skipped things
 	skippedCount := len(manifest.Skipped)
 	if skippedCount > 0 {
 		logger.Info("skipped directories", "count", skippedCount, "list", manifest.PrettySkipped())
+
+		if err := scanner.AssertNoSkippedChildLeakage(manifest); err != nil {
+			return fmt.Errorf("skipped children: %w", err)
+		}
 	}
 
     return output.WriteJSON(cfg.Output.File, manifest)
