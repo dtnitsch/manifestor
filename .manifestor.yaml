@@ -1,0 +1,59 @@
+version: "0.1"
+
+root:
+  path: "."               # Root directory to scan
+  follow_symlinks: false  # MUST be false in v0.1 (guardrail)
+
+scan:
+  mode: "folders-only"    # v0.1 invariant
+  parallelism:
+    enabled: true
+    max_workers: 0        # 0 = auto (runtime.NumCPU)
+
+ignore:
+  dot_folders: true       # Ignore any folder starting with "."
+  
+  block:
+    # Block rules are evaluated FIRST
+    # If a block rule matches, the path is excluded
+    patterns:
+      - "*/test"
+      - "**/test"
+      - "var/logs"
+      - "var/logs/**"
+
+  allow:
+    # Allow rules override block rules
+    # Evaluated AFTER block rules
+    patterns:
+      - "var/results"
+      - "var/results/**"
+
+manifest:
+  layout: "hierarchical"  # master + children manifests
+  master:
+    filename: "manifest.root.json"
+  children:
+    enabled: true
+    depth: 1              # v0.1: only direct children of root
+    filename_pattern: "manifest.{folder}.json"
+
+metadata:
+  record:
+    - path
+    - inode
+    - mtime
+    - ctime
+    - file_count
+    - folder_count
+    - symlink_count
+
+performance:
+  use_inodes: true
+  use_timestamps: true
+  use_counts: true
+  hash_files: false       # Explicitly forbidden in v0.1
+
+logging:
+  level: "info"           # debug | info | warn | error
+

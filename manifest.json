@@ -1,0 +1,170 @@
+{
+  "root": ".",
+  "generated_at": "2025-12-30T19:43:08.902762Z",
+  "nodes": [
+    {
+      "path": ".",
+      "is_dir": true,
+      "inode": 67006342,
+      "mtime_unix": 1767123759,
+      "file_count": 9,
+      "subdir_count": 2
+    },
+    {
+      "path": ".manifestor.yaml",
+      "is_dir": false,
+      "inode": 67011474,
+      "mtime_unix": 1767120532
+    },
+    {
+      "path": "README.md",
+      "is_dir": false,
+      "inode": 67007029,
+      "mtime_unix": 1767119472
+    },
+    {
+      "path": "docs",
+      "is_dir": true,
+      "inode": 67006420,
+      "mtime_unix": 1767119423
+    },
+    {
+      "path": "go.mod",
+      "is_dir": false,
+      "inode": 67016751,
+      "mtime_unix": 1767122112
+    },
+    {
+      "path": "go.sum",
+      "is_dir": false,
+      "inode": 67023470,
+      "mtime_unix": 1767122112
+    },
+    {
+      "path": "internal",
+      "is_dir": true,
+      "inode": 67014996,
+      "mtime_unix": 1767123018,
+      "subdir_count": 5
+    },
+    {
+      "path": "internal/config",
+      "is_dir": true,
+      "inode": 67014997,
+      "mtime_unix": 1767123706,
+      "file_count": 1
+    },
+    {
+      "path": "internal/config/config.go",
+      "is_dir": false,
+      "inode": 67023072,
+      "mtime_unix": 1767123132
+    },
+    {
+      "path": "internal/filter",
+      "is_dir": true,
+      "inode": 67030649,
+      "mtime_unix": 1767123051,
+      "file_count": 1
+    },
+    {
+      "path": "internal/filter/rule.go",
+      "is_dir": false,
+      "inode": 67030776,
+      "mtime_unix": 1767123501
+    },
+    {
+      "path": "internal/manifest",
+      "is_dir": true,
+      "inode": 67017830,
+      "mtime_unix": 1767121736,
+      "file_count": 2
+    },
+    {
+      "path": "internal/manifest/manifest.go",
+      "is_dir": false,
+      "inode": 67017972,
+      "mtime_unix": 1767121728
+    },
+    {
+      "path": "internal/manifest/node.go",
+      "is_dir": false,
+      "inode": 67018141,
+      "mtime_unix": 1767121736
+    },
+    {
+      "path": "internal/output",
+      "is_dir": true,
+      "inode": 67020140,
+      "mtime_unix": 1767121901,
+      "file_count": 1
+    },
+    {
+      "path": "internal/output/json.go",
+      "is_dir": false,
+      "inode": 67020204,
+      "mtime_unix": 1767121913
+    },
+    {
+      "path": "internal/scanner",
+      "is_dir": true,
+      "inode": 67015625,
+      "mtime_unix": 1767121883,
+      "file_count": 4
+    },
+    {
+      "path": "internal/scanner/ignore.go",
+      "is_dir": false,
+      "inode": 67020036,
+      "mtime_unix": 1767123518
+    },
+    {
+      "path": "internal/scanner/metadata.go",
+      "is_dir": false,
+      "inode": 67019864,
+      "mtime_unix": 1767121873
+    },
+    {
+      "path": "internal/scanner/model.go",
+      "is_dir": false,
+      "inode": 67015679,
+      "mtime_unix": 1767123189
+    },
+    {
+      "path": "internal/scanner/scanner.go",
+      "is_dir": false,
+      "inode": 67018403,
+      "mtime_unix": 1767123195
+    },
+    {
+      "path": "main.go",
+      "is_dir": false,
+      "inode": 67015194,
+      "mtime_unix": 1767123786
+    },
+    {
+      "path": "manifest.json",
+      "is_dir": false,
+      "inode": 67036567,
+      "mtime_unix": 1767123759
+    },
+    {
+      "path": "manifestor.example.yaml",
+      "is_dir": false,
+      "inode": 67035861,
+      "mtime_unix": 1767123717
+    },
+    {
+      "path": "manifestor.yaml",
+      "is_dir": false,
+      "inode": 67015277,
+      "mtime_unix": 1767121466
+    },
+    {
+      "path": "negative-learning.mf",
+      "is_dir": false,
+      "inode": 67006475,
+      "mtime_unix": 1767119454
+    }
+  ]
+}

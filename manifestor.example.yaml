@@ -1,0 +1,64 @@
+# -----------------------------------------------------------------------------
+# Manifestor Default Configuration (v0.1)
+# -----------------------------------------------------------------------------
+
+app:
+  name: "manifestor"
+  version: "0.1.0"
+
+scanner:
+  # Root directory to scan.
+  # Usually overridden by CLI arg.
+  root: "."
+
+  # Maximum number of concurrent directory workers.
+  # Rule of thumb: 2–4x CPU cores.
+  max_workers: 8
+
+  # Do not follow symlinks (v0.1 invariant)
+  follow_symlinks: false
+
+  # Whether to collect inode numbers (if available)
+  collect_inodes: true
+
+  # Whether to collect timestamps (mtime, ctime where available)
+  collect_timestamps: true
+
+  # Whether to count files per directory
+  collect_file_counts: true
+
+filters:
+  # Block rules are evaluated first.
+  # If a path matches a block rule, it is skipped unless explicitly allowed.
+  block:
+    # Ignore all dot-directories by default
+    - pattern: ".*"
+      type: "basename"
+
+    # Common heavy or unsafe directories
+    - pattern: "node_modules"
+      type: "basename"
+    - pattern: "vendor"
+      type: "basename"
+    - pattern: "dist"
+      type: "basename"
+    - pattern: "build"
+      type: "basename"
+
+    # Explicit path block
+    - pattern: "var/log"
+      type: "path"
+
+  # Allow rules override block rules
+  allow:
+    # Example: allow results but not logs
+    - pattern: "var/results"
+      type: "path"
+
+output:
+  # Output format (v0.1 only json)
+  format: "json"
+
+  # Output file path
+  file: "manifest.json"
+
