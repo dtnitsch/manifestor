@@ -40,11 +40,11 @@ rollup:
   enable_depth_stats: true
 
   # p50, p90, p99
-  enable_percentiles: true
+  enable_percentiles: false
 
 validate:
   # Percentiles
-  enable: true
+  enable: false
 
 
 filters:

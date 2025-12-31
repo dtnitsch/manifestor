@@ -10,23 +10,37 @@
     "schema": {
       "node": "node.v1",
       "rollup": "rollup.v1"
+    },
+    "capabilities": {
+      "rollup": {
+        "size_stats": false,
+        "size_percentiles": false,
+        "size_buckets": false,
+        "activity_span": false,
+        "dir_counts": false,
+        "depth_stats": false,
+        "depth_metrics": false,
+        "extension_counts": false,
+        "file_types": false
+      }
     }
   },
   "root": ".",
-  "generated_at": "2025-12-31T04:00:35.603667Z",
+  "generated_at": "2025-12-31T04:46:02.306469Z",
   "nodes": [
     {
       "path": ".",
       "is_dir": true,
       "inode": 67006342,
-      "mtime_unix": 1767150767,
+      "mtime_unix": 1767153635,
       "direct_subdir_count": 3,
       "rollup": {
-        "total_files": 13,
+        "total_files": 14,
         "total_descendant_dirs": 8,
         "extensions": {
           ".gitignore": 1,
           ".go": 1,
+          ".json": 1,
           ".md": 2,
           ".mod": 1,
           ".sum": 1,
@@ -34,18 +48,13 @@
           ".yml": 1
         },
         "size": {
-          "total": 3878115,
+          "total": 3887385,
           "min": 28,
           "max": 3848834,
-          "mean": 298316,
-          "median": 1893,
-          "percentiles": {
-            "p50": 1893,
-            "p90": 10969,
-            "p99": 3848834
-          }
+          "mean": 277670,
+          "median": 2021
         },
-        "last_modified": 1767153341
+        "last_modified": 1767156294
       }
     },
     {
@@ -80,8 +89,8 @@
       "path": "config.yaml",
       "is_dir": false,
       "inode": 67015277,
-      "mtime_unix": 1767153341,
-      "size_bytes": 1893
+      "mtime_unix": 1767156292,
+      "size_bytes": 1895
     },
     {
       "path": "docs",
@@ -99,12 +108,7 @@
           "min": 2795,
           "max": 2795,
           "mean": 2795,
-          "median": 2795,
-          "percentiles": {
-            "p50": 2795,
-            "p90": 2795,
-            "p99": 2795
-          }
+          "median": 2795
         },
         "last_modified": 1767135103
       }
@@ -120,14 +124,14 @@
       "path": "go.mod",
       "is_dir": false,
       "inode": 67016751,
-      "mtime_unix": 1767122112,
+      "mtime_unix": 1767154492,
       "size_bytes": 82
     },
     {
       "path": "go.sum",
       "is_dir": false,
       "inode": 67023470,
-      "mtime_unix": 1767122112,
+      "mtime_unix": 1767154492,
       "size_bytes": 360
     },
     {
@@ -142,7 +146,7 @@
         "size": {
           "total": 0
         },
-        "last_modified": 1767150663
+        "last_modified": 1767154951
       }
     },
     {
@@ -161,12 +165,7 @@
           "min": 1829,
           "max": 1829,
           "mean": 1829,
-          "median": 1829,
-          "percentiles": {
-            "p50": 1829,
-            "p90": 1829,
-            "p99": 1829
-          }
+          "median": 1829
         },
         "last_modified": 1767147690
       }
@@ -194,12 +193,7 @@
           "min": 198,
           "max": 198,
           "mean": 198,
-          "median": 198,
-          "percentiles": {
-            "p50": 198,
-            "p90": 198,
-            "p99": 198
-          }
+          "median": 198
         },
         "last_modified": 1767123501
       }
@@ -215,34 +209,36 @@
       "path": "internal/manifest",
       "is_dir": true,
       "inode": 67017830,
-      "mtime_unix": 1767150663,
+      "mtime_unix": 1767154951,
       "rollup": {
-        "total_files": 5,
+        "total_files": 6,
         "total_descendant_dirs": 0,
         "extensions": {
-          ".go": 5
+          ".go": 6
         },
         "size": {
-          "total": 7625,
+          "total": 10611,
           "min": 475,
-          "max": 4688,
-          "mean": 1525,
-          "median": 894,
-          "percentiles": {
-            "p50": 894,
-            "p90": 4688,
-            "p99": 4688
-          }
+          "max": 5077,
+          "mean": 1768,
+          "median": 1002
         },
-        "last_modified": 1767153621
+        "last_modified": 1767156354
       }
+    },
+    {
+      "path": "internal/manifest/capabilities.go",
+      "is_dir": false,
+      "inode": 67230250,
+      "mtime_unix": 1767156354,
+      "size_bytes": 2547
     },
     {
       "path": "internal/manifest/manifest.go",
       "is_dir": false,
       "inode": 67017972,
-      "mtime_unix": 1767146874,
-      "size_bytes": 1061
+      "mtime_unix": 1767155048,
+      "size_bytes": 1111
     },
     {
       "path": "internal/manifest/meta.go",
@@ -262,8 +258,8 @@
       "path": "internal/manifest/rollup.go",
       "is_dir": false,
       "inode": 67120596,
-      "mtime_unix": 1767153621,
-      "size_bytes": 4688
+      "mtime_unix": 1767156062,
+      "size_bytes": 5077
     },
     {
       "path": "internal/manifest/rollup_helpers.go",
@@ -288,12 +284,7 @@
           "min": 494,
           "max": 494,
           "mean": 494,
-          "median": 494,
-          "percentiles": {
-            "p50": 494,
-            "p90": 494,
-            "p99": 494
-          }
+          "median": 494
         },
         "last_modified": 1767121913
       }
@@ -321,12 +312,7 @@
           "min": 438,
           "max": 3442,
           "mean": 1412,
-          "median": 860,
-          "percentiles": {
-            "p50": 860,
-            "p90": 3442,
-            "p99": 3442
-          }
+          "median": 878
         },
         "last_modified": 1767153519
       }
@@ -379,6 +365,13 @@
       "inode": 67015194,
       "mtime_unix": 1767150717,
       "size_bytes": 2291
+    },
+    {
+      "path": "manifest.json",
+      "is_dir": false,
+      "inode": 67221032,
+      "mtime_unix": 1767156294,
+      "size_bytes": 9268
     },
     {
       "path": "manifestor",

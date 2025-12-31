@@ -23,6 +23,7 @@ type ManifestMeta struct {
 	Version   string        `json:"version"`
 	Generator GeneratorMeta `json:"generator"`
 	Schema    SchemaMeta    `json:"schema"`
+	Capabilities Capabilities `json:"capabilities"`
 }
 
 type GeneratorMeta struct {
@@ -36,6 +37,7 @@ type SchemaMeta struct {
 	Node   string `json:"node"`
 	Rollup string `json:"rollup"`
 }
+
 
 func (m *Manifest) PrettySkipped() []string {
 	output := make([]string, len(m.Skipped))

@@ -31,9 +31,17 @@ type Rollup struct {
 		
 		// p50, 90, 99
 		Percentiles *Percentiles `json:"percentiles,omitempty"`
+		Buckets     *SizeBuckets `json:"buckets,omitempty"`
 	} `json:"size"`
 
 	LastModified int64 `json:"last_modified"`
+}
+
+type SizeBuckets struct {
+	Lt1KB     int `json:"lt_1kb"`
+	KbTo1MB   int `json:"kb_to_1mb"`
+	MbTo10MB  int `json:"mb_to_10mb"`
+	Gt10MB    int `json:"gt_10mb"`
 }
 
 type Percentiles struct {
@@ -61,16 +69,6 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 	*/
 
 	// 2. Build parent → children map
-/*
-	children := make(map[string][]*Node)
-	for _, n := range m.Nodes {
-		parent := filepath.Dir(n.Path)
-		if parent == "." && n.Path == "." {
-			continue
-		}
-		children[parent] = append(children[parent], n)
-	}
-*/
 	children := make(map[string][]*Node)
 
 	for _, n := range m.Nodes {
@@ -165,6 +163,15 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 		}
 		r.LastModified = lastMod
 
+		m.Manifest.Capabilities.Rollup = RollupCapabilities {
+		    SizeStats:    opts.EnableSizeBytes,
+		    SizeBuckets:  false, // future
+		    SizePercentiles:  opts.EnablePercentiles,
+		    ActivitySpan: false, // future
+		    FileTypes:    opts.EnableFileTypes,
+		    DepthMetrics: opts.EnableDepthStats,
+		}
+
 		// Attach rollup
 		dir.Rollup = r
 	}
@@ -173,6 +180,10 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 }
 
 func (m *Manifest) Validate(opts ValidateOptions) error {
+	if err := m.validateCapabilities(); err != nil {
+        return err
+    }
+
 	for _, n := range m.Nodes {
 		if err := validateNode(n, opts); err != nil {
 			return err
