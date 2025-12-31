@@ -12,7 +12,7 @@ import (
 	"github.com/dtnitsch/manifestor/internal/scanner"
 )
 
-func setup(t *testing.T) *manifest.Manifest {
+func setup(t *testing.T) (*manifest.Manifest, *scanner.Scanner) {
 	t.Helper()
 
 	root := t.TempDir()
@@ -43,11 +43,11 @@ func setup(t *testing.T) *manifest.Manifest {
 		t.Fatalf("scan failed: %v", err)
 	}
 
-	return m
+	return m, s
 }
 
 func TestSkippedDirectorySuppressesChildren(t *testing.T) {
-	m := setup(t)
+	m, _ := setup(t)
 
 	// Assert .git is recorded as skipped
 	foundGit := false
@@ -73,7 +73,7 @@ func TestSkippedDirectorySuppressesChildren(t *testing.T) {
 }
 
 func TestSkipDirPreventsTraversal(t *testing.T) {
-	m := setup(t)
+	m, _ := setup(t)
 
 	for _, n := range m.Nodes {
 		if strings.Contains(n.Path, "objects") {
@@ -83,7 +83,20 @@ func TestSkipDirPreventsTraversal(t *testing.T) {
 }
 
 func TestSkipDirNeverDescends(t *testing.T) {
-	m := setup(t)
+
+	opts := scanner.Options{Root: "."}
+	filters := scanner.FilterSet{
+		Block: []filter.Rule{
+			{Type: filter.Basename, Pattern: "internal/build"},
+		},
+	}
+
+	s := scanner.New(opts, filters)
+
+	m, err := s.Scan(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	for _, n := range m.Nodes {
 		if strings.Contains(n.Path, "/objects/") {
@@ -91,4 +104,6 @@ func TestSkipDirNeverDescends(t *testing.T) {
 		}
 	}
 }
+
+
 

@@ -84,6 +84,9 @@ func run(logger *slog.Logger, cfg *config.Config) error {
 		}
 	}
 
+	// Set defaults
+	m.Manifest = manifest.DefaultManifestMeta()
+
     return output.WriteJSON(cfg.Output.File, m)
 }
 

@@ -6,6 +6,7 @@ import (
     "os"
     "path/filepath"
 	"sort"
+	"strings"
     "syscall"
     "time"
 
@@ -70,11 +71,16 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
             }
         }
 
+		/* // Causing invariant issues
         if d.IsDir() && s.opts.CollectFileCounts {
-            files, dirs := countDir(path)
+			files, dirs := countDir(path, func(p string) bool {
+    			return !s.isSkipped(p) && s.willDescend(p)
+			})
+
             node.FileCount = files
-            node.SubdirCount = dirs
+            node.DirectSubdirCount = dirs
         }
+		*/
 
         m.Nodes = append(m.Nodes, node)
         return nil
@@ -125,13 +131,35 @@ func (s *Scanner) normalizePath(path string) string {
 
 	rel = filepath.Clean(rel)
 
-	// filepath.Rel(".", ".") returns "."
-	// filepath.Rel(".", "./foo") returns "foo"
 	if rel == "" {
 		return "."
 	}
 
 	return rel
+}
+
+func (s *Scanner) isSkipped(path string) bool {
+	// Normalize path once
+	path = filepath.Clean(path)
+	for _, skipped := range s.skipped {
+		sp := filepath.Clean(skipped.Path)
+
+		// Exact match
+		if path == sp {
+			return true
+		}
+
+		// Descendant of skipped directory
+		if skipped.IsDir && strings.HasPrefix(path, sp+string(os.PathSeparator)) {
+			return true
+		}
+	}
+
+	return false
+}
+
+func (s *Scanner) willDescend(path string) bool {
+    return !s.isSkipped(path)
 }
 
 

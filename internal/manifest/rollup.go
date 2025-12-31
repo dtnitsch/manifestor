@@ -18,7 +18,7 @@ type RollupOptions struct {
 
 type Rollup struct {
 	TotalFiles   int            `json:"total_files"`
-	DescendantDirs    int            `json:"descendant_dirs"`
+	TotalDescendantDirs   int   `json:"total_descendant_dirs"`
 	Extensions   map[string]int `json:"extensions,omitempty"`
 
 	// Size statistics in bytes
@@ -61,6 +61,7 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 	*/
 
 	// 2. Build parent → children map
+/*
 	children := make(map[string][]*Node)
 	for _, n := range m.Nodes {
 		parent := filepath.Dir(n.Path)
@@ -69,6 +70,28 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 		}
 		children[parent] = append(children[parent], n)
 	}
+*/
+	children := make(map[string][]*Node)
+
+	for _, n := range m.Nodes {
+	    parent := filepath.Dir(n.Path)
+	    children[parent] = append(children[parent], n)
+	}
+
+	for _, n := range m.Nodes {
+	    if !n.IsDir {
+	        continue
+	    }
+
+	    count := 0
+	    for _, c := range children[n.Path] {
+	        if c.IsDir {
+	            count++
+	        }
+	    }
+	    n.DirectSubdirCount = count
+	}
+
 
 	// 3. Sort directories deepest-first
 	dirs := make([]*Node, 0)
@@ -94,17 +117,11 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 		for _, child := range children[dir.Path] {
 			if child.IsDir {
 			    if opts.EnableDirCounts {
-        			r.DescendantDirs++ // direct child
+        			r.TotalDescendantDirs++ // direct child
 	    		    if child.Rollup != nil {
-    	       			r.DescendantDirs += child.Rollup.DescendantDirs
+    	       			r.TotalDescendantDirs += child.Rollup.TotalDescendantDirs
         			}
     			}
-				//if opts.EnableDirCounts {
-				//	r.DescendantDirs++
-				//}
-				//if child.Rollup != nil {
-				//	r.TotalFiles += child.Rollup.TotalFiles
-				//}
 			} else {
 				r.TotalFiles++
 
@@ -183,8 +200,8 @@ func validateRollup(n *Node) error {
 		return fmt.Errorf("%s: total_files < file_count", n.Path)
 	}
 
-	if r.DescendantDirs < n.SubdirCount {
-		return fmt.Errorf("%s: descendant_dirs < subdir_count", n.Path)
+	if r.TotalDescendantDirs < n.DirectSubdirCount {
+		return fmt.Errorf("%s: total_descendant_dirs < direct_subdir_count", n.Path)
 	}
 	if r.Size.Percentiles != nil {
 	    p := r.Size.Percentiles

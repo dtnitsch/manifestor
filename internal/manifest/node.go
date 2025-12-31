@@ -11,7 +11,7 @@ type Node struct {
 
 	// Immediate directory stats (scanner)
 	FileCount   int `json:"file_count,omitempty"`
-	SubdirCount int `json:"subdir_count,omitempty"`
+	DirectSubdirCount int `json:"direct_subdir_count,omitempty"`
 
 	// Derived aggregate statistics
 	Rollup *Rollup `json:"rollup,omitempty"`
