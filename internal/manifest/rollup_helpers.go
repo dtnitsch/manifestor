@@ -1,6 +1,7 @@
 package manifest
 
 import (
+	"math"
 	"os"
 	"sort"
 	"strings"
@@ -34,5 +35,29 @@ func median(vals []int64) int64 {
 		return vals[n/2]
 	}
 	return (vals[n/2-1] + vals[n/2]) / 2
+}
+
+func computePercentiles(sorted []int64) *Percentiles {
+	n := len(sorted)
+	if n == 0 {
+		return nil
+	}
+
+	at := func(p float64) int64 {
+		rank := int(math.Ceil(p * float64(n)))
+		if rank < 1 {
+			rank = 1
+		}
+		if rank > n {
+			rank = n
+		}
+		return sorted[rank-1]
+	}
+
+	return &Percentiles{
+		P50: at(0.50),
+		P90: at(0.90),
+		P99: at(0.99),
+	}
 }
 

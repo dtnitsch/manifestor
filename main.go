@@ -70,9 +70,17 @@ func run(logger *slog.Logger, cfg *config.Config) error {
 			EnableSizeBytes: cfg.Rollup.EnableSizeBytes,
 			EnableFileTypes: cfg.Rollup.EnableFileTypes,
 			EnableDepthStats: cfg.Rollup.EnableDepthStats,
+			EnablePercentiles: cfg.Rollup.EnablePercentiles,
 		})
 		if err != nil {
 			return fmt.Errorf("rollups: %w", err)
+		}
+		if cfg.Validate.Enable {
+			if err := m.Validate(manifest.ValidateOptions{
+				Strict: true,
+			}); err != nil {
+				return fmt.Errorf("validation failed: %w", err)
+			}
 		}
 	}
 

@@ -33,13 +33,18 @@ rollup:
   # Rollup stats at the end
   enable: true
 
+  # general counts
   enable_dir_counts: true
-
   enable_size_bytes: true
-
   enable_file_types: true
-  
   enable_depth_stats: true
+
+  # p50, p90, p99
+  enable_percentiles: true
+
+validate:
+  # Percentiles
+  enable: true
 
 
 filters:

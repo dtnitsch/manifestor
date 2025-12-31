@@ -16,6 +16,9 @@ type Config struct {
 	
 	// Directory Stats
 	Rollup RollupConfig `yaml:"rollup"`
+
+	// Validate
+	Validate ValidateConfig `yaml:"validate"`
 }
 
 type ScannerConfig struct {
@@ -35,6 +38,11 @@ type RollupConfig struct {
 	EnableSizeBytes bool `yaml:"enable_size_bytes"`
 	EnableFileTypes bool `yaml:"enable_file_types"`
 	EnableDepthStats bool `yaml:"enable_depth_stats"`
+	EnablePercentiles bool `yaml:"enable_percentiles"`
+}
+
+type ValidateConfig struct {
+	Enable bool `yaml:"enable"`  
 }
 
 type Filters struct {
