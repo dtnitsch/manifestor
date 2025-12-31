@@ -8,6 +8,7 @@ priorities:
     items:
       - id: rollup-size-stats
         title: "Directory size statistics"
+        status: Complete
         details:
           - total_size_bytes
           - min_file_size
@@ -33,6 +34,21 @@ priorities:
           - span_seconds
         rationale: "Identifies active vs dead directories"
 
+      - id: capability-integrity
+        title: "Capability-driven invariant enforcement"
+        details:
+          - manifest-declared capabilities
+          - table-driven validation
+          - per-capability failure reporting
+        rationale: "Prevents silent data corruption and enables safe downstream reasoning"
+
+      - id: rollup-completeness
+        title: "Rollup completeness indicators"
+        details:
+          - directories_with_rollups
+          - directories_missing_rollups
+        rationale: "Allows consumers to reason about partial manifests"
+
   p1:
     description: "High signal, low additional cost"
     items:
@@ -47,11 +63,22 @@ priorities:
           - avg_depth
         rationale: "Distinguishes wide vs deep trees for chunking strategies"
 
+      - id: rollup-activity-span
+        details:
+          - oldest_mtime
+          - newest_mtime
+          - span_seconds
+
+      - id: schema-evolution-policy
+        title: "Schema and capability evolution rules"
+        rationale: "Ensures backward compatibility and safe consumer upgrades"
+
   p2:
     description: "Nice to have; supports smarter routing later"
     items:
       - id: text-binary-ratio
         title: "Text vs binary file counts"
+        status: will-not-do 
         rationale: "Prevents wasted LLM tokens; improves ingestion decisions"
 
       - id: largest-files

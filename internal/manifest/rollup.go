@@ -180,7 +180,7 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 }
 
 func (m *Manifest) Validate(opts ValidateOptions) error {
-	if err := m.validateCapabilities(); err != nil {
+	if err := m.validateCapabilitiesInline(); err != nil {
         return err
     }
 

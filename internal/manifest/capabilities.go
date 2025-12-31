@@ -28,7 +28,7 @@ type Capabilities struct {
 }
 
 
-func (m *Manifest) validateCapabilities() error {
+func (m *Manifest) validateCapabilitiesInline() error {
 	c := m.Manifest.Capabilities.Rollup
 
 	for _, n := range m.Nodes {
