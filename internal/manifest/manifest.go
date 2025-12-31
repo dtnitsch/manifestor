@@ -28,3 +28,4 @@ func (m *Manifest) PrettySkipped() []string {
 
 	return output
 }
+

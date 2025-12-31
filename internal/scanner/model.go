@@ -23,6 +23,8 @@ type Options struct {
 	CollectInodes      bool
 	CollectTimestamps  bool
 	CollectFileCounts  bool
+
+	EnableRollups      bool
 }
 
 func New(opts Options, filters FilterSet) *Scanner {

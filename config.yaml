@@ -28,6 +28,20 @@ scanner:
   # Whether to count files per directory
   collect_file_counts: true
 
+
+rollup:
+  # Rollup stats at the end
+  enable: true
+
+  enable_dir_counts: true
+
+  enable_size_bytes: true
+
+  enable_file_types: true
+  
+  enable_depth_stats: true
+
+
 filters:
   # Block rules are evaluated first.
   # If a path matches a block rule, it is skipped unless explicitly allowed.

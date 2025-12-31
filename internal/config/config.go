@@ -13,6 +13,9 @@ type Config struct {
 	Scanner ScannerConfig `yaml:"scanner"`
 	Filters Filters       `yaml:"filters"`
 	Output  Output        `yaml:"output"`
+	
+	// Directory Stats
+	Rollup RollupConfig `yaml:"rollup"`
 }
 
 type ScannerConfig struct {
@@ -23,6 +26,15 @@ type ScannerConfig struct {
 	CollectInodes     bool `yaml:"collect_inodes"`
 	CollectTimestamps bool `yaml:"collect_timestamps"`
 	CollectFileCounts bool `yaml:"collect_file_counts"`
+}
+
+type RollupConfig struct {
+	Enable   bool `yaml:"enable"`  
+
+	EnableDirCounts bool `yaml:"enable_dir_counts"`
+	EnableSizeBytes bool `yaml:"enable_size_bytes"`
+	EnableFileTypes bool `yaml:"enable_file_types"`
+	EnableDepthStats bool `yaml:"enable_depth_stats"`
 }
 
 type Filters struct {

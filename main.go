@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/dtnitsch/manifestor/internal/config"
+	"github.com/dtnitsch/manifestor/internal/manifest"
 	"github.com/dtnitsch/manifestor/internal/output"
 	"github.com/dtnitsch/manifestor/internal/scanner"
 )
@@ -37,30 +38,44 @@ func run(logger *slog.Logger, cfg *config.Config) error {
         Allow: cfg.Filters.Allow,
     }
 
-    sc := scanner.New(scanner.Options{
+	opts := scanner.Options{
         Root:              cfg.Scanner.Root,
         MaxWorkers:        cfg.Scanner.MaxWorkers,
         FollowSymlinks:    false,
         CollectInodes:     true,
         CollectTimestamps: true,
         CollectFileCounts: true,
-    }, filters)
+	}
 
-    manifest, err := sc.Scan(context.Background())
+    sc := scanner.New(opts, filters)
+
+    m, err := sc.Scan(context.Background())
     if err != nil {
         return err
     }
 
 	// Double check skipped things
-	skippedCount := len(manifest.Skipped)
+	skippedCount := len(m.Skipped)
 	if skippedCount > 0 {
-		logger.Info("skipped directories", "count", skippedCount, "list", manifest.PrettySkipped())
+		logger.Info("skipped directories", "count", skippedCount, "list", m.PrettySkipped())
 
-		if err := scanner.AssertNoSkippedChildLeakage(manifest); err != nil {
+		if err := scanner.AssertNoSkippedChildLeakage(m); err != nil {
 			return fmt.Errorf("skipped children: %w", err)
 		}
 	}
 
-    return output.WriteJSON(cfg.Output.File, manifest)
+	if cfg.Rollup.Enable {
+		err := m.BuildRollups(manifest.RollupOptions{
+			EnableDirCounts: cfg.Rollup.EnableDirCounts,
+			EnableSizeBytes: cfg.Rollup.EnableSizeBytes,
+			EnableFileTypes: cfg.Rollup.EnableFileTypes,
+			EnableDepthStats: cfg.Rollup.EnableDepthStats,
+		})
+		if err != nil {
+			return fmt.Errorf("rollups: %w", err)
+		}
+	}
+
+    return output.WriteJSON(cfg.Output.File, m)
 }
 

@@ -41,7 +41,7 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 
             if d.IsDir() {
                 return filepath.SkipDir
-            }
+            } 
             return nil
         }
 
@@ -54,6 +54,11 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
             Path:  norm,
             IsDir: d.IsDir(),
         }
+
+		// Statistics
+		if !d.IsDir() {
+			node.SizeBytes = info.Size()
+		}
 
         if s.opts.CollectTimestamps {
             node.ModTimeUnix = info.ModTime().Unix()
@@ -92,8 +97,7 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 		})
 	}
 
-
-    return m, nil
+	return m, nil
 }
 
 func (s *Scanner) recordSkip(path string, d os.DirEntry, reason string, rule *filter.Rule) {
