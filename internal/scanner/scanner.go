@@ -62,7 +62,7 @@ func (s *Scanner) Scan(ctx context.Context) (*manifest.Manifest, error) {
 		}
 
         if s.opts.CollectTimestamps {
-            node.ModTimeUnix = info.ModTime().Unix()
+            node.MtimeUnix = info.ModTime().Unix()
         }
 
         if s.opts.CollectInodes {

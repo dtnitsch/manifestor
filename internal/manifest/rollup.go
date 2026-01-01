@@ -37,6 +37,34 @@ type Rollup struct {
 	LastModified int64 `json:"last_modified"`
 }
 
+type RollupCapabilities struct {
+	// Size-related
+	SizeStats       bool `json:"size_stats"`
+	SizePercentiles bool `json:"size_percentiles"`
+	SizeBuckets     bool `json:"size_buckets"`
+
+	// Time-related
+	ActivitySpan    bool `json:"activity_span"`
+
+	// Structure-related
+	DirCounts       bool `json:"dir_counts"`
+	DepthStats      bool `json:"depth_stats"`
+	DepthMetrics    bool `json:"depth_metrics"`
+
+	// Content-related
+	ExtensionCounts bool `json:"extension_counts"`
+	FileTypes       bool `json:"file_types"`
+}
+
+func (rc RollupCapabilities) Declared() map[string]bool {
+	return map[string]bool{
+		"size_stats":        rc.SizeStats,
+		"size_buckets":      rc.SizeBuckets,
+		"activity_span":     rc.ActivitySpan,
+		// intentionally omit non-spec capabilities
+	}
+}
+
 type SizeBuckets struct {
 	Lt1KB     int `json:"lt_1kb"`
 	KbTo1MB   int `json:"kb_to_1mb"`
@@ -139,8 +167,8 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 				}
 			}
 
-			if child.ModTimeUnix > lastMod {
-				lastMod = child.ModTimeUnix
+			if child.MtimeUnix > lastMod {
+				lastMod = child.MtimeUnix
 			}
 		}
 
@@ -166,7 +194,7 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 		m.Manifest.Capabilities.Rollup = RollupCapabilities {
 		    SizeStats:    opts.EnableSizeBytes,
 		    SizeBuckets:  false, // future
-		    SizePercentiles:  opts.EnablePercentiles,
+		    //SizePercentiles:  opts.EnablePercentiles,
 		    ActivitySpan: false, // future
 		    FileTypes:    opts.EnableFileTypes,
 		    DepthMetrics: opts.EnableDepthStats,
@@ -180,7 +208,8 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 }
 
 func (m *Manifest) Validate(opts ValidateOptions) error {
-	if err := m.validateCapabilitiesInline(); err != nil {
+	//if err := m.validateCapabilitiesInline(); err != nil {
+	if err := m.validateCapabilities(); err != nil {
         return err
     }
 

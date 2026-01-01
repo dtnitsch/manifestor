@@ -1,189 +1,149 @@
-# Manifest Capabilities
+# Rollup Capabilities Specification
 
-This document defines the **capabilities model** for `manifestor`, with a focus on **rollup semantics**, **validation guarantees**, and **forward compatibility**.
+**Project:** scanner  
+**Version:** 0.2  
+**Status:** Draft (P0 semantics locking)  
+**Last updated:** 2025-12-30
 
-Capabilities describe **what a generated manifest promises to contain**. Validation logic uses these declarations to assert invariants and detect partial, inconsistent, or corrupted rollups.
+This document defines **rollup capabilities** declared in `manifest.capabilities.rollup`
+and the **invariants that MUST hold** if a capability is claimed.
 
----
+Capabilities exist to:
+- make rollup semantics explicit
+- prevent silent partial data
+- enable safe downstream reasoning
+- support schema evolution without breakage
 
-## Design Goals
-
-* **Explicit contracts**: A manifest must declare what it claims to support.
-* **Cheap validation**: Capability checks must be fast and stateless.
-* **Forward compatible**: Older consumers can safely ignore unknown capabilities.
-* **Single-pass derivation**: All rollup capabilities must be computable during a single filesystem scan.
-
----
-
-## Capability Structure
-
-Capabilities are declared at the manifest level:
-
-```json
-{
-  "manifest": {
-    "capabilities": {
-      "rollup": { ... }
-    }
-  }
-}
-```
-
-Currently, only **rollup capabilities** are defined.
+If a capability is declared and its invariants are violated, the manifest is **invalid**.
 
 ---
 
-## RollupCapabilities
+## Capability Model
 
-```go
-type RollupCapabilities struct {
-    SizeStats        bool `json:"size_stats"`
-    SizePercentiles  bool `json:"size_percentiles"`
-    SizeBuckets      bool `json:"size_buckets"`
-    ActivitySpan     bool `json:"activity_span"`
+Capabilities are **opt-in guarantees**, not feature flags.
 
-    ExtensionCounts  bool `json:"extension_counts"`
-    DirCounts        bool `json:"dir_counts"`
-
-    DepthMetrics     bool `json:"depth_metrics"`
-}
-```
-
-Each flag indicates that **all directory rollups** in the manifest satisfy the corresponding invariant set.
+Rules:
+- Declaring a capability asserts *presence and correctness* of specific fields
+- Absence of a capability means **no guarantees**
+- Validators MUST NOT infer capabilities from data presence
+- Capabilities apply only to directory nodes with a rollup
 
 ---
 
-## Capability Definitions & Invariants
+## P0 Capabilities (v0.2)
 
-### `size_stats`
+### 1. `size_stats`
 
-Rollups include aggregate file size statistics.
+**Description:**  
+Directory-level aggregate file size statistics.
 
-**Required fields:**
-
-* `rollup.size.total`
-* `rollup.size.min`
-* `rollup.size.max`
-* `rollup.size.mean`
-* `rollup.size.median`
-
-**Invariants:**
-
-* `total > 0` if `total_files > 0`
-* `min <= median <= max`
-
----
-
-### `size_percentiles`
-
-Rollups include percentile statistics derived from file sizes.
-
-**Required fields:**
-
-* `rollup.size.percentiles.p50`
-* `rollup.size.percentiles.p90`
-* `rollup.size.percentiles.p99`
-
-**Invariants:**
-
-* `median == p50`
-* `min <= p50 <= p90 <= p99 <= max`
-
----
-
-### `size_buckets`
-
-Rollups include coarse-grained size distribution buckets.
-
-**Required fields:**
-
-* `rollup.size.buckets`
+**If declared, the following MUST hold for every directory rollup:**
+- `rollup.size.total` is present
+- `rollup.size.total > 0` if `rollup.total_files > 0`
+- `rollup.size.min` is present
+- `rollup.size.max` is present
+- `rollup.size.mean` is present
+- `rollup.size.median` is present
+- `rollup.size.min <= rollup.size.median <= rollup.size.max`
 
 **Notes:**
-
-* Bucket definitions are fixed per schema version.
-* Intended for fast binary/blob detection.
-
----
-
-### `activity_span`
-
-Rollups include modification-time span metrics.
-
-**Required fields:**
-
-* `rollup.last_modified`
-* (future) `oldest_mtime`, `newest_mtime`, `span_seconds`
+- Units are bytes
+- Statistics are computed over files only (not directories)
 
 ---
 
-### `extension_counts`
+### 2. `size_buckets`
 
-Rollups include counts of file extensions.
+**Description:**  
+File count distribution across coarse size ranges.
 
-**Required fields:**
+**If declared, the following MUST hold:**
+- `rollup.size.buckets` is present
+- All bucket keys defined by the schema are present
+- Sum of all bucket counts == `rollup.total_files`
 
-* `rollup.extensions`
-
-**Invariants:**
-
-* Sum of extension counts == `total_files`
-
----
-
-### `dir_counts`
-
-Rollups include directory count aggregation.
-
-**Required fields:**
-
-* `rollup.total_descendant_dirs`
-
-**Invariants:**
-
-* `total_descendant_dirs >= direct_subdir_count`
+**Defined buckets (v0.2):**
+- `<1KB`
+- `1KB-1MB`
+- `1MB-10MB`
+- `>10MB`
 
 ---
 
-### `depth_metrics` (planned)
+### 3. `activity_span`
 
-Rollups include directory tree depth statistics.
+**Description:**  
+Modification time span of files within a directory subtree.
 
-**Status:** Not yet implemented.
+**If declared, the following MUST hold:**
+- `rollup.last_modified` is present
+- Value represents the **maximum mtime** of all descendant files
+- `rollup.last_modified >= node.mtime_unix`
 
----
-
-## Validation Model
-
-Capabilities are validated during manifest construction via:
-
-* `validateCapabilitiesInline()` (current)
-* A future **table-driven invariant engine**
-
-Only capabilities explicitly set to `true` are validated.
+**Notes:**
+- Derived from stat() only
+- Does not imply continuous activity, only bounds
 
 ---
 
-## Compatibility Rules
+### 4. `capability_integrity` *(meta-capability)*
 
-* Consumers **must not assume** a capability unless declared.
-* Producers **must not declare** a capability unless all invariants hold.
-* Unknown capabilities must be ignored by consumers.
+**Description:**  
+Indicates that the manifest enforces capability-driven validation.
+
+**If declared, the following MUST hold:**
+- All declared rollup capabilities are validated
+- Validation failures are fatal
+- Validation errors reference:
+  - node path
+  - violated capability
+  - invariant description
+
+**Notes:**
+- This capability applies to the manifest as a whole
+- It is implicitly required for production use
 
 ---
 
-## Roadmap
+### 5. `rollup_completeness`
 
-* Introduce a capability invariant table
-* Promote select capabilities from experimental → stable
-* Expose capability summaries to downstream LLM ingestion pipelines
+**Description:**  
+Indicates whether rollups are complete across directory nodes.
+
+**If declared, the following MUST hold:**
+- Every directory node either:
+  - has a rollup, or
+  - is explicitly marked as excluded
+- Manifest includes:
+  - `directories_with_rollups`
+  - `directories_missing_rollups`
+
+**Notes:**
+- Enables consumers to reason about partial scans
 
 ---
 
-## Philosophy
+## Non-Goals (v0.2)
 
-Capabilities are not features.
-They are **promises**.
+- File content inspection
+- MIME detection
+- Heuristic scoring
+- Cross-manifest comparisons
 
-A manifest that lies about its capabilities is worse than one that omits them entirely.
+---
+
+## Schema Evolution Rules (Preview)
+
+- Capabilities are additive
+- Removing a capability is a breaking change
+- New invariants MUST be guarded by new capabilities
+- Validators MUST ignore unknown capabilities
+
+---
+
+## Status
+
+- Capability definitions: **draft**
+- Invariants: **locking**
+- Validator: **in-progress**
 

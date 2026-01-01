@@ -8,7 +8,7 @@ priorities:
     items:
       - id: rollup-size-stats
         title: "Directory size statistics"
-        status: Complete
+        status: complete
         details:
           - total_size_bytes
           - min_file_size
@@ -19,6 +19,7 @@ priorities:
 
       - id: rollup-size-buckets
         title: "File size buckets"
+        status: planned
         details:
           - "<1KB"
           - "1KB-1MB"
@@ -28,6 +29,7 @@ priorities:
 
       - id: rollup-activity-span
         title: "Modification time span"
+        status: planned
         details:
           - oldest_mtime
           - newest_mtime
@@ -36,6 +38,7 @@ priorities:
 
       - id: capability-integrity
         title: "Capability-driven invariant enforcement"
+        status: in-progress
         details:
           - manifest-declared capabilities
           - table-driven validation
@@ -44,6 +47,7 @@ priorities:
 
       - id: rollup-completeness
         title: "Rollup completeness indicators"
+        status: planned
         details:
           - directories_with_rollups
           - directories_missing_rollups
@@ -54,23 +58,20 @@ priorities:
     items:
       - id: extension-entropy
         title: "Extension entropy metric"
+        status: planned
         rationale: "Detects mixed-modality directories and summarization complexity"
 
       - id: structure-depth
         title: "Directory depth metrics"
+        status: planned
         details:
           - max_depth
           - avg_depth
         rationale: "Distinguishes wide vs deep trees for chunking strategies"
 
-      - id: rollup-activity-span
-        details:
-          - oldest_mtime
-          - newest_mtime
-          - span_seconds
-
       - id: schema-evolution-policy
         title: "Schema and capability evolution rules"
+        status: planned
         rationale: "Ensures backward compatibility and safe consumer upgrades"
 
   p2:
@@ -78,11 +79,12 @@ priorities:
     items:
       - id: text-binary-ratio
         title: "Text vs binary file counts"
-        status: will-not-do 
+        status: will-not-do
         rationale: "Prevents wasted LLM tokens; improves ingestion decisions"
 
       - id: largest-files
         title: "Top-N largest files"
+        status: planned
         details:
           - limit: 3
         rationale: "Explains skewed stats and aids human debugging"
@@ -92,6 +94,7 @@ priorities:
     items:
       - id: hotspot-score
         title: "Heuristic hotspot score"
+        status: deferred
         rationale: "Useful for UI and triage but requires tuning"
 
 notes:

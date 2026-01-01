@@ -3,42 +3,39 @@ package manifest
 import "fmt"
 
 func (m *Manifest) validateCapabilities() error {
-	caps := m.Manifest.Capabilities.Rollup
+	declared := m.Manifest.Capabilities.Rollup.Declared()
 
-	for _, n := range m.Nodes {
-		if !n.IsDir || n.Rollup == nil {
+	for capName, enabled := range declared {
+		if !enabled {
 			continue
 		}
 
-		if err := applyRollupCapability("size_stats", caps.SizeStats, n); err != nil {
-			return err
+		invariants, ok := rollupCapabilityInvariants[capName]
+		if !ok {
+			// Unknown or future capability — ignore per spec
+			continue
 		}
-		if err := applyRollupCapability("size_percentiles", caps.SizePercentiles, n); err != nil {
-			return err
+
+		if enabled && len(invariants) == 0 {
+			return fmt.Errorf("declared capability %s has no invariants", capName)
 		}
-		if err := applyRollupCapability("extension_counts", caps.ExtensionCounts, n); err != nil {
-			return err
-		}
-	}
 
-	return nil
-}
+		for _, n := range m.Nodes {
+			if !n.IsDir || n.Rollup == nil {
+				continue
+			}
 
-func applyRollupCapability(name string, enabled bool, n *Node) error {
-	if !enabled {
-		return nil
-	}
-
-	invariants := rollupCapabilityInvariants[name]
-	for _, inv := range invariants {
-		if err := inv.Validate(n); err != nil {
-			return fmt.Errorf(
-				"%s: capability %s invariant %s failed: %w",
-				n.Path,
-				name,
-				inv.Name,
-				err,
-			)
+			for _, inv := range invariants {
+				if err := inv.Validate(n); err != nil {
+					return fmt.Errorf(
+						"%s: capability %s invariant %s violated: %w",
+						n.Path,
+						capName,
+						inv.Name,
+						err,
+					)
+				}
+			}
 		}
 	}
 

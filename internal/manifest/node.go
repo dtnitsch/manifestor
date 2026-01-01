@@ -6,7 +6,7 @@ type Node struct {
 
 	// Raw filesystem facts
 	Inode       uint64 `json:"inode,omitempty"`
-	ModTimeUnix int64  `json:"mtime_unix,omitempty"`
+	MtimeUnix int64  `json:"mtime_unix,omitempty"`
 	SizeBytes   int64  `json:"size_bytes,omitempty"`
 
 	// Immediate directory stats (scanner)
