@@ -26,7 +26,7 @@
     }
   },
   "root": ".",
-  "generated_at": "2026-01-01T21:49:55.658745Z",
+  "generated_at": "2026-01-01T21:58:10.368957Z",
   "nodes": [
     {
       "path": ".",
@@ -48,13 +48,13 @@
           ".yml": 1
         },
         "size": {
-          "total": 3909242,
+          "total": 3909423,
           "min": 28,
           "max": 3868482,
-          "mean": 279231,
-          "median": 2263
+          "mean": 279244,
+          "median": 2354
         },
-        "last_modified": 1767304094
+        "last_modified": 1767304667
       }
     },
     {
@@ -153,7 +153,7 @@
         "size": {
           "total": 0
         },
-        "last_modified": 1767300631
+        "last_modified": 1767304428
       }
     },
     {
@@ -216,21 +216,21 @@
       "path": "internal/manifest",
       "is_dir": true,
       "inode": 67017830,
-      "mtime_unix": 1767300631,
+      "mtime_unix": 1767304428,
       "rollup": {
-        "total_files": 10,
+        "total_files": 11,
         "total_descendant_dirs": 0,
         "extensions": {
-          ".go": 10
+          ".go": 11
         },
         "size": {
-          "total": 21988,
+          "total": 22947,
           "min": 94,
           "max": 7297,
-          "mean": 2198,
-          "median": 1136
+          "mean": 2086,
+          "median": 1111
         },
-        "last_modified": 1767304163
+        "last_modified": 1767304685
       }
     },
     {
@@ -302,6 +302,13 @@
       "inode": 67469512,
       "mtime_unix": 1767302814,
       "size_bytes": 2697
+    },
+    {
+      "path": "internal/manifest/violation_summary.go",
+      "is_dir": false,
+      "inode": 67491355,
+      "mtime_unix": 1767304685,
+      "size_bytes": 959
     },
     {
       "path": "internal/output",
@@ -398,14 +405,14 @@
       "path": "main.go",
       "is_dir": false,
       "inode": 67015194,
-      "mtime_unix": 1767304094,
-      "size_bytes": 2632
+      "mtime_unix": 1767304667,
+      "size_bytes": 2813
     },
     {
       "path": "manifest.json",
       "is_dir": false,
       "inode": 67247368,
-      "mtime_unix": 1767303775,
+      "mtime_unix": 1767304195,
       "size_bytes": 10121
     },
     {

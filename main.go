@@ -79,6 +79,10 @@ func run(logger *slog.Logger, cfg *config.Config) error {
             violations, err := m.Validate(manifest.ValidateOptions{
                 Strict: true,
             })
+			// Violations are returned for reporting; fatal capability violations surface via err.
+            if err != nil {
+                return fmt.Errorf("validation failed: %w", err)
+            }
 
             for _, v := range violations {
                 if v.Severity == manifest.SeverityWarning {
@@ -86,10 +90,11 @@ func run(logger *slog.Logger, cfg *config.Config) error {
                 }
             }
 
-            // Violations are intentionally ignored here; fatal violations surface via err.
-            if err != nil {
-                return fmt.Errorf("validation failed: %w", err)
-            }
+			summary := manifest.SummarizeViolations(violations)
+			if summary.HasErrors() {
+				manifest.LogViolationSummary(logger, summary)
+				return fmt.Errorf("validation failed")
+			}
 		}
 	}
 
