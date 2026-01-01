@@ -207,20 +207,6 @@ func (m *Manifest) BuildRollups(opts RollupOptions) error {
 	return nil
 }
 
-func (m *Manifest) Validate(opts ValidateOptions) error {
-	//if err := m.validateCapabilitiesInline(); err != nil {
-	if err := m.validateCapabilities(); err != nil {
-        return err
-    }
-
-	for _, n := range m.Nodes {
-		if err := validateNode(n, opts); err != nil {
-			return err
-		}
-	}
-	return nil
-}
-
 func validateNode(n *Node, opts ValidateOptions) error {
 	if n.Rollup != nil {
 		if err := validateRollup(n); err != nil {

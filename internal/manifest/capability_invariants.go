@@ -3,14 +3,17 @@ package manifest
 import "fmt"
 
 type RollupInvariant struct {
-	Name     string
-	Validate func(n *Node) error
+    Name        string
+    Description string
+    Severity    Severity // Error | Warning (future)
+    Validate    func(*Node) error
 }
 
 var rollupCapabilityInvariants = map[string][]RollupInvariant{
     "activity_span": {
         {
             Name: "activity.last_modified.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.LastModified == 0 {
                     return fmt.Errorf("last_modified missing")
@@ -20,6 +23,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "activity.last_modified.bounds",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.LastModified < n.MtimeUnix {
                     return fmt.Errorf(
@@ -50,6 +54,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
     "size_stats": {
         {
             Name: "size.total.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles > 0 && n.Rollup.Size.Total == 0 {
                     return fmt.Errorf("size.total missing or zero with nonzero files")
@@ -59,6 +64,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size.min.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles > 0 && n.Rollup.Size.Min == 0 {
                     return fmt.Errorf("size.min missing")
@@ -68,6 +74,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size.max.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles > 0 && n.Rollup.Size.Max == 0 {
                     return fmt.Errorf("size.max missing")
@@ -77,6 +84,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size.mean.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles > 0 && n.Rollup.Size.Mean == 0 {
                     return fmt.Errorf("size.mean missing")
@@ -86,6 +94,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size.median.present",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles > 0 && n.Rollup.Size.Median == 0 {
                     return fmt.Errorf("size.median missing")
@@ -95,6 +104,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size.ordering",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 if n.Rollup.TotalFiles == 0 {
                     return nil
@@ -139,6 +149,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
 		},
 	    {
             Name: "size_percentiles.ordering",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 p := n.Rollup.Size.Percentiles
                 if p == nil {
@@ -152,6 +163,7 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
         },
         {
             Name: "size_percentiles.within_min_max",
+            Severity: SeverityError,
             Validate: func(n *Node) error {
                 s := n.Rollup.Size
                 p := s.Percentiles
@@ -160,6 +172,17 @@ var rollupCapabilityInvariants = map[string][]RollupInvariant{
                 }
                 if p.P50 < s.Min || p.P99 > s.Max {
                     return fmt.Errorf("percentiles outside min/max")
+                }
+                return nil
+            },
+        },
+        {
+            Name:        "size.percentiles.missing",
+            Description: "size.percentiles missing; percentile-based reasoning unavailable",
+            Severity:    SeverityWarning,
+            Validate: func(n *Node) error {
+                if n.Rollup.Size.Percentiles == nil {
+                    return fmt.Errorf("percentiles missing")
                 }
                 return nil
             },

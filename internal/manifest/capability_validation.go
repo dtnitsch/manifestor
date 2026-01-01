@@ -2,8 +2,27 @@ package manifest
 
 import "fmt"
 
+func (v InvariantViolation) Error() string {
+	if v.Path != "" {
+		return fmt.Sprintf(
+			"%s: %s (%s)",
+			v.Path,
+			v.Invariant,
+			v.Capability,
+		)
+	}
+
+	return fmt.Sprintf(
+		"%s (%s)",
+		v.Invariant,
+		v.Capability,
+	)
+}
+
+
 func (m *Manifest) validateCapabilities() error {
 	declared := m.Manifest.Capabilities.Rollup.Declared()
+	violations := m.collectRollupCapabilityViolations()
 
 	for capName, enabled := range declared {
 		if !enabled {
@@ -36,6 +55,12 @@ func (m *Manifest) validateCapabilities() error {
 					)
 				}
 			}
+		}
+	}
+
+	for _, v := range violations {
+		if v.IsFatal() {
+			return v
 		}
 	}
 

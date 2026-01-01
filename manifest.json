@@ -26,7 +26,7 @@
     }
   },
   "root": ".",
-  "generated_at": "2026-01-01T20:33:55.353631Z",
+  "generated_at": "2026-01-01T21:49:55.658745Z",
   "nodes": [
     {
       "path": ".",
@@ -48,13 +48,13 @@
           ".yml": 1
         },
         "size": {
-          "total": 3908558,
+          "total": 3909242,
           "min": 28,
           "max": 3868482,
-          "mean": 279182,
-          "median": 2093
+          "mean": 279231,
+          "median": 2263
         },
-        "last_modified": 1767299383
+        "last_modified": 1767304094
       }
     },
     {
@@ -153,7 +153,7 @@
         "size": {
           "total": 0
         },
-        "last_modified": 1767156660
+        "last_modified": 1767300631
       }
     },
     {
@@ -216,43 +216,43 @@
       "path": "internal/manifest",
       "is_dir": true,
       "inode": 67017830,
-      "mtime_unix": 1767156660,
+      "mtime_unix": 1767300631,
       "rollup": {
-        "total_files": 8,
+        "total_files": 10,
         "total_descendant_dirs": 0,
         "extensions": {
-          ".go": 8
+          ".go": 10
         },
         "size": {
-          "total": 17719,
-          "min": 475,
-          "max": 5954,
-          "mean": 2214,
-          "median": 1002
+          "total": 21988,
+          "min": 94,
+          "max": 7297,
+          "mean": 2198,
+          "median": 1136
         },
-        "last_modified": 1767299603
+        "last_modified": 1767304163
       }
     },
     {
       "path": "internal/manifest/capabilities.go",
       "is_dir": false,
       "inode": 67230250,
-      "mtime_unix": 1767299091,
-      "size_bytes": 2838
+      "mtime_unix": 1767301002,
+      "size_bytes": 94
     },
     {
       "path": "internal/manifest/capability_invariants.go",
       "is_dir": false,
       "inode": 67241982,
-      "mtime_unix": 1767299603,
-      "size_bytes": 5954
+      "mtime_unix": 1767301645,
+      "size_bytes": 7297
     },
     {
       "path": "internal/manifest/capability_validation.go",
       "is_dir": false,
       "inode": 67242241,
-      "mtime_unix": 1767297303,
-      "size_bytes": 809
+      "mtime_unix": 1767302770,
+      "size_bytes": 1161
     },
     {
       "path": "internal/manifest/manifest.go",
@@ -279,8 +279,8 @@
       "path": "internal/manifest/rollup.go",
       "is_dir": false,
       "inode": 67120596,
-      "mtime_unix": 1767299369,
-      "size_bytes": 5133
+      "mtime_unix": 1767302637,
+      "size_bytes": 5593
     },
     {
       "path": "internal/manifest/rollup_helpers.go",
@@ -288,6 +288,20 @@
       "inode": 67124667,
       "mtime_unix": 1767146487,
       "size_bytes": 894
+    },
+    {
+      "path": "internal/manifest/severity.go",
+      "is_dir": false,
+      "inode": 67468066,
+      "mtime_unix": 1767304163,
+      "size_bytes": 2161
+    },
+    {
+      "path": "internal/manifest/validation_violation.go",
+      "is_dir": false,
+      "inode": 67469512,
+      "mtime_unix": 1767302814,
+      "size_bytes": 2697
     },
     {
       "path": "internal/output",
@@ -384,15 +398,15 @@
       "path": "main.go",
       "is_dir": false,
       "inode": 67015194,
-      "mtime_unix": 1767150717,
-      "size_bytes": 2291
+      "mtime_unix": 1767304094,
+      "size_bytes": 2632
     },
     {
       "path": "manifest.json",
       "is_dir": false,
       "inode": 67247368,
-      "mtime_unix": 1767299383,
-      "size_bytes": 9778
+      "mtime_unix": 1767303775,
+      "size_bytes": 10121
     },
     {
       "path": "manifestor",

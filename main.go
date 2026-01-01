@@ -76,11 +76,20 @@ func run(logger *slog.Logger, cfg *config.Config) error {
 			return fmt.Errorf("rollups: %w", err)
 		}
 		if cfg.Validate.Enable {
-			if err := m.Validate(manifest.ValidateOptions{
-				Strict: true,
-			}); err != nil {
-				return fmt.Errorf("validation failed: %w", err)
-			}
+            violations, err := m.Validate(manifest.ValidateOptions{
+                Strict: true,
+            })
+
+            for _, v := range violations {
+                if v.Severity == manifest.SeverityWarning {
+					manifest.LogViolation(logger, v)
+                }
+            }
+
+            // Violations are intentionally ignored here; fatal violations surface via err.
+            if err != nil {
+                return fmt.Errorf("validation failed: %w", err)
+            }
 		}
 	}
 
