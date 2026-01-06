@@ -1,7 +1,7 @@
 # Manifest-First Context for LLMs
 
 **Stop asking LLMs to read your filesystem.
-Start telling them what matters.**
+Start telling them what matters. **
 
 ## What this is
 
