@@ -9,8 +9,8 @@ app:
 scanner:
   # Root directory to scan.
   # Usually overridden by CLI arg.
-  # root: "."
-   root: "/Users/daniel.nitsch/ais/projects/service-template"
+  root: "."
+  # root: "/Users/daniel.nitsch/ais/projects/service-template"
 
   # Maximum number of concurrent directory workers.
   # Rule of thumb: 2–4x CPU cores.

@@ -17,7 +17,7 @@ func main() {
         Level: slog.LevelInfo,
     }))
 
-	configPath := "config.yaml"
+	configPath := "manifestor-config.yaml"
 	cfg, err := config.Load(logger, configPath) 
     if err != nil {
         logger.Error("failed to load config", "error", err, "path", configPath)
@@ -101,6 +101,14 @@ func run(logger *slog.Logger, cfg *config.Config) error {
 	// Set defaults
 	m.Manifest = manifest.DefaultManifestMeta()
 
-    return output.WriteJSON(cfg.Output.File, m)
+	// Write output based on configured format
+	switch cfg.Output.Format {
+	case "yaml":
+		return output.WriteYAML(cfg.Output.File, m)
+	case "json":
+		return output.WriteJSON(cfg.Output.File, m)
+	default:
+		return fmt.Errorf("unsupported output format: %s (supported: json, yaml)", cfg.Output.Format)
+	}
 }
 

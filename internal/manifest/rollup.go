@@ -17,43 +17,43 @@ type RollupOptions struct {
 }
 
 type Rollup struct {
-	TotalFiles   int            `json:"total_files"`
-	TotalDescendantDirs   int   `json:"total_descendant_dirs"`
-	Extensions   map[string]int `json:"extensions,omitempty"`
+	TotalFiles   int            `json:"total_files" yaml:"total_files"`
+	TotalDescendantDirs   int   `json:"total_descendant_dirs" yaml:"total_descendant_dirs"`
+	Extensions   map[string]int `json:"extensions,omitempty" yaml:"extensions,omitempty"`
 
 	// Size statistics in bytes
 	Size struct {
-		Total  int64 `json:"total"`
-		Min    int64 `json:"min,omitempty"`
-		Max    int64 `json:"max,omitempty"`
-		Mean   int64 `json:"mean,omitempty"`
-		Median int64 `json:"median,omitempty"`
-		
-		// p50, 90, 99
-		Percentiles *Percentiles `json:"percentiles,omitempty"`
-		Buckets     *SizeBuckets `json:"buckets,omitempty"`
-	} `json:"size"`
+		Total  int64 `json:"total" yaml:"total"`
+		Min    int64 `json:"min,omitempty" yaml:"min,omitempty"`
+		Max    int64 `json:"max,omitempty" yaml:"max,omitempty"`
+		Mean   int64 `json:"mean,omitempty" yaml:"mean,omitempty"`
+		Median int64 `json:"median,omitempty" yaml:"median,omitempty"`
 
-	LastModified int64 `json:"last_modified"`
+		// p50, 90, 99
+		Percentiles *Percentiles `json:"percentiles,omitempty" yaml:"percentiles,omitempty"`
+		Buckets     *SizeBuckets `json:"buckets,omitempty" yaml:"buckets,omitempty"`
+	} `json:"size" yaml:"size"`
+
+	LastModified int64 `json:"last_modified" yaml:"last_modified"`
 }
 
 type RollupCapabilities struct {
 	// Size-related
-	SizeStats       bool `json:"size_stats"`
-	SizePercentiles bool `json:"size_percentiles"`
-	SizeBuckets     bool `json:"size_buckets"`
+	SizeStats       bool `json:"size_stats" yaml:"size_stats"`
+	SizePercentiles bool `json:"size_percentiles" yaml:"size_percentiles"`
+	SizeBuckets     bool `json:"size_buckets" yaml:"size_buckets"`
 
 	// Time-related
-	ActivitySpan    bool `json:"activity_span"`
+	ActivitySpan    bool `json:"activity_span" yaml:"activity_span"`
 
 	// Structure-related
-	DirCounts       bool `json:"dir_counts"`
-	DepthStats      bool `json:"depth_stats"`
-	DepthMetrics    bool `json:"depth_metrics"`
+	DirCounts       bool `json:"dir_counts" yaml:"dir_counts"`
+	DepthStats      bool `json:"depth_stats" yaml:"depth_stats"`
+	DepthMetrics    bool `json:"depth_metrics" yaml:"depth_metrics"`
 
 	// Content-related
-	ExtensionCounts bool `json:"extension_counts"`
-	FileTypes       bool `json:"file_types"`
+	ExtensionCounts bool `json:"extension_counts" yaml:"extension_counts"`
+	FileTypes       bool `json:"file_types" yaml:"file_types"`
 }
 
 func (rc RollupCapabilities) Declared() map[string]bool {
@@ -66,16 +66,16 @@ func (rc RollupCapabilities) Declared() map[string]bool {
 }
 
 type SizeBuckets struct {
-	Lt1KB     int `json:"lt_1kb"`
-	KbTo1MB   int `json:"kb_to_1mb"`
-	MbTo10MB  int `json:"mb_to_10mb"`
-	Gt10MB    int `json:"gt_10mb"`
+	Lt1KB     int `json:"lt_1kb" yaml:"lt_1kb"`
+	KbTo1MB   int `json:"kb_to_1mb" yaml:"kb_to_1mb"`
+	MbTo10MB  int `json:"mb_to_10mb" yaml:"mb_to_10mb"`
+	Gt10MB    int `json:"gt_10mb" yaml:"gt_10mb"`
 }
 
 type Percentiles struct {
-	P50 int64 `json:"p50,omitempty"`
-	P90 int64 `json:"p90,omitempty"`
-	P99 int64 `json:"p99,omitempty"`
+	P50 int64 `json:"p50,omitempty" yaml:"p50,omitempty"`
+	P90 int64 `json:"p90,omitempty" yaml:"p90,omitempty"`
+	P99 int64 `json:"p99,omitempty" yaml:"p99,omitempty"`
 }
 
 type ValidateOptions struct {
