@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------
-# Manifestor Default Configuration (v0.1)
+# Manifestor Default Configuration (v0.3)
 # -----------------------------------------------------------------------------
 
 app:
   name: "manifestor"
-  version: "0.1.0"
+  version: "0.3.0"
 
 scanner:
   # Root directory to scan.
@@ -56,9 +56,10 @@ filters:
       type: "path"
 
 output:
-  # Output format (v0.1 only json)
-  format: "json"
+  # Output format: yaml or json
+  # YAML is recommended for LLM consumption (saves ~26% tokens vs JSON)
+  format: "yaml"
 
   # Output file path
-  file: "manifest.json"
+  file: "manifest.yaml"
 

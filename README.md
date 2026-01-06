@@ -27,24 +27,57 @@ go build .
 
 # Scan the current directory
 ./manifestor
-````
+
+# Or specify a different directory
+./manifestor --root /path/to/project
+```
 
 This will:
 
-* read `default.yaml`
-* recursively scan the configured root
+* read `manifestor-config.yaml` (or use `--config` to specify)
+* recursively scan the root directory
 * apply allow/block rules
-* write a JSON manifest to the configured output file
+* write a YAML manifest (saves ~26% tokens vs JSON)
 
-No flags required.
+### CLI Flags
+
+```bash
+./manifestor [options]
+
+  -r, --root PATH      Root directory to scan (overrides config)
+  -f, --format FORMAT  Output format: yaml or json (overrides config)
+  -o, --output PATH    Output file path (overrides config)
+  --config PATH        Config file path (default: manifestor-config.yaml)
+  --version            Show version
+  --help               Show help
+```
+
+### Output Formats
+
+**YAML (default):** Optimized for LLM consumption. Saves ~26% tokens compared to JSON.
+
+**JSON:** Use if you prefer jq over yq, or need strict JSON compatibility.
+
+Switch formats in config:
+```yaml
+output:
+  format: "yaml"  # or "json"
+  file: "manifest.yaml"
+```
+
+Or via CLI: `./manifestor --format json`
+
+### Query Examples
+
+See [docs/examples.md](docs/examples.md) for yq and jq query examples.
 
 ---
 
 ### Typical Workflow
 
-1. Edit `default.yaml`
-2. Run `manifestor`
-3. Inspect or consume the generated manifest
+1. (Optional) Edit `manifestor-config.yaml` to customize filters
+2. Run `./manifestor` or `./manifestor --root /path/to/repo`
+3. Query with yq/jq or send to your LLM
 
 Manifestor is intentionally simple at the entry point.
 Complexity lives in configuration, not flags.

@@ -4,7 +4,7 @@ import "github.com/dtnitsch/manifestor/internal/build"
 
 func DefaultManifestMeta() ManifestMeta {
     return ManifestMeta{
-        Version: "0.2",
+        Version: "0.3",
         Generator: GeneratorMeta{
             Name:      build.Name,
             Version:   build.Version,

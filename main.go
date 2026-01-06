@@ -10,26 +10,74 @@ import (
 	"github.com/dtnitsch/manifestor/internal/manifest"
 	"github.com/dtnitsch/manifestor/internal/output"
 	"github.com/dtnitsch/manifestor/internal/scanner"
+	"github.com/urfave/cli/v2"
 )
 
+const version = "0.3.0"
+
 func main() {
-    logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
-        Level: slog.LevelInfo,
-    }))
+	app := &cli.App{
+		Name:    "manifestor",
+		Usage:   "Generate LLM-friendly filesystem manifests",
+		Version: version,
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:    "root",
+				Aliases: []string{"r"},
+				Usage:   "Root directory to scan (overrides config)",
+			},
+			&cli.StringFlag{
+				Name:    "format",
+				Aliases: []string{"f"},
+				Usage:   "Output format: json or yaml (overrides config)",
+			},
+			&cli.StringFlag{
+				Name:    "output",
+				Aliases: []string{"o"},
+				Usage:   "Output file path (overrides config)",
+			},
+			&cli.StringFlag{
+				Name:  "config",
+				Usage: "Config file path",
+				Value: "manifestor-config.yaml",
+			},
+		},
+		Action: func(c *cli.Context) error {
+			logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+				Level: slog.LevelInfo,
+			}))
 
-	configPath := "manifestor-config.yaml"
-	cfg, err := config.Load(logger, configPath) 
-    if err != nil {
-        logger.Error("failed to load config", "error", err, "path", configPath)
-        os.Exit(1)
-    }
+			// Load config
+			configPath := c.String("config")
+			cfg, err := config.Load(logger, configPath)
+			if err != nil {
+				return fmt.Errorf("failed to load config: %w", err)
+			}
 
-    if err := run(logger, cfg); err != nil {
-        logger.Error("application error", "error", err)
-        os.Exit(1)
-    }
+			// Override config with CLI flags
+			if c.IsSet("root") {
+				cfg.Scanner.Root = c.String("root")
+			}
+			if c.IsSet("format") {
+				cfg.Output.Format = c.String("format")
+			}
+			if c.IsSet("output") {
+				cfg.Output.File = c.String("output")
+			}
 
-	logger.Info("DONE - Success!")
+			if err := run(logger, cfg); err != nil {
+				return err
+			}
+
+			logger.Info("DONE - Success!")
+			return nil
+		},
+	}
+
+	if err := app.Run(os.Args); err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
+	}
 }
 
 func run(logger *slog.Logger, cfg *config.Config) error {

@@ -1,5 +1,5 @@
 manifest:
-  version: "0.2"
+  version: "0.3"
   generator:
     name: manifestor
     version: dev
@@ -19,347 +19,6122 @@ manifest:
       depth_metrics: false
       extension_counts: false
       file_types: false
-root: .
-generated_at: 2026-01-06T01:31:19.368442Z
+root: /Users/daniel.nitsch/Work/titan-mt
+generated_at: 2026-01-06T15:11:20.195244Z
 nodes:
   - path: .
     is_dir: true
-    inode: 67006342
-    mtime_unix: 1767662845
-    direct_subdir_count: 5
+    inode: 68061871
+    mtime_unix: 1767712252
+    direct_subdir_count: 16
     rollup:
-      total_files: 13
-      total_descendant_dirs: 10
+      total_files: 47
+      total_descendant_dirs: 129
       extensions:
+        .cfg: 2
+        .clouddev: 1
+        .conf: 2
+        .coveragerc: 1
+        .dockerignore: 2
+        .fc22: 1
+        .fc28: 1
+        .git-blame-ignore-revs: 1
         .gitignore: 1
-        .go: 1
-        .json: 1
+        .haproxy-yggdrasil-rest: 1
         .md: 2
-        .mod: 1
-        .sum: 1
-        .yaml: 4
-        .yml: 1
+        .py: 3
+        .pylintrc: 1
+        .sh: 4
+        .support: 1
+        .tac: 1
+        .test-local: 1
+        .tests: 1
+        .toml: 1
+        .txt: 7
+        .ubuntu: 1
+        .yaml: 1
+        .yggdrasil-rest: 1
+        .yggdrasil-rest-sandbox: 1
+        .yml: 2
       size:
-        total: 4100207
-        min: 28
-        max: 4059650
-        mean: 315400
-        median: 1956
-      last_modified: 1767663079
-  - path: .claude
+        total: 88160
+        min: 5
+        max: 18786
+        mean: 1916
+        median: 878
+      last_modified: 1767712252
+  - path: .circleci
     is_dir: true
-    inode: 68019300
-    mtime_unix: 1767663079
-    rollup:
-      total_files: 1
-      total_descendant_dirs: 0
-      extensions:
-        .json: 1
-      size:
-        total: 132
-        min: 132
-        max: 132
-        mean: 132
-        median: 132
-      last_modified: 1767663079
-  - path: .claude/settings.local.json
-    inode: 68020723
-    mtime_unix: 1767663079
-    size_bytes: 132
-  - path: .gitignore
-    inode: 67038951
-    mtime_unix: 1767123958
-    size_bytes: 28
-  - path: .golangci.yml
-    inode: 67038963
-    mtime_unix: 1767123967
-    size_bytes: 10969
-  - path: .manifestor.yaml
-    inode: 67011474
-    mtime_unix: 1767120532
-    size_bytes: 1256
-  - path: README.md
-    inode: 67007029
-    mtime_unix: 1767124448
-    size_bytes: 4790
-  - path: config.yaml
-    inode: 68018504
-    mtime_unix: 1767662567
-    size_bytes: 1956
-  - path: docs
-    is_dir: true
-    inode: 67006420
-    mtime_unix: 1767157039
+    inode: 68062055
+    mtime_unix: 1767712252
     rollup:
       total_files: 2
       total_descendant_dirs: 0
       extensions:
-        .md: 2
+        .sh: 1
+        .yml: 1
       size:
-        total: 6312
-        min: 2795
-        max: 3517
-        mean: 3156
-        median: 3156
-      last_modified: 1767294172
-  - path: docs/capabilities.md
-    inode: 67245141
-    mtime_unix: 1767294172
-    size_bytes: 3517
-  - path: docs/design.md
-    inode: 67040547
-    mtime_unix: 1767135103
-    size_bytes: 2795
-  - path: go.mod
-    inode: 67016751
-    mtime_unix: 1767154492
-    size_bytes: 82
-  - path: go.sum
-    inode: 67023470
-    mtime_unix: 1767154492
-    size_bytes: 360
-  - path: internal
+        total: 26222
+        min: 1925
+        max: 24297
+        mean: 13111
+        median: 13111
+      last_modified: 1767712252
+  - path: .circleci/config.yml
+    inode: 68062056
+    mtime_unix: 1767712252
+    size_bytes: 24297
+  - path: .circleci/gen-pr-comment.sh
+    inode: 68062057
+    mtime_unix: 1767712252
+    size_bytes: 1925
+  - path: .codacy.yml
+    inode: 68062058
+    mtime_unix: 1767712252
+    size_bytes: 325
+  - path: .coveragerc
+    inode: 68062059
+    mtime_unix: 1767712252
+    size_bytes: 151
+  - path: .devcontainer
     is_dir: true
-    inode: 67014996
-    mtime_unix: 1767150579
-    direct_subdir_count: 5
+    inode: 68062060
+    mtime_unix: 1767712252
     rollup:
-      total_files: 0
-      total_descendant_dirs: 5
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .json: 1
+        .repo: 1
+        .sh: 2
+      size:
+        total: 7254
+        min: 178
+        max: 4194
+        mean: 1450
+        median: 922
+      last_modified: 1767712252
+  - path: .devcontainer/Dockerfile
+    inode: 68062061
+    mtime_unix: 1767712252
+    size_bytes: 4194
+  - path: .devcontainer/devcontainer.json
+    inode: 68062062
+    mtime_unix: 1767712252
+    size_bytes: 1055
+  - path: .devcontainer/kubernetes.repo
+    inode: 68062063
+    mtime_unix: 1767712252
+    size_bytes: 178
+  - path: .devcontainer/on-create.sh
+    inode: 68062064
+    mtime_unix: 1767712252
+    size_bytes: 922
+  - path: .devcontainer/post-create-command.sh
+    inode: 68062065
+    mtime_unix: 1767712252
+    size_bytes: 905
+  - path: .dockerignore
+    inode: 68062066
+    mtime_unix: 1767712252
+    size_bytes: 55
+  - path: .git-blame-ignore-revs
+    inode: 68062067
+    mtime_unix: 1767712252
+    size_bytes: 106
+  - path: .github
+    is_dir: true
+    inode: 68062068
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 1
+      extensions:
+        .md: 1
+      size:
+        total: 241
+        min: 241
+        max: 241
+        mean: 241
+        median: 241
+      last_modified: 1767712252
+  - path: .github/PULL_REQUEST_TEMPLATE.md
+    inode: 68062069
+    mtime_unix: 1767712252
+    size_bytes: 241
+  - path: .github/workflows
+    is_dir: true
+    inode: 68062070
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .yaml: 1
+        .yml: 1
+      size:
+        total: 861
+        min: 424
+        max: 437
+        mean: 430
+        median: 430
+      last_modified: 1767712252
+  - path: .github/workflows/catalog.yaml
+    inode: 68062071
+    mtime_unix: 1767712252
+    size_bytes: 437
+  - path: .github/workflows/update-common-makefiles.yml
+    inode: 68062072
+    mtime_unix: 1767712252
+    size_bytes: 424
+  - path: .gitignore
+    inode: 68062073
+    mtime_unix: 1767712252
+    size_bytes: 780
+  - path: .guardrails
+    is_dir: true
+    inode: 68062074
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .yml: 1
+      size:
+        total: 250
+        min: 250
+        max: 250
+        mean: 250
+        median: 250
+      last_modified: 1767712252
+  - path: .guardrails/config.yml
+    inode: 68062075
+    mtime_unix: 1767712252
+    size_bytes: 250
+  - path: .pylintrc
+    inode: 68062076
+    mtime_unix: 1767712252
+    size_bytes: 13389
+  - path: CODEOWNERS
+    inode: 68062077
+    mtime_unix: 1767712252
+    size_bytes: 1338
+  - path: Dockerfile
+    inode: 68062078
+    mtime_unix: 1767712252
+    size_bytes: 1886
+  - path: Dockerfile.clouddev
+    inode: 68062079
+    mtime_unix: 1767712252
+    size_bytes: 2574
+  - path: Dockerfile.clouddev.dockerignore
+    inode: 68062080
+    mtime_unix: 1767712252
+    size_bytes: 5
+  - path: Dockerfile.fc22
+    inode: 68062081
+    mtime_unix: 1767712252
+    size_bytes: 1471
+  - path: Dockerfile.fc28
+    inode: 68062082
+    mtime_unix: 1767712252
+    size_bytes: 2144
+  - path: Dockerfile.haproxy-yggdrasil-rest
+    inode: 68062083
+    mtime_unix: 1767712252
+    size_bytes: 323
+  - path: Dockerfile.support
+    inode: 68062084
+    mtime_unix: 1767712252
+    size_bytes: 1602
+  - path: Dockerfile.test-local
+    inode: 68062085
+    mtime_unix: 1767712252
+    size_bytes: 1806
+  - path: Dockerfile.tests
+    inode: 68062086
+    mtime_unix: 1767712252
+    size_bytes: 231
+  - path: Dockerfile.ubuntu
+    inode: 68062087
+    mtime_unix: 1767712252
+    size_bytes: 1752
+  - path: Dockerfile.yggdrasil-rest
+    inode: 68062088
+    mtime_unix: 1767712252
+    size_bytes: 2634
+  - path: Dockerfile.yggdrasil-rest-sandbox
+    inode: 68062089
+    mtime_unix: 1767712252
+    size_bytes: 330
+  - path: Guardfile
+    inode: 68062090
+    mtime_unix: 1767712252
+    size_bytes: 1039
+  - path: Makefile
+    inode: 68062091
+    mtime_unix: 1767712252
+    size_bytes: 18786
+  - path: README.clouddev.md
+    inode: 68062092
+    mtime_unix: 1767712252
+    size_bytes: 4006
+  - path: README.md
+    inode: 68062093
+    mtime_unix: 1767712252
+    size_bytes: 6970
+  - path: Vagrantfile
+    inode: 68062094
+    mtime_unix: 1767712252
+    size_bytes: 836
+  - path: __init__.py
+    inode: 68062095
+    mtime_unix: 1767712252
+  - path: _setup.py
+    inode: 68062096
+    mtime_unix: 1767712252
+    size_bytes: 531
+  - path: backends
+    is_dir: true
+    inode: 68062097
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 4
+      extensions:
+        .py: 1
       size:
         total: 0
-      last_modified: 1767662547
-  - path: internal/config
+      last_modified: 1767712252
+  - path: backends/__init__.py
+    inode: 68062098
+    mtime_unix: 1767712252
+  - path: backends/cassandra
     is_dir: true
-    inode: 67014997
-    mtime_unix: 1767123706
+    inode: 68062099
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
     rollup:
-      total_files: 1
+      total_files: 5
+      total_descendant_dirs: 3
+      extensions:
+        .md: 1
+        .py: 4
+      size:
+        total: 109626
+        min: 153
+        max: 65422
+        mean: 21925
+        median: 20570
+      last_modified: 1767712252
+  - path: backends/cassandra/README.md
+    inode: 68062100
+    mtime_unix: 1767712252
+    size_bytes: 2370
+  - path: backends/cassandra/__init__.py
+    inode: 68062101
+    mtime_unix: 1767712252
+    size_bytes: 21111
+  - path: backends/cassandra/collection.py
+    inode: 68062102
+    mtime_unix: 1767712252
+    size_bytes: 65422
+  - path: backends/cassandra/exceptions.py
+    inode: 68062103
+    mtime_unix: 1767712252
+    size_bytes: 153
+  - path: backends/cassandra/model.py
+    inode: 68062104
+    mtime_unix: 1767712252
+    size_bytes: 20570
+  - path: backends/cassandra/scripts
+    is_dir: true
+    inode: 68062105
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
       total_descendant_dirs: 0
       extensions:
-        .go: 1
+        .py: 1
+        .sh: 1
       size:
-        total: 1829
-        min: 1829
-        max: 1829
-        mean: 1829
-        median: 1829
-      last_modified: 1767147690
-  - path: internal/config/config.go
-    inode: 67023072
-    mtime_unix: 1767147690
-    size_bytes: 1829
-  - path: internal/filter
+        total: 3649
+        min: 1788
+        max: 1861
+        mean: 1824
+        median: 1824
+      last_modified: 1767712252
+  - path: backends/cassandra/scripts/cassaShell.sh
+    inode: 68062106
+    mtime_unix: 1767712252
+    size_bytes: 1788
+  - path: backends/cassandra/scripts/shell_setup.py
+    inode: 68062107
+    mtime_unix: 1767712252
+    size_bytes: 1861
+  - path: backends/cassandra/tests
     is_dir: true
-    inode: 67030649
-    mtime_unix: 1767123051
+    inode: 68062108
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
     rollup:
-      total_files: 1
+      total_files: 4
+      total_descendant_dirs: 1
+      extensions:
+        .py: 4
+      size:
+        total: 57906
+        min: 4351
+        max: 37090
+        mean: 19302
+        median: 16465
+      last_modified: 1767712252
+  - path: backends/cassandra/tests/__init__.py
+    inode: 68062109
+    mtime_unix: 1767712252
+  - path: backends/cassandra/tests/lib
+    is_dir: true
+    inode: 68062110
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
       total_descendant_dirs: 0
       extensions:
-        .go: 1
+        .py: 3
       size:
-        total: 198
-        min: 198
-        max: 198
-        mean: 198
-        median: 198
-      last_modified: 1767123501
-  - path: internal/filter/rule.go
-    inode: 67030776
-    mtime_unix: 1767123501
-    size_bytes: 198
-  - path: internal/manifest
+        total: 18960
+        min: 3861
+        max: 15099
+        mean: 9480
+        median: 9480
+      last_modified: 1767712252
+  - path: backends/cassandra/tests/lib/__init__.py
+    inode: 68062111
+    mtime_unix: 1767712252
+  - path: backends/cassandra/tests/lib/helpers.py
+    inode: 68062112
+    mtime_unix: 1767712252
+    size_bytes: 3861
+  - path: backends/cassandra/tests/lib/pycassa_stubs.py
+    inode: 68062113
+    mtime_unix: 1767712252
+    size_bytes: 15099
+  - path: backends/cassandra/tests/test_cassandra.py
+    inode: 68062114
+    mtime_unix: 1767712252
+    size_bytes: 4351
+  - path: backends/cassandra/tests/test_collection.py
+    inode: 68062115
+    mtime_unix: 1767712252
+    size_bytes: 37090
+  - path: backends/cassandra/tests/test_model.py
+    inode: 68062116
+    mtime_unix: 1767712252
+    size_bytes: 16465
+  - path: bin
     is_dir: true
-    inode: 67017830
-    mtime_unix: 1767662535
+    inode: 68062117
+    mtime_unix: 1767712252
     rollup:
-      total_files: 12
+      total_files: 7
       total_descendant_dirs: 0
       extensions:
-        .go: 12
+        .py: 1
+        .sh: 6
       size:
-        total: 25161
-        min: 108
-        max: 7297
-        mean: 2096
-        median: 1123
-      last_modified: 1767662535
-  - path: internal/manifest/capabilities.go
-    inode: 68018429
-    mtime_unix: 1767662535
-    size_bytes: 108
-  - path: internal/manifest/capability_invariants.go
-    inode: 67241982
-    mtime_unix: 1767301645
-    size_bytes: 7297
-  - path: internal/manifest/capability_size_stats_test.go
-    inode: 67494488
-    mtime_unix: 1767306045
-    size_bytes: 1085
-  - path: internal/manifest/capability_validation.go
-    inode: 67242241
-    mtime_unix: 1767302770
-    size_bytes: 1161
-  - path: internal/manifest/manifest.go
-    inode: 68018411
-    mtime_unix: 1767662526
-    size_bytes: 1440
-  - path: internal/manifest/meta.go
-    inode: 67196384
-    mtime_unix: 1767150682
-    size_bytes: 475
-  - path: internal/manifest/node.go
-    inode: 68009343
-    mtime_unix: 1767658359
-    size_bytes: 719
-  - path: internal/manifest/rollup.go
-    inode: 68018390
-    mtime_unix: 1767662517
-    size_bytes: 6165
-  - path: internal/manifest/rollup_helpers.go
-    inode: 67124667
-    mtime_unix: 1767146487
+        total: 24104
+        min: 257
+        max: 9588
+        mean: 3443
+        median: 1361
+      last_modified: 1767712252
+  - path: bin/circle_build.sh
+    inode: 68062118
+    mtime_unix: 1767712252
+    size_bytes: 1188
+  - path: bin/compare_pylint_output.py
+    inode: 68062119
+    mtime_unix: 1767712252
+    size_bytes: 9588
+  - path: bin/jsonlint.sh
+    inode: 68062120
+    mtime_unix: 1767712252
+    size_bytes: 257
+  - path: bin/pylint.sh
+    inode: 68062121
+    mtime_unix: 1767712252
+    size_bytes: 2674
+  - path: bin/pylint_differential.sh
+    inode: 68062122
+    mtime_unix: 1767712252
+    size_bytes: 8143
+  - path: bin/pylint_titan.sh
+    inode: 68062123
+    mtime_unix: 1767712252
+    size_bytes: 1361
+  - path: bin/trigger_infra_build.sh
+    inode: 68062124
+    mtime_unix: 1767712252
+    size_bytes: 893
+  - path: binding
+    is_dir: true
+    inode: 68062125
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 11
+      total_descendant_dirs: 1
+      extensions:
+        .md: 1
+        .py: 10
+      size:
+        total: 183324
+        min: 116
+        max: 113288
+        mean: 16665
+        median: 2784
+      last_modified: 1767712252
+  - path: binding/README.md
+    inode: 68062126
+    mtime_unix: 1767712252
+    size_bytes: 1303
+  - path: binding/__init__.py
+    inode: 68062127
+    mtime_unix: 1767712252
+    size_bytes: 2784
+  - path: binding/appserver.py
+    inode: 68062128
+    mtime_unix: 1767712252
+    size_bytes: 25744
+  - path: binding/binding.py
+    inode: 68062129
+    mtime_unix: 1767712252
+    size_bytes: 21675
+  - path: binding/cacheserver.py
+    inode: 68062130
+    mtime_unix: 1767712252
+    size_bytes: 4231
+  - path: binding/codeserver.py
+    inode: 68062131
+    mtime_unix: 1767712252
+    size_bytes: 11756
+  - path: binding/dbserver.py
+    inode: 68062132
+    mtime_unix: 1767712252
+    size_bytes: 113288
+  - path: binding/deployment_identifier.py
+    inode: 68062133
+    mtime_unix: 1767712252
+    size_bytes: 1475
+  - path: binding/fileserver.py
+    inode: 68062134
+    mtime_unix: 1767712252
+    size_bytes: 835
+  - path: binding/newrelic.py
+    inode: 68062135
+    mtime_unix: 1767712252
+    size_bytes: 117
+  - path: binding/pingdom.py
+    inode: 68062136
+    mtime_unix: 1767712252
+    size_bytes: 116
+  - path: binding/tests
+    is_dir: true
+    inode: 68062137
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .py: 8
+      size:
+        total: 123030
+        min: 1100
+        max: 92866
+        mean: 17575
+        median: 2589
+      last_modified: 1767712252
+  - path: binding/tests/__init__.py
+    inode: 68062138
+    mtime_unix: 1767712252
+  - path: binding/tests/test_appserver.py
+    inode: 68062139
+    mtime_unix: 1767712252
+    size_bytes: 1550
+  - path: binding/tests/test_binding.py
+    inode: 68062140
+    mtime_unix: 1767712252
+    size_bytes: 20018
+  - path: binding/tests/test_cacheserver.py
+    inode: 68062141
+    mtime_unix: 1767712252
+    size_bytes: 2618
+  - path: binding/tests/test_dbserver.py
+    inode: 68062142
+    mtime_unix: 1767712252
+    size_bytes: 92866
+  - path: binding/tests/test_deployment_identifier.py
+    inode: 68062143
+    mtime_unix: 1767712252
+    size_bytes: 1100
+  - path: binding/tests/test_helpers.py
+    inode: 68062144
+    mtime_unix: 1767712252
+    size_bytes: 2289
+  - path: binding/tests/test_init.py
+    inode: 68062145
+    mtime_unix: 1767712252
+    size_bytes: 2589
+  - path: boto.cfg
+    inode: 68062146
+    mtime_unix: 1767712252
+    size_bytes: 208
+  - path: catalog-info.yaml
+    inode: 68062147
+    mtime_unix: 1767712252
+    size_bytes: 409
+  - path: circle_constraints.txt
+    inode: 68062148
+    mtime_unix: 1767712252
+    size_bytes: 14
+  - path: cqlshrc
+    inode: 68062149
+    mtime_unix: 1767712252
+    size_bytes: 324
+  - path: devops
+    is_dir: true
+    inode: 68062150
+    mtime_unix: 1767712252
+    direct_subdir_count: 3
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 24
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/kustomize
+    is_dir: true
+    inode: 68062151
+    mtime_unix: 1767712252
+    direct_subdir_count: 3
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 7
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/kustomize/base
+    is_dir: true
+    inode: 68062152
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .yaml: 8
+      size:
+        total: 32277
+        min: 192
+        max: 12829
+        mean: 4034
+        median: 2388
+      last_modified: 1767712252
+  - path: devops/kustomize/base/configmap.yaml
+    inode: 68062153
+    mtime_unix: 1767712252
+    size_bytes: 7771
+  - path: devops/kustomize/base/deployment.yaml
+    inode: 68062154
+    mtime_unix: 1767712252
+    size_bytes: 12829
+  - path: devops/kustomize/base/egress-tls-proxy-configmap.yaml
+    inode: 68062155
+    mtime_unix: 1767712252
+    size_bytes: 3591
+  - path: devops/kustomize/base/kustomization.yaml
+    inode: 68062156
+    mtime_unix: 1767712252
+    size_bytes: 960
+  - path: devops/kustomize/base/sa.yaml
+    inode: 68062157
+    mtime_unix: 1767712252
+    size_bytes: 192
+  - path: devops/kustomize/base/service-ygg-dns.yaml
+    inode: 68062158
+    mtime_unix: 1767712252
+    size_bytes: 319
+  - path: devops/kustomize/base/service.yaml
+    inode: 68062159
+    mtime_unix: 1767712252
+    size_bytes: 1186
+  - path: devops/kustomize/base/support.yaml
+    inode: 68062160
+    mtime_unix: 1767712252
+    size_bytes: 5429
+  - path: devops/kustomize/instances
+    is_dir: true
+    inode: 68062161
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 4
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/kustomize/instances/prod
+    is_dir: true
+    inode: 68062162
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 2
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/kustomize/instances/prod/us-central1
+    is_dir: true
+    inode: 68062163
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .yaml: 5
+      size:
+        total: 3908
+        min: 177
+        max: 1316
+        mean: 781
+        median: 894
+      last_modified: 1767712252
+  - path: devops/kustomize/instances/prod/us-central1/kustomization.yaml
+    inode: 68062164
+    mtime_unix: 1767712252
+    size_bytes: 1070
+  - path: devops/kustomize/instances/prod/us-central1/resources.yaml
+    inode: 68062165
+    mtime_unix: 1767712252
+    size_bytes: 451
+  - path: devops/kustomize/instances/prod/us-central1/rollout-strategy.yaml
+    inode: 68062166
+    mtime_unix: 1767712252
+    size_bytes: 177
+  - path: devops/kustomize/instances/prod/us-central1/service-cert.yaml
+    inode: 68062167
+    mtime_unix: 1767712252
+    size_bytes: 1316
+  - path: devops/kustomize/instances/prod/us-central1/settings.yaml
+    inode: 68062168
+    mtime_unix: 1767712252
     size_bytes: 894
-  - path: internal/manifest/severity.go
-    inode: 67468066
-    mtime_unix: 1767304163
-    size_bytes: 2161
-  - path: internal/manifest/validation_violation.go
-    inode: 67469512
-    mtime_unix: 1767302814
-    size_bytes: 2697
-  - path: internal/manifest/violation_summary.go
-    inode: 67491355
-    mtime_unix: 1767304685
-    size_bytes: 959
-  - path: internal/output
+  - path: devops/kustomize/instances/prod/us-west1
     is_dir: true
-    inode: 67020140
-    mtime_unix: 1767662547
+    inode: 68062169
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 0
+      extensions:
+        .yaml: 4
+      size:
+        total: 5017
+        min: 290
+        max: 2163
+        mean: 1254
+        median: 1282
+      last_modified: 1767712252
+  - path: devops/kustomize/instances/prod/us-west1/kustomization.yaml
+    inode: 68062170
+    mtime_unix: 1767712252
+    size_bytes: 1040
+  - path: devops/kustomize/instances/prod/us-west1/resources.yaml
+    inode: 68062171
+    mtime_unix: 1767712252
+    size_bytes: 290
+  - path: devops/kustomize/instances/prod/us-west1/service-cert.yaml
+    inode: 68062172
+    mtime_unix: 1767712252
+    size_bytes: 2163
+  - path: devops/kustomize/instances/prod/us-west1/settings.yaml
+    inode: 68062173
+    mtime_unix: 1767712252
+    size_bytes: 1524
+  - path: devops/kustomize/instances/sandbox
+    is_dir: true
+    inode: 68062174
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .template: 1
+        .yaml: 7
+      size:
+        total: 15995
+        min: 271
+        max: 5407
+        mean: 1999
+        median: 1112
+      last_modified: 1767712252
+  - path: devops/kustomize/instances/sandbox/kustomization.yaml
+    inode: 68062175
+    mtime_unix: 1767712252
+    size_bytes: 971
+  - path: devops/kustomize/instances/sandbox/kustomization.yaml.template
+    inode: 68062176
+    mtime_unix: 1767712252
+    size_bytes: 924
+  - path: devops/kustomize/instances/sandbox/pantheon-environment.yaml
+    inode: 68062177
+    mtime_unix: 1767712252
+    size_bytes: 1491
+  - path: devops/kustomize/instances/sandbox/resources.yaml
+    inode: 68062178
+    mtime_unix: 1767712252
+    size_bytes: 1073
+  - path: devops/kustomize/instances/sandbox/schema-init.yaml
+    inode: 68062179
+    mtime_unix: 1767712252
+    size_bytes: 5407
+  - path: devops/kustomize/instances/sandbox/service-cert.yaml
+    inode: 68062180
+    mtime_unix: 1767712252
+    size_bytes: 1152
+  - path: devops/kustomize/instances/sandbox/update-schema-job.yaml
+    inode: 68062181
+    mtime_unix: 1767712252
+    size_bytes: 4706
+  - path: devops/kustomize/instances/sandbox/wi-sa-annotation.yaml
+    inode: 68062182
+    mtime_unix: 1767712252
+    size_bytes: 271
+  - path: devops/kustomize/prod-common
+    is_dir: true
+    inode: 68062183
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .yaml: 5
+      size:
+        total: 2323
+        min: 94
+        max: 1212
+        mean: 464
+        median: 181
+      last_modified: 1767712252
+  - path: devops/kustomize/prod-common/kustomization.yaml
+    inode: 68062184
+    mtime_unix: 1767712252
+    size_bytes: 172
+  - path: devops/kustomize/prod-common/pantheon-environment.yaml
+    inode: 68062185
+    mtime_unix: 1767712252
+    size_bytes: 1212
+  - path: devops/kustomize/prod-common/replicas.yaml
+    inode: 68062186
+    mtime_unix: 1767712252
+    size_bytes: 94
+  - path: devops/kustomize/prod-common/resources.yaml
+    inode: 68062187
+    mtime_unix: 1767712252
+    size_bytes: 664
+  - path: devops/kustomize/prod-common/wi-sa-annotation.yaml
+    inode: 68062188
+    mtime_unix: 1767712252
+    size_bytes: 181
+  - path: devops/make
+    is_dir: true
+    inode: 68062189
+    mtime_unix: 1767712252
+    direct_subdir_count: 5
+    rollup:
+      total_files: 24
+      total_descendant_dirs: 14
+      extensions:
+        .gitignore: 1
+        .go: 1
+        .md: 1
+        .mk: 17
+        .mod: 1
+      size:
+        total: 112889
+        min: 32
+        max: 56306
+        mean: 4703
+        median: 2081
+      last_modified: 1767712252
+  - path: devops/make/.circleci
+    is_dir: true
+    inode: 68062190
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .yml: 1
+      size:
+        total: 3016
+        min: 3016
+        max: 3016
+        mean: 3016
+        median: 3016
+      last_modified: 1767712252
+  - path: devops/make/.circleci/config.yml
+    inode: 68062191
+    mtime_unix: 1767712252
+    size_bytes: 3016
+  - path: devops/make/.devcontainer
+    is_dir: true
+    inode: 68062192
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .json: 1
+        .sh: 1
+      size:
+        total: 3199
+        min: 554
+        max: 1548
+        mean: 1066
+        median: 1097
+      last_modified: 1767712252
+  - path: devops/make/.devcontainer/Dockerfile
+    inode: 68062193
+    mtime_unix: 1767712252
+    size_bytes: 1548
+  - path: devops/make/.devcontainer/devcontainer.json
+    inode: 68062194
+    mtime_unix: 1767712252
+    size_bytes: 1097
+  - path: devops/make/.devcontainer/on-create.sh
+    inode: 68062195
+    mtime_unix: 1767712252
+    size_bytes: 554
+  - path: devops/make/.github
+    is_dir: true
+    inode: 68062196
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+      size:
+        total: 743
+        min: 743
+        max: 743
+        mean: 743
+        median: 743
+      last_modified: 1767712252
+  - path: devops/make/.github/PULL_REQUEST_TEMPLATE.md
+    inode: 68062197
+    mtime_unix: 1767712252
+    size_bytes: 743
+  - path: devops/make/.gitignore
+    inode: 68062198
+    mtime_unix: 1767712252
+    size_bytes: 58
+  - path: devops/make/CODEOWNERS
+    inode: 68062199
+    mtime_unix: 1767712252
+    size_bytes: 333
+  - path: devops/make/Dockerfile
+    inode: 68062200
+    mtime_unix: 1767712252
+    size_bytes: 32
+  - path: devops/make/Makefile
+    inode: 68062201
+    mtime_unix: 1767712252
+    size_bytes: 2203
+  - path: devops/make/README.md
+    inode: 68062202
+    mtime_unix: 1767712252
+    size_bytes: 56306
+  - path: devops/make/_base.mk
+    inode: 68062203
+    mtime_unix: 1767712252
+    size_bytes: 340
+  - path: devops/make/_docker.mk
+    inode: 68062204
+    mtime_unix: 1767712252
+    size_bytes: 3261
+  - path: devops/make/common-apollo.mk
+    inode: 68062205
+    mtime_unix: 1767712252
+    size_bytes: 1227
+  - path: devops/make/common-conda.mk
+    inode: 68062206
+    mtime_unix: 1767712252
+    size_bytes: 10111
+  - path: devops/make/common-django.mk
+    inode: 68062207
+    mtime_unix: 1767712252
+    size_bytes: 3256
+  - path: devops/make/common-docker-ar.mk
+    inode: 68062208
+    mtime_unix: 1767712252
+    size_bytes: 1798
+  - path: devops/make/common-docker-quay.mk
+    inode: 68062209
+    mtime_unix: 1767712252
+    size_bytes: 2201
+  - path: devops/make/common-docker.mk
+    inode: 68062210
+    mtime_unix: 1767712252
+    size_bytes: 496
+  - path: devops/make/common-docs.mk
+    inode: 68062211
+    mtime_unix: 1767712252
+    size_bytes: 1962
+  - path: devops/make/common-go.mk
+    inode: 68062212
+    mtime_unix: 1767712252
+    size_bytes: 5061
+  - path: devops/make/common-kube.mk
+    inode: 68062213
+    mtime_unix: 1767712252
+    size_bytes: 6779
+  - path: devops/make/common-kustomize.mk
+    inode: 68062214
+    mtime_unix: 1767712252
+    size_bytes: 3733
+  - path: devops/make/common-pants.mk
+    inode: 68062215
+    mtime_unix: 1767712252
+    size_bytes: 3326
+  - path: devops/make/common-python.mk
+    inode: 68062216
+    mtime_unix: 1767712252
+    size_bytes: 4317
+  - path: devops/make/common-python3.mk
+    inode: 68062217
+    mtime_unix: 1767712252
+    size_bytes: 915
+  - path: devops/make/common-shell.mk
+    inode: 68062218
+    mtime_unix: 1767712252
+    size_bytes: 1371
+  - path: devops/make/common.mk
+    inode: 68062219
+    mtime_unix: 1767712252
+    size_bytes: 3659
+  - path: devops/make/go.mod
+    inode: 68062220
+    mtime_unix: 1767712252
+    size_bytes: 61
+  - path: devops/make/main.go
+    inode: 68062221
+    mtime_unix: 1767712252
+    size_bytes: 83
+  - path: devops/make/sh
+    is_dir: true
+    inode: 68062222
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 11
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 11
+      size:
+        total: 28786
+        min: 358
+        max: 5871
+        mean: 2616
+        median: 1903
+      last_modified: 1767712252
+  - path: devops/make/sh/build-docker.sh
+    inode: 68062223
+    mtime_unix: 1767712252
+    size_bytes: 1095
+  - path: devops/make/sh/create-tls-cert.sh
+    inode: 68062224
+    mtime_unix: 1767712252
+    size_bytes: 4721
+  - path: devops/make/sh/install-gcloud.sh
+    inode: 68062225
+    mtime_unix: 1767712252
+    size_bytes: 1846
+  - path: devops/make/sh/install-pants.sh
+    inode: 68062226
+    mtime_unix: 1767712252
+    size_bytes: 1903
+  - path: devops/make/sh/repo-hash.sh
+    inode: 68062227
+    mtime_unix: 1767712252
+    size_bytes: 358
+  - path: devops/make/sh/setup-circle-ar-docker.sh
+    inode: 68062228
+    mtime_unix: 1767712252
+    size_bytes: 3483
+  - path: devops/make/sh/setup-circle-vault.sh
+    inode: 68062229
+    mtime_unix: 1767712252
+    size_bytes: 4972
+  - path: devops/make/sh/setup-gcloud-test.sh
+    inode: 68062230
+    mtime_unix: 1767712252
+    size_bytes: 684
+  - path: devops/make/sh/setup-gcloud.sh
+    inode: 68062231
+    mtime_unix: 1767712252
+    size_bytes: 2674
+  - path: devops/make/sh/update-gcloud.sh
+    inode: 68062232
+    mtime_unix: 1767712252
+    size_bytes: 1179
+  - path: devops/make/sh/update-kube-object.sh
+    inode: 68062233
+    mtime_unix: 1767712252
+    size_bytes: 5871
+  - path: devops/make/test
+    is_dir: true
+    inode: 68062234
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 9
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures
+    is_dir: true
+    inode: 68062235
+    mtime_unix: 1767712252
+    direct_subdir_count: 3
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 7
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/configmaps
+    is_dir: true
+    inode: 68062236
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 3
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/configmaps/non-prod
+    is_dir: true
+    inode: 68062237
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      size:
+        total: 32
+        min: 32
+        max: 32
+        mean: 32
+        median: 32
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/configmaps/non-prod/foofile
+    inode: 68062238
+    mtime_unix: 1767712252
+    size_bytes: 32
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test
+    is_dir: true
+    inode: 68062239
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 1
+      size:
+        total: 16
+        min: 8
+        max: 8
+        mean: 8
+        median: 8
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test/test
+    is_dir: true
+    inode: 68062240
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      size:
+        total: 8
+        min: 4
+        max: 4
+        mean: 4
+        median: 4
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test/test/bar
+    inode: 68062241
+    mtime_unix: 1767712252
+    size_bytes: 4
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test/test/foo
+    inode: 68062242
+    mtime_unix: 1767712252
+    size_bytes: 4
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test/testfile
+    inode: 68062243
+    mtime_unix: 1767712252
+    size_bytes: 8
+  - path: devops/make/test/fixtures/configmaps/sandbox-common-make-test/testfile3
+    inode: 68062244
+    mtime_unix: 1767712252
+    size_bytes: 8
+  - path: devops/make/test/fixtures/golang
+    is_dir: true
+    inode: 68062245
+    mtime_unix: 1767712252
     rollup:
       total_files: 2
       total_descendant_dirs: 0
       extensions:
         .go: 2
       size:
-        total: 932
-        min: 438
-        max: 494
-        mean: 466
-        median: 466
-      last_modified: 1767662547
-  - path: internal/output/json.go
-    inode: 67020204
-    mtime_unix: 1767121913
-    size_bytes: 494
-  - path: internal/output/yaml.go
-    inode: 68018464
-    mtime_unix: 1767662547
-    size_bytes: 438
-  - path: internal/scanner
+        total: 168
+        min: 68
+        max: 100
+        mean: 84
+        median: 84
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/golang/main.go
+    inode: 68062246
+    mtime_unix: 1767712252
+    size_bytes: 68
+  - path: devops/make/test/fixtures/golang/main_test.go
+    inode: 68062247
+    mtime_unix: 1767712252
+    size_bytes: 100
+  - path: devops/make/test/fixtures/secrets
     is_dir: true
-    inode: 67015625
-    mtime_unix: 1767135452
+    inode: 68062248
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
     rollup:
-      total_files: 6
-      total_descendant_dirs: 0
-      extensions:
-        .go: 6
+      total_files: 0
+      total_descendant_dirs: 1
       size:
-        total: 8472
-        min: 438
-        max: 3440
-        mean: 1412
-        median: 878
-      last_modified: 1767299378
-  - path: internal/scanner/ignore.go
-    inode: 67020036
-    mtime_unix: 1767125286
-    size_bytes: 775
-  - path: internal/scanner/invariants.go
-    inode: 67097143
-    mtime_unix: 1767135220
-    size_bytes: 860
-  - path: internal/scanner/metadata.go
-    inode: 67019864
-    mtime_unix: 1767151496
-    size_bytes: 438
-  - path: internal/scanner/model.go
-    inode: 67015679
-    mtime_unix: 1767137527
-    size_bytes: 896
-  - path: internal/scanner/scanner.go
-    inode: 67018403
-    mtime_unix: 1767299378
-    size_bytes: 3440
-  - path: internal/scanner/scanner_skip_test.go
-    inode: 67098943
-    mtime_unix: 1767152501
-    size_bytes: 2063
-  - path: main.go
-    inode: 68018489
-    mtime_unix: 1767662559
-    size_bytes: 3075
-  - path: manifest.json
-    inode: 67621395
-    mtime_unix: 1767662815
-    size_bytes: 11244
-  - path: manifestor
-    inode: 68019344
-    mtime_unix: 1767662798
-    size_bytes: 4059650
-  - path: manifestor-config.yaml
-    inode: 68019560
-    mtime_unix: 1767662845
-    size_bytes: 1955
-  - path: manifestor.example.yaml
-    inode: 67035861
-    mtime_unix: 1767123717
-    size_bytes: 1518
-  - path: negative-learning.md
-    inode: 67006475
-    mtime_unix: 1767119454
-    size_bytes: 3324
-  - path: todo
+        total: 0
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/secrets/non-prod
     is_dir: true
-    inode: 67944814
-    mtime_unix: 1767643885
+    inode: 68062249
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      size:
+        total: 10
+        min: 10
+        max: 10
+        mean: 10
+        median: 10
+      last_modified: 1767712252
+  - path: devops/make/test/fixtures/secrets/non-prod/supersecret
+    inode: 68062250
+    mtime_unix: 1767712252
+    size_bytes: 10
+  - path: devops/make/test/make
+    is_dir: true
+    inode: 68062251
+    mtime_unix: 1767712252
     rollup:
       total_files: 4
       total_descendant_dirs: 0
       extensions:
-        .md: 2
-        .yaml: 2
+        .mk: 4
       size:
-        total: 29696
-        min: 622
-        max: 13528
-        mean: 7424
-        median: 7773
-      last_modified: 1767643885
-  - path: todo/manifest-optimization-strategy.md
-    inode: 67954877
-    mtime_unix: 1767643885
-    size_bytes: 13528
-  - path: todo/output-format-yaml.md
-    inode: 67945848
-    mtime_unix: 1767641186
-    size_bytes: 6747
-  - path: todo/todos.old.yaml
-    inode: 67091113
-    mtime_unix: 1767131499
-    size_bytes: 622
-  - path: todo/todos.yaml
-    inode: 67092710
-    mtime_unix: 1767413725
-    size_bytes: 8799
+        total: 2820
+        min: 428
+        max: 1313
+        mean: 705
+        median: 539
+      last_modified: 1767712252
+  - path: devops/make/test/make/docker-ar.mk
+    inode: 68062252
+    mtime_unix: 1767712252
+    size_bytes: 544
+  - path: devops/make/test/make/docker.mk
+    inode: 68062253
+    mtime_unix: 1767712252
+    size_bytes: 535
+  - path: devops/make/test/make/kube.mk
+    inode: 68062254
+    mtime_unix: 1767712252
+    size_bytes: 1313
+  - path: devops/make/test/make/pants.mk
+    inode: 68062255
+    mtime_unix: 1767712252
+    size_bytes: 428
+  - path: devops/scripts
+    is_dir: true
+    inode: 68062256
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 0
+      extensions:
+        .bashrc: 1
+        .gitconfig: 1
+        .sh: 2
+      size:
+        total: 2053
+        min: 121
+        max: 1012
+        mean: 513
+        median: 460
+      last_modified: 1767712252
+  - path: devops/scripts/.bashrc
+    inode: 68062257
+    mtime_unix: 1767712252
+    size_bytes: 307
+  - path: devops/scripts/.gitconfig
+    inode: 68062258
+    mtime_unix: 1767712252
+    size_bytes: 121
+  - path: devops/scripts/devkeys.sh
+    inode: 68062259
+    mtime_unix: 1767712252
+    size_bytes: 1012
+  - path: devops/scripts/ready-probe.sh
+    inode: 68062260
+    mtime_unix: 1767712252
+    size_bytes: 613
+  - path: docker-compose.yml
+    inode: 68062261
+    mtime_unix: 1767712252
+    size_bytes: 673
+  - path: endpoint
+    is_dir: true
+    inode: 68062262
+    mtime_unix: 1767712252
+    direct_subdir_count: 4
+    rollup:
+      total_files: 10
+      total_descendant_dirs: 10
+      extensions:
+        .json: 1
+        .md: 1
+        .py: 8
+      size:
+        total: 115255
+        min: 3
+        max: 73580
+        mean: 11525
+        median: 3569
+      last_modified: 1767712252
+  - path: endpoint/README.md
+    inode: 68062263
+    mtime_unix: 1767712252
+    size_bytes: 1492
+  - path: endpoint/__init__.py
+    inode: 68062264
+    mtime_unix: 1767712252
+    size_bytes: 6831
+  - path: endpoint/binding_metrics.py
+    inode: 68062265
+    mtime_unix: 1767712252
+    size_bytes: 5646
+  - path: endpoint/cert_utils.py
+    inode: 68062266
+    mtime_unix: 1767712252
+    size_bytes: 1247
+  - path: endpoint/config.json
+    inode: 68062267
+    mtime_unix: 1767712252
+    size_bytes: 3
+  - path: endpoint/deploy.py
+    inode: 68062268
+    mtime_unix: 1767712252
+    size_bytes: 690
+  - path: endpoint/endpoint.py
+    inode: 68062269
+    mtime_unix: 1767712252
+    size_bytes: 13418
+  - path: endpoint/endpoint_rest.py
+    inode: 68062270
+    mtime_unix: 1767712252
+    size_bytes: 73580
+  - path: endpoint/gateways
+    is_dir: true
+    inode: 68062271
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 6482
+        min: 2680
+        max: 3802
+        mean: 3241
+        median: 3241
+      last_modified: 1767712252
+  - path: endpoint/gateways/__init__.py
+    inode: 68062272
+    mtime_unix: 1767712252
+  - path: endpoint/gateways/git.py
+    inode: 68062273
+    mtime_unix: 1767712252
+    size_bytes: 3802
+  - path: endpoint/gateways/yggdrasil_rest.py
+    inode: 68062274
+    mtime_unix: 1767712252
+    size_bytes: 2680
+  - path: endpoint/report_activity.py
+    inode: 68062275
+    mtime_unix: 1767712252
+    size_bytes: 11620
+  - path: endpoint/services
+    is_dir: true
+    inode: 68062276
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 14612
+        min: 4144
+        max: 10468
+        mean: 7306
+        median: 7306
+      last_modified: 1767712252
+  - path: endpoint/services/__init__.py
+    inode: 68062277
+    mtime_unix: 1767712252
+  - path: endpoint/services/framework_detector.py
+    inode: 68062278
+    mtime_unix: 1767712252
+    size_bytes: 10468
+  - path: endpoint/services/osd.py
+    inode: 68062279
+    mtime_unix: 1767712252
+    size_bytes: 4144
+  - path: endpoint/test
+    is_dir: true
+    inode: 68062280
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 6
+      extensions:
+        .py: 4
+      size:
+        total: 37372
+        min: 609
+        max: 33160
+        mean: 12457
+        median: 3603
+      last_modified: 1767712252
+  - path: endpoint/test/__init__.py
+    inode: 68062281
+    mtime_unix: 1767712252
+  - path: endpoint/test/files
+    is_dir: true
+    inode: 68062282
+    mtime_unix: 1767712252
+    direct_subdir_count: 3
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 5
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: endpoint/test/files/binding-id
+    is_dir: true
+    inode: 68062283
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: endpoint/test/files/binding-id/certs
+    is_dir: true
+    inode: 68062284
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .pem: 1
+      size:
+        total: 3412
+        min: 3412
+        max: 3412
+        mean: 3412
+        median: 3412
+      last_modified: 1767712252
+  - path: endpoint/test/files/binding-id/certs/binding.pem
+    inode: 68062285
+    mtime_unix: 1767712252
+    size_bytes: 3412
+  - path: endpoint/test/files/framework-detector
+    is_dir: true
+    inode: 68062286
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .json: 1
+      size:
+        total: 1308
+        min: 1308
+        max: 1308
+        mean: 1308
+        median: 1308
+      last_modified: 1767712252
+  - path: endpoint/test/files/framework-detector/composer.json
+    inode: 68062287
+    mtime_unix: 1767712252
+    size_bytes: 1308
+  - path: endpoint/test/files/invalid-binding-certificate
+    is_dir: true
+    inode: 68062288
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: endpoint/test/files/invalid-binding-certificate/certs
+    is_dir: true
+    inode: 68062289
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .pem: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: endpoint/test/files/invalid-binding-certificate/certs/binding.pem
+    inode: 68062290
+    mtime_unix: 1767712252
+  - path: endpoint/test/test_cert_utils.py
+    inode: 68062291
+    mtime_unix: 1767712252
+    size_bytes: 609
+  - path: endpoint/test/test_endpoint_rest.py
+    inode: 68062292
+    mtime_unix: 1767712252
+    size_bytes: 3603
+  - path: endpoint/test/test_framework_detector.py
+    inode: 68062293
+    mtime_unix: 1767712252
+    size_bytes: 33160
+  - path: endpoint/utilities
+    is_dir: true
+    inode: 68062294
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 1
+      size:
+        total: 1153
+        min: 1153
+        max: 1153
+        mean: 1153
+        median: 1153
+      last_modified: 1767712252
+  - path: endpoint/utilities/cleanup_tmp_dirs.sh
+    inode: 68062295
+    mtime_unix: 1767712252
+    size_bytes: 1153
+  - path: endpoint/workflow.py
+    inode: 68062296
+    mtime_unix: 1767712252
+    size_bytes: 728
+  - path: entrypoint.sh
+    inode: 68062297
+    mtime_unix: 1767712252
+    size_bytes: 276
+  - path: entrypoint_haproxy.sh
+    inode: 68062298
+    mtime_unix: 1767712252
+    size_bytes: 58
+  - path: entrypoint_support.sh
+    inode: 68062299
+    mtime_unix: 1767712252
+    size_bytes: 263
+  - path: fabfile.py
+    inode: 68062300
+    mtime_unix: 1767712252
+    size_bytes: 2014
+  - path: hack_onebox_ygg2kube.sh
+    inode: 68062301
+    mtime_unix: 1767712252
+    size_bytes: 3756
+  - path: haproxy.cfg
+    inode: 68062302
+    mtime_unix: 1767712252
+    size_bytes: 5347
+  - path: jobs
+    is_dir: true
+    inode: 68062303
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 1
+      extensions:
+        .py: 3
+      size:
+        total: 2203
+        min: 623
+        max: 1580
+        mean: 1101
+        median: 1101
+      last_modified: 1767712252
+  - path: jobs/__init__.py
+    inode: 68062304
+    mtime_unix: 1767712252
+  - path: jobs/dns_zone_jobs.py
+    inode: 68062305
+    mtime_unix: 1767712252
+    size_bytes: 623
+  - path: jobs/loadbalancer_jobs.py
+    inode: 68062306
+    mtime_unix: 1767712252
+    size_bytes: 1580
+  - path: jobs/tests
+    is_dir: true
+    inode: 68062307
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .py: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: jobs/tests/__init__.py
+    inode: 68062308
+    mtime_unix: 1767712252
+  - path: models
+    is_dir: true
+    inode: 68062309
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 1
+      extensions:
+        .py: 4
+      size:
+        total: 24648
+        min: 1067
+        max: 20996
+        mean: 8216
+        median: 2585
+      last_modified: 1767712252
+  - path: models/__init__.py
+    inode: 68062310
+    mtime_unix: 1767712252
+  - path: models/dns_zone.py
+    inode: 68062311
+    mtime_unix: 1767712252
+    size_bytes: 1067
+  - path: models/loadbalancer.py
+    inode: 68062312
+    mtime_unix: 1767712252
+    size_bytes: 20996
+  - path: models/styx_cluster.py
+    inode: 68062313
+    mtime_unix: 1767712252
+    size_bytes: 2585
+  - path: models/test
+    is_dir: true
+    inode: 68062314
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 914
+        min: 914
+        max: 914
+        mean: 914
+        median: 914
+      last_modified: 1767712252
+  - path: models/test/__init__.py
+    inode: 68062315
+    mtime_unix: 1767712252
+  - path: models/test/test_loadbalancer.py
+    inode: 68062316
+    mtime_unix: 1767712252
+    size_bytes: 914
+  - path: pantheon
+    is_dir: true
+    inode: 68062317
+    mtime_unix: 1767712252
+    direct_subdir_count: 3
+    rollup:
+      total_files: 40
+      total_descendant_dirs: 4
+      extensions:
+        .py: 40
+      size:
+        total: 535677
+        min: 458
+        max: 84636
+        mean: 13391
+        median: 6086
+      last_modified: 1767712252
+  - path: pantheon/__init__.py
+    inode: 68062318
+    mtime_unix: 1767712252
+    size_bytes: 5721
+  - path: pantheon/api.py
+    inode: 68062319
+    mtime_unix: 1767712252
+    size_bytes: 33226
+  - path: pantheon/auth.py
+    inode: 68062320
+    mtime_unix: 1767712252
+    size_bytes: 26538
+  - path: pantheon/binding_utilities.py
+    inode: 68062321
+    mtime_unix: 1767712252
+    size_bytes: 25999
+  - path: pantheon/blobs.py
+    inode: 68062322
+    mtime_unix: 1767712252
+    size_bytes: 5108
+  - path: pantheon/counters.py
+    inode: 68062323
+    mtime_unix: 1767712252
+    size_bytes: 2576
+  - path: pantheon/crypto.py
+    inode: 68062324
+    mtime_unix: 1767712252
+    size_bytes: 11091
+  - path: pantheon/custom
+    is_dir: true
+    inode: 68062325
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .spec: 1
+      size:
+        total: 3441
+        min: 3441
+        max: 3441
+        mean: 3441
+        median: 3441
+      last_modified: 1767712252
+  - path: pantheon/custom/libgit2.spec
+    inode: 68062326
+    mtime_unix: 1767712252
+    size_bytes: 3441
+  - path: pantheon/decorators.py
+    inode: 68062327
+    mtime_unix: 1767712252
+    size_bytes: 28866
+  - path: pantheon/deploy_helpers.py
+    inode: 68062328
+    mtime_unix: 1767712252
+    size_bytes: 7828
+  - path: pantheon/dns.py
+    inode: 68062329
+    mtime_unix: 1767712252
+    size_bytes: 6173
+  - path: pantheon/endpoint_jobs.py
+    inode: 68062330
+    mtime_unix: 1767712252
+    size_bytes: 33364
+  - path: pantheon/env_variables.py
+    inode: 68062331
+    mtime_unix: 1767712252
+    size_bytes: 3915
+  - path: pantheon/framework_dependency_validator.py
+    inode: 68062332
+    mtime_unix: 1767712252
+    size_bytes: 5361
+  - path: pantheon/gcloud_log_urls.py
+    inode: 68062333
+    mtime_unix: 1767712252
+    size_bytes: 2388
+  - path: pantheon/humans.py
+    inode: 68062334
+    mtime_unix: 1767712252
+    size_bytes: 7341
+  - path: pantheon/lb_converger.py
+    inode: 68062335
+    mtime_unix: 1767712252
+    size_bytes: 7303
+  - path: pantheon/logger.py
+    inode: 68062336
+    mtime_unix: 1767712252
+    size_bytes: 5792
+  - path: pantheon/newrelic.py
+    inode: 68062337
+    mtime_unix: 1767712252
+    size_bytes: 17294
+  - path: pantheon/pingdom_checks.py
+    inode: 68062338
+    mtime_unix: 1767712252
+    size_bytes: 2928
+  - path: pantheon/plans.py
+    inode: 68062339
+    mtime_unix: 1767712252
+    size_bytes: 579
+  - path: pantheon/rackspace.py
+    inode: 68062340
+    mtime_unix: 1767712252
+    size_bytes: 13260
+  - path: pantheon/repo.py
+    inode: 68062341
+    mtime_unix: 1767712252
+    size_bytes: 15387
+  - path: pantheon/request.py
+    inode: 68062342
+    mtime_unix: 1767712252
+    size_bytes: 26092
+  - path: pantheon/resource.py
+    inode: 68062343
+    mtime_unix: 1767712252
+    size_bytes: 4286
+  - path: pantheon/retries.py
+    inode: 68062344
+    mtime_unix: 1767712252
+    size_bytes: 6000
+  - path: pantheon/roles.py
+    inode: 68062345
+    mtime_unix: 1767712252
+    size_bytes: 45472
+  - path: pantheon/runtime_dependency_validator.py
+    inode: 68062346
+    mtime_unix: 1767712252
+    size_bytes: 4438
+  - path: pantheon/sentry.py
+    inode: 68062347
+    mtime_unix: 1767712252
+    size_bytes: 458
+  - path: pantheon/service_levels.py
+    inode: 68062348
+    mtime_unix: 1767712252
+    size_bytes: 37999
+  - path: pantheon/settings.py
+    inode: 68062349
+    mtime_unix: 1767712252
+    size_bytes: 84636
+  - path: pantheon/signal_handler.py
+    inode: 68062350
+    mtime_unix: 1767712252
+    size_bytes: 922
+  - path: pantheon/simple_file_cache.py
+    inode: 68062351
+    mtime_unix: 1767712252
+    size_bytes: 1713
+  - path: pantheon/simple_profiler.py
+    inode: 68062352
+    mtime_unix: 1767712252
+    size_bytes: 777
+  - path: pantheon/stats.py
+    inode: 68062353
+    mtime_unix: 1767712252
+    size_bytes: 17647
+  - path: pantheon/systemctl.py
+    inode: 68062354
+    mtime_unix: 1767712252
+    size_bytes: 4726
+  - path: pantheon/testcases.py
+    inode: 68062355
+    mtime_unix: 1767712252
+    size_bytes: 1509
+  - path: pantheon/tests
+    is_dir: true
+    inode: 68062356
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 18
+      total_descendant_dirs: 1
+      extensions:
+        .py: 18
+      size:
+        total: 380583
+        min: 65
+        max: 239768
+        mean: 21143
+        median: 7770
+      last_modified: 1767712252
+  - path: pantheon/tests/__init__.py
+    inode: 68062357
+    mtime_unix: 1767712252
+    size_bytes: 65
+  - path: pantheon/tests/lib
+    is_dir: true
+    inode: 68062358
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 3546
+        min: 1491
+        max: 2055
+        mean: 1773
+        median: 1773
+      last_modified: 1767712252
+  - path: pantheon/tests/lib/__init__.py
+    inode: 68062359
+    mtime_unix: 1767712252
+  - path: pantheon/tests/lib/dav_server.py
+    inode: 68062360
+    mtime_unix: 1767712252
+    size_bytes: 1491
+  - path: pantheon/tests/lib/mock_s3.py
+    inode: 68062361
+    mtime_unix: 1767712252
+    size_bytes: 2055
+  - path: pantheon/tests/test_api_request.py
+    inode: 68062362
+    mtime_unix: 1767712252
+    size_bytes: 14168
+  - path: pantheon/tests/test_auth.py
+    inode: 68062363
+    mtime_unix: 1767712252
+    size_bytes: 9250
+  - path: pantheon/tests/test_blocking_gateway.py
+    inode: 68062364
+    mtime_unix: 1767712252
+    size_bytes: 3453
+  - path: pantheon/tests/test_crypto.py
+    inode: 68062365
+    mtime_unix: 1767712252
+    size_bytes: 19422
+  - path: pantheon/tests/test_decorators.py
+    inode: 68062366
+    mtime_unix: 1767712252
+    size_bytes: 13203
+  - path: pantheon/tests/test_dns.py
+    inode: 68062367
+    mtime_unix: 1767712252
+    size_bytes: 1850
+  - path: pantheon/tests/test_endpoint_jobs.py
+    inode: 68062368
+    mtime_unix: 1767712252
+    size_bytes: 5557
+  - path: pantheon/tests/test_framework_dependency_validator.py
+    inode: 68062369
+    mtime_unix: 1767712252
+    size_bytes: 9233
+  - path: pantheon/tests/test_gcloud_log_urls.py
+    inode: 68062370
+    mtime_unix: 1767712252
+    size_bytes: 3504
+  - path: pantheon/tests/test_pingdom.py
+    inode: 68062371
+    mtime_unix: 1767712252
+    size_bytes: 1481
+  - path: pantheon/tests/test_repo.py
+    inode: 68062372
+    mtime_unix: 1767712252
+    size_bytes: 9002
+  - path: pantheon/tests/test_retries.py
+    inode: 68062373
+    mtime_unix: 1767712252
+    size_bytes: 3388
+  - path: pantheon/tests/test_roles.py
+    inode: 68062374
+    mtime_unix: 1767712252
+    size_bytes: 239768
+  - path: pantheon/tests/test_runtime_dependency_validator.py
+    inode: 68062375
+    mtime_unix: 1767712252
+    size_bytes: 8612
+  - path: pantheon/tests/test_service_levels.py
+    inode: 68062376
+    mtime_unix: 1767712252
+    size_bytes: 25558
+  - path: pantheon/tests/test_stats.py
+    inode: 68062377
+    mtime_unix: 1767712252
+    size_bytes: 6140
+  - path: pantheon/tests/test_workload_identity.py
+    inode: 68062378
+    mtime_unix: 1767712252
+    size_bytes: 6929
+  - path: pantheon/tools
+    is_dir: true
+    inode: 68062379
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 19849
+        min: 1423
+        max: 12972
+        mean: 6616
+        median: 5454
+      last_modified: 1767712252
+  - path: pantheon/tools/binding_disk_quotas.py
+    inode: 68062380
+    mtime_unix: 1767712252
+    size_bytes: 1423
+  - path: pantheon/tools/binding_utils.py
+    inode: 68062381
+    mtime_unix: 1767712252
+    size_bytes: 5454
+  - path: pantheon/tools/lawk
+    inode: 68062382
+    mtime_unix: 1767712252
+    size_bytes: 12972
+  - path: pantheon/twistedLog.py
+    inode: 68062383
+    mtime_unix: 1767712252
+    size_bytes: 18593
+  - path: pantheon/twistedUtils.py
+    inode: 68062384
+    mtime_unix: 1767712252
+    size_bytes: 8005
+  - path: pantheon/workflow_utilities.py
+    inode: 68062385
+    mtime_unix: 1767712252
+    size_bytes: 2515
+  - path: pantheon/xmlreader.py
+    inode: 68062386
+    mtime_unix: 1767712252
+    size_bytes: 1851
+  - path: pyproject.toml
+    inode: 68062387
+    mtime_unix: 1767712252
+    size_bytes: 333
+  - path: requirements.txt
+    inode: 68062388
+    mtime_unix: 1767712252
+    size_bytes: 206
+  - path: requirements_base.txt
+    inode: 68062389
+    mtime_unix: 1767712252
+    size_bytes: 1753
+  - path: requirements_local.txt
+    inode: 68062390
+    mtime_unix: 1767712252
+    size_bytes: 587
+  - path: requirements_prod.txt
+    inode: 68062391
+    mtime_unix: 1767712252
+    size_bytes: 1794
+  - path: requirements_utils_py3_fc22.txt
+    inode: 68062392
+    mtime_unix: 1767712252
+    size_bytes: 213
+  - path: supervisord.clouddev.conf
+    inode: 68062393
+    mtime_unix: 1767712252
+    size_bytes: 920
+  - path: supervisord.conf
+    inode: 68062394
+    mtime_unix: 1767712252
+    size_bytes: 1005
+  - path: test-fixtures
+    is_dir: true
+    inode: 68062395
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 0
+      total_descendant_dirs: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: test-fixtures/certs
+    is_dir: true
+    inode: 68062396
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 15
+      total_descendant_dirs: 0
+      extensions:
+        .cfg: 1
+        .crt: 3
+        .csr: 2
+        .key: 3
+        .p12: 2
+        .pem: 3
+        .sh: 1
+      size:
+        total: 26332
+        min: 259
+        max: 2908
+        mean: 1755
+        median: 1704
+      last_modified: 1767712252
+  - path: test-fixtures/certs/ca.crt
+    inode: 68062397
+    mtime_unix: 1767712252
+    size_bytes: 1188
+  - path: test-fixtures/certs/ca.key
+    inode: 68062398
+    mtime_unix: 1767712252
+    size_bytes: 1704
+  - path: test-fixtures/certs/ca.pem
+    inode: 68062399
+    mtime_unix: 1767712252
+    size_bytes: 2892
+  - path: test-fixtures/certs/client1.crt
+    inode: 68062400
+    mtime_unix: 1767712252
+    size_bytes: 1200
+  - path: test-fixtures/certs/client1.csr
+    inode: 68062401
+    mtime_unix: 1767712252
+    size_bytes: 911
+  - path: test-fixtures/certs/client1.key
+    inode: 68062402
+    mtime_unix: 1767712252
+    size_bytes: 1704
+  - path: test-fixtures/certs/client1.p12
+    inode: 68062403
+    mtime_unix: 1767712252
+    size_bytes: 2595
+  - path: test-fixtures/certs/client1.pem
+    inode: 68062404
+    mtime_unix: 1767712252
+    size_bytes: 2904
+  - path: test-fixtures/certs/create-test-certs.sh
+    inode: 68062405
+    mtime_unix: 1767712252
+    size_bytes: 1653
+  - path: test-fixtures/certs/openssl-test.cfg
+    inode: 68062406
+    mtime_unix: 1767712252
+    size_bytes: 259
+  - path: test-fixtures/certs/server.crt
+    inode: 68062407
+    mtime_unix: 1767712252
+    size_bytes: 1204
+  - path: test-fixtures/certs/server.csr
+    inode: 68062408
+    mtime_unix: 1767712252
+    size_bytes: 911
+  - path: test-fixtures/certs/server.key
+    inode: 68062409
+    mtime_unix: 1767712252
+    size_bytes: 1704
+  - path: test-fixtures/certs/server.p12
+    inode: 68062410
+    mtime_unix: 1767712252
+    size_bytes: 2595
+  - path: test-fixtures/certs/server.pem
+    inode: 68062411
+    mtime_unix: 1767712252
+    size_bytes: 2908
+  - path: utilities
+    is_dir: true
+    inode: 68062412
+    mtime_unix: 1767712252
+    direct_subdir_count: 26
+    rollup:
+      total_files: 63
+      total_descendant_dirs: 33
+      extensions:
+        .py: 49
+        .rb: 1
+        .sh: 12
+      size:
+        total: 431258
+        min: 106
+        max: 107282
+        mean: 6955
+        median: 2138
+      last_modified: 1767712252
+  - path: utilities/__init__.py
+    inode: 68062413
+    mtime_unix: 1767712252
+  - path: utilities/adhoc.py
+    inode: 68062414
+    mtime_unix: 1767712252
+    size_bytes: 1703
+  - path: utilities/amazon
+    is_dir: true
+    inode: 68062415
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 11
+      total_descendant_dirs: 0
+      extensions:
+        .json: 7
+        .py: 4
+      size:
+        total: 23418
+        min: 401
+        max: 9706
+        mean: 2341
+        median: 745
+      last_modified: 1767712252
+  - path: utilities/amazon/__init__.py
+    inode: 68062416
+    mtime_unix: 1767712252
+  - path: utilities/amazon/cimt_policy.json
+    inode: 68062417
+    mtime_unix: 1767712252
+    size_bytes: 607
+  - path: utilities/amazon/ellis_policy.json
+    inode: 68062418
+    mtime_unix: 1767712252
+    size_bytes: 824
+  - path: utilities/amazon/iam.py
+    inode: 68062419
+    mtime_unix: 1767712252
+    size_bytes: 6278
+  - path: utilities/amazon/job_worker_policy.json
+    inode: 68062420
+    mtime_unix: 1767712252
+    size_bytes: 824
+  - path: utilities/amazon/logs_policy.json
+    inode: 68062421
+    mtime_unix: 1767712252
+    size_bytes: 667
+  - path: utilities/amazon/onebox_policy.json
+    inode: 68062422
+    mtime_unix: 1767712252
+    size_bytes: 401
+  - path: utilities/amazon/s3.py
+    inode: 68062423
+    mtime_unix: 1767712252
+    size_bytes: 2921
+  - path: utilities/amazon/s3_cleaner.py
+    inode: 68062424
+    mtime_unix: 1767712252
+    size_bytes: 9706
+  - path: utilities/amazon/valhalla_policy.json
+    inode: 68062425
+    mtime_unix: 1767712252
+    size_bytes: 549
+  - path: utilities/amazon/yggdrasil_policy.json
+    inode: 68062426
+    mtime_unix: 1767712252
+    size_bytes: 641
+  - path: utilities/audit_fab.py
+    inode: 68062427
+    mtime_unix: 1767712252
+    size_bytes: 1891
+  - path: utilities/audit_site_plans.sh
+    inode: 68062428
+    mtime_unix: 1767712252
+    size_bytes: 1406
+  - path: utilities/audits
+    is_dir: true
+    inode: 68062429
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 35
+      total_descendant_dirs: 0
+      extensions:
+        .py: 35
+      size:
+        total: 143748
+        min: 1121
+        max: 12669
+        mean: 4227
+        median: 3163
+      last_modified: 1767712252
+  - path: utilities/audits/__init__.py
+    inode: 68062430
+    mtime_unix: 1767712252
+  - path: utilities/audits/audit_auth0_users.py
+    inode: 68062431
+    mtime_unix: 1767712252
+    size_bytes: 8993
+  - path: utilities/audits/audit_bindings_by_endpoint_tables.py
+    inode: 68062432
+    mtime_unix: 1767712252
+    size_bytes: 2680
+  - path: utilities/audits/audit_cacheserver_bindings.py
+    inode: 68062433
+    mtime_unix: 1767712252
+    size_bytes: 1894
+  - path: utilities/audits/audit_column_types.py
+    inode: 68062434
+    mtime_unix: 1767712252
+    size_bytes: 5013
+  - path: utilities/audits/audit_downcase.py
+    inode: 68062435
+    mtime_unix: 1767712252
+    size_bytes: 1900
+  - path: utilities/audits/audit_duplicate_bindings.py
+    inode: 68062436
+    mtime_unix: 1767712252
+    size_bytes: 7429
+  - path: utilities/audits/audit_duplicate_machine_names.py
+    inode: 68062437
+    mtime_unix: 1767712252
+    size_bytes: 2803
+  - path: utilities/audits/audit_endpoint_binding_tables.py
+    inode: 68062438
+    mtime_unix: 1767712252
+    size_bytes: 4721
+  - path: utilities/audits/audit_free_sites_scheduled_backups.py
+    inode: 68062439
+    mtime_unix: 1767712252
+    size_bytes: 1232
+  - path: utilities/audits/audit_hostnames.py
+    inode: 68062440
+    mtime_unix: 1767712252
+    size_bytes: 12669
+  - path: utilities/audits/audit_loadbalancers.py
+    inode: 68062441
+    mtime_unix: 1767712252
+    size_bytes: 4173
+  - path: utilities/audits/audit_locked_bindings.py
+    inode: 68062442
+    mtime_unix: 1767712252
+    size_bytes: 4019
+  - path: utilities/audits/audit_mean_kernel_uptime.py
+    inode: 68062443
+    mtime_unix: 1767712252
+    size_bytes: 3242
+  - path: utilities/audits/audit_newrelic_accounts.py
+    inode: 68062444
+    mtime_unix: 1767712252
+    size_bytes: 5592
+  - path: utilities/audits/audit_newrelic_accounts_siteid.py
+    inode: 68062445
+    mtime_unix: 1767712252
+    size_bytes: 2480
+  - path: utilities/audits/audit_newrelic_bindings.py
+    inode: 68062446
+    mtime_unix: 1767712252
+    size_bytes: 5735
+  - path: utilities/audits/audit_organization_service_levels.py
+    inode: 68062447
+    mtime_unix: 1767712252
+    size_bytes: 1606
+  - path: utilities/audits/audit_orphaned_endpoint_bindings.py
+    inode: 68062448
+    mtime_unix: 1767712252
+    size_bytes: 10998
+  - path: utilities/audits/audit_orphaned_sites.py
+    inode: 68062449
+    mtime_unix: 1767712252
+    size_bytes: 11742
+  - path: utilities/audits/audit_outdated_upstreams.py
+    inode: 68062450
+    mtime_unix: 1767712252
+    size_bytes: 4079
+  - path: utilities/audits/audit_products.py
+    inode: 68062451
+    mtime_unix: 1767712252
+    size_bytes: 1121
+  - path: utilities/audits/audit_site_holder.py
+    inode: 68062452
+    mtime_unix: 1767712252
+    size_bytes: 1250
+  - path: utilities/audits/audit_site_organization_memberships.py
+    inode: 68062453
+    mtime_unix: 1767712252
+    size_bytes: 1894
+  - path: utilities/audits/audit_site_owner_holder.py
+    inode: 68062454
+    mtime_unix: 1767712252
+    size_bytes: 4039
+  - path: utilities/audits/audit_sites.py
+    inode: 68062455
+    mtime_unix: 1767712252
+    size_bytes: 3298
+  - path: utilities/audits/audit_sites_and_service_levels.py
+    inode: 68062456
+    mtime_unix: 1767712252
+    size_bytes: 1640
+  - path: utilities/audits/audit_users_in_auth0_table.py
+    inode: 68062457
+    mtime_unix: 1767712252
+    size_bytes: 1436
+  - path: utilities/audits/audit_workflows.py
+    inode: 68062458
+    mtime_unix: 1767712252
+    size_bytes: 1915
+  - path: utilities/audits/audit_yggdrasil_secondary_index_column_values.py
+    inode: 68062459
+    mtime_unix: 1767712252
+    size_bytes: 4224
+  - path: utilities/audits/bindings_by_valhalla_cluster.py
+    inode: 68062460
+    mtime_unix: 1767712252
+    size_bytes: 2969
+  - path: utilities/audits/cloud_servers.py
+    inode: 68062461
+    mtime_unix: 1767712252
+    size_bytes: 9736
+  - path: utilities/audits/fix_preferred_zone.py
+    inode: 68062462
+    mtime_unix: 1767712252
+    size_bytes: 2185
+  - path: utilities/audits/mount.py
+    inode: 68062463
+    mtime_unix: 1767712252
+    size_bytes: 1956
+  - path: utilities/audits/utils.py
+    inode: 68062464
+    mtime_unix: 1767712252
+    size_bytes: 3085
+  - path: utilities/backfill_bindings_by_site.py
+    inode: 68062465
+    mtime_unix: 1767712252
+    size_bytes: 1637
+  - path: utilities/backfill_cms_status.py
+    inode: 68062466
+    mtime_unix: 1767712252
+    size_bytes: 1119
+  - path: utilities/backfill_framework_runtime.py
+    inode: 68062467
+    mtime_unix: 1767712252
+    size_bytes: 5712
+  - path: utilities/backfill_region_from_preferred_zone.py
+    inode: 68062468
+    mtime_unix: 1767712252
+    size_bytes: 1062
+  - path: utilities/backup_dns_zones_to_s3.py
+    inode: 68062469
+    mtime_unix: 1767712252
+    size_bytes: 2699
+  - path: utilities/bi.py
+    inode: 68062470
+    mtime_unix: 1767712252
+    size_bytes: 1673
+  - path: utilities/bi_scripts
+    is_dir: true
+    inode: 68062471
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 10
+      total_descendant_dirs: 1
+      extensions:
+        .py: 9
+        .sql: 1
+      size:
+        total: 66542
+        min: 1155
+        max: 28854
+        mean: 7393
+        median: 4353
+      last_modified: 1767712252
+  - path: utilities/bi_scripts/__init__.py
+    inode: 68062472
+    mtime_unix: 1767712252
+  - path: utilities/bi_scripts/bi_common.py
+    inode: 68062473
+    mtime_unix: 1767712252
+    size_bytes: 2622
+  - path: utilities/bi_scripts/endpoint_score_report_etl.py
+    inode: 68062474
+    mtime_unix: 1767712252
+    size_bytes: 6672
+  - path: utilities/bi_scripts/pagerduty_etl.py
+    inode: 68062475
+    mtime_unix: 1767712252
+    size_bytes: 3673
+  - path: utilities/bi_scripts/pingdom
+    is_dir: true
+    inode: 68062476
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 6
+      total_descendant_dirs: 0
+      extensions:
+        .py: 6
+      size:
+        total: 21291
+        min: 1067
+        max: 9025
+        mean: 3548
+        median: 2819
+      last_modified: 1767712252
+  - path: utilities/bi_scripts/pingdom/__init__.py
+    inode: 68062477
+    mtime_unix: 1767712252
+    size_bytes: 1102
+  - path: utilities/bi_scripts/pingdom/connection.py
+    inode: 68062478
+    mtime_unix: 1767712252
+    size_bytes: 9025
+  - path: utilities/bi_scripts/pingdom/custom_report_sample_script.py
+    inode: 68062479
+    mtime_unix: 1767712252
+    size_bytes: 3912
+  - path: utilities/bi_scripts/pingdom/exception.py
+    inode: 68062480
+    mtime_unix: 1767712252
+    size_bytes: 1727
+  - path: utilities/bi_scripts/pingdom/get_ttrs_and_source_for_a_given_daterange.py
+    inode: 68062481
+    mtime_unix: 1767712252
+    size_bytes: 4458
+  - path: utilities/bi_scripts/pingdom/resources.py
+    inode: 68062482
+    mtime_unix: 1767712252
+    size_bytes: 1067
+  - path: utilities/bi_scripts/pingdom_etl.py
+    inode: 68062483
+    mtime_unix: 1767712252
+    size_bytes: 5806
+  - path: utilities/bi_scripts/schema.sql
+    inode: 68062484
+    mtime_unix: 1767712252
+    size_bytes: 28854
+  - path: utilities/bi_scripts/site_score_report_etl.py
+    inode: 68062485
+    mtime_unix: 1767712252
+    size_bytes: 9997
+  - path: utilities/bi_scripts/sites_launched.py
+    inode: 68062486
+    mtime_unix: 1767712252
+    size_bytes: 4353
+  - path: utilities/bi_scripts/styx_etl.py
+    inode: 68062487
+    mtime_unix: 1767712252
+    size_bytes: 3410
+  - path: utilities/bi_scripts/valhalla_usage_report.py
+    inode: 68062488
+    mtime_unix: 1767712252
+    size_bytes: 1155
+  - path: utilities/binding_audit.py
+    inode: 68062489
+    mtime_unix: 1767712252
+    size_bytes: 2080
+  - path: utilities/bindings.py
+    inode: 68062490
+    mtime_unix: 1767712252
+    size_bytes: 4092
+  - path: utilities/btool.py
+    inode: 68062491
+    mtime_unix: 1767712252
+    size_bytes: 107282
+  - path: utilities/bulk_change_scripts
+    is_dir: true
+    inode: 68062492
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .py: 4
+      size:
+        total: 8741
+        min: 1607
+        max: 2494
+        mean: 2185
+        median: 2320
+      last_modified: 1767712252
+  - path: utilities/bulk_change_scripts/README.md
+    inode: 68062493
+    mtime_unix: 1767712252
+    size_bytes: 1607
+  - path: utilities/bulk_change_scripts/__init__.py
+    inode: 68062494
+    mtime_unix: 1767712252
+  - path: utilities/bulk_change_scripts/bulk_converge.py
+    inode: 68062495
+    mtime_unix: 1767712252
+    size_bytes: 2475
+  - path: utilities/bulk_change_scripts/bulk_tier_upgrades.py
+    inode: 68062496
+    mtime_unix: 1767712252
+    size_bytes: 2165
+  - path: utilities/bulk_change_scripts/bulk_user_dashboard_opt_in.py
+    inode: 68062497
+    mtime_unix: 1767712252
+    size_bytes: 2494
+  - path: utilities/cassandra
+    is_dir: true
+    inode: 68062498
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .py: 5
+      size:
+        total: 25356
+        min: 4355
+        max: 7954
+        mean: 6339
+        median: 6523
+      last_modified: 1767712252
+  - path: utilities/cassandra/__init__.py
+    inode: 68062499
+    mtime_unix: 1767712252
+  - path: utilities/cassandra/backup.py
+    inode: 68062500
+    mtime_unix: 1767712252
+    size_bytes: 7954
+  - path: utilities/cassandra/ca.py
+    inode: 68062501
+    mtime_unix: 1767712252
+    size_bytes: 4355
+  - path: utilities/cassandra/cluster_setup.py
+    inode: 68062502
+    mtime_unix: 1767712252
+    size_bytes: 6225
+  - path: utilities/cassandra/pki.py
+    inode: 68062503
+    mtime_unix: 1767712252
+    size_bytes: 6822
+  - path: utilities/check-f5-expiration.sh
+    inode: 68062504
+    mtime_unix: 1767712252
+    size_bytes: 1261
+  - path: utilities/cleanup_fusedav_stats.sh
+    inode: 68062505
+    mtime_unix: 1767712252
+    size_bytes: 429
+  - path: utilities/cogs.py
+    inode: 68062506
+    mtime_unix: 1767712252
+    size_bytes: 3020
+  - path: utilities/cos
+    is_dir: true
+    inode: 68062507
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 2
+      extensions:
+        .sh: 1
+      size:
+        total: 4345
+        min: 4345
+        max: 4345
+        mean: 4345
+        median: 4345
+      last_modified: 1767712252
+  - path: utilities/cos/deprecated
+    is_dir: true
+    inode: 68062508
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 18
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 18
+      size:
+        total: 46753
+        min: 449
+        max: 7966
+        mean: 2597
+        median: 1998
+      last_modified: 1767712252
+  - path: utilities/cos/deprecated/db-banner-file.sh
+    inode: 68062509
+    mtime_unix: 1767712252
+    size_bytes: 2039
+  - path: utilities/cos/deprecated/db-banner-gdoc.sh
+    inode: 68062510
+    mtime_unix: 1767712252
+    size_bytes: 3039
+  - path: utilities/cos/deprecated/db-banner-org-stats.sh
+    inode: 68062511
+    mtime_unix: 1767712252
+    size_bytes: 1262
+  - path: utilities/cos/deprecated/db-banner-site-stats.sh
+    inode: 68062512
+    mtime_unix: 1767712252
+    size_bytes: 1969
+  - path: utilities/cos/deprecated/db-banner-site.sh
+    inode: 68062513
+    mtime_unix: 1767712252
+    size_bytes: 1623
+  - path: utilities/cos/deprecated/db-migrate.sh
+    inode: 68062514
+    mtime_unix: 1767712252
+    size_bytes: 4842
+  - path: utilities/cos/deprecated/general-utils.sh
+    inode: 68062515
+    mtime_unix: 1767712252
+    size_bytes: 4207
+  - path: utilities/cos/deprecated/mass-banner-sites.sh
+    inode: 68062516
+    mtime_unix: 1767712252
+    size_bytes: 449
+  - path: utilities/cos/deprecated/migrate-appservers.sh
+    inode: 68062517
+    mtime_unix: 1767712252
+    size_bytes: 7966
+  - path: utilities/cos/deprecated/migrating.sh
+    inode: 68062518
+    mtime_unix: 1767712252
+    size_bytes: 5067
+  - path: utilities/cos/deprecated/migrator-dbs.sh
+    inode: 68062519
+    mtime_unix: 1767712252
+    size_bytes: 2299
+  - path: utilities/cos/deprecated/migrator-endpoint-dbs.sh
+    inode: 68062520
+    mtime_unix: 1767712252
+    size_bytes: 1732
+  - path: utilities/cos/deprecated/migrator-env-dbs.sh
+    inode: 68062521
+    mtime_unix: 1767712252
+    size_bytes: 884
+  - path: utilities/cos/deprecated/migrator-org-dbs.sh
+    inode: 68062522
+    mtime_unix: 1767712252
+    size_bytes: 635
+  - path: utilities/cos/deprecated/migrator-site-dbs.sh
+    inode: 68062523
+    mtime_unix: 1767712252
+    size_bytes: 752
+  - path: utilities/cos/deprecated/migrator.sh
+    inode: 68062524
+    mtime_unix: 1767712252
+    size_bytes: 2027
+  - path: utilities/cos/deprecated/sql_proxy.sh
+    inode: 68062525
+    mtime_unix: 1767712252
+    size_bytes: 4087
+  - path: utilities/cos/deprecated/update-frozen-sites.sh
+    inode: 68062526
+    mtime_unix: 1767712252
+    size_bytes: 1874
+  - path: utilities/cos/includes
+    is_dir: true
+    inode: 68062527
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 8
+      size:
+        total: 13015
+        min: 268
+        max: 4807
+        mean: 1626
+        median: 1010
+      last_modified: 1767712252
+  - path: utilities/cos/includes/codeserver_workloads.sh
+    inode: 68062528
+    mtime_unix: 1767712252
+    size_bytes: 4807
+  - path: utilities/cos/includes/dump-envs.sh
+    inode: 68062529
+    mtime_unix: 1767712252
+    size_bytes: 463
+  - path: utilities/cos/includes/logging.sh
+    inode: 68062530
+    mtime_unix: 1767712252
+    size_bytes: 524
+  - path: utilities/cos/includes/runner.sh
+    inode: 68062531
+    mtime_unix: 1767712252
+    size_bytes: 1497
+  - path: utilities/cos/includes/spinner.sh
+    inode: 68062532
+    mtime_unix: 1767712252
+    size_bytes: 268
+  - path: utilities/cos/includes/trap.sh
+    inode: 68062533
+    mtime_unix: 1767712252
+    size_bytes: 285
+  - path: utilities/cos/includes/wait-for-workflow.sh
+    inode: 68062534
+    mtime_unix: 1767712252
+    size_bytes: 1749
+  - path: utilities/cos/includes/workloads.sh
+    inode: 68062535
+    mtime_unix: 1767712252
+    size_bytes: 3422
+  - path: utilities/cos/migrate-codeserver.sh
+    inode: 68062536
+    mtime_unix: 1767712252
+    size_bytes: 4345
+  - path: utilities/cse.py
+    inode: 68062537
+    mtime_unix: 1767712252
+    size_bytes: 14883
+  - path: utilities/density
+    is_dir: true
+    inode: 68062538
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 2
+      size:
+        total: 6678
+        min: 3129
+        max: 3549
+        mean: 3339
+        median: 3339
+      last_modified: 1767712252
+  - path: utilities/density/create_units.sh
+    inode: 68062539
+    mtime_unix: 1767712252
+    size_bytes: 3129
+  - path: utilities/density/create_units_with_slices.sh
+    inode: 68062540
+    mtime_unix: 1767712252
+    size_bytes: 3549
+  - path: utilities/deploy
+    is_dir: true
+    inode: 68062541
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 4100
+        min: 2005
+        max: 2095
+        mean: 2050
+        median: 2050
+      last_modified: 1767712252
+  - path: utilities/deploy/__init__.py
+    inode: 68062542
+    mtime_unix: 1767712252
+  - path: utilities/deploy/hermes.py
+    inode: 68062543
+    mtime_unix: 1767712252
+    size_bytes: 2095
+  - path: utilities/deploy/phoebe.py
+    inode: 68062544
+    mtime_unix: 1767712252
+    size_bytes: 2005
+  - path: utilities/domains_status_client
+    is_dir: true
+    inode: 68062545
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 1274
+        min: 1274
+        max: 1274
+        mean: 1274
+        median: 1274
+      last_modified: 1767712252
+  - path: utilities/domains_status_client/__init__.py
+    inode: 68062546
+    mtime_unix: 1767712252
+  - path: utilities/domains_status_client/client.py
+    inode: 68062547
+    mtime_unix: 1767712252
+    size_bytes: 1274
+  - path: utilities/dr.py
+    inode: 68062548
+    mtime_unix: 1767712252
+    size_bytes: 3668
+  - path: utilities/drainer.py
+    inode: 68062549
+    mtime_unix: 1767712252
+    size_bytes: 29290
+  - path: utilities/dyn_dns
+    is_dir: true
+    inode: 68062550
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .rb: 2
+      size:
+        total: 2290
+        min: 362
+        max: 1445
+        mean: 763
+        median: 483
+      last_modified: 1767712252
+  - path: utilities/dyn_dns/README.md
+    inode: 68062551
+    mtime_unix: 1767712252
+    size_bytes: 1445
+  - path: utilities/dyn_dns/dyn-list-records.rb
+    inode: 68062552
+    mtime_unix: 1767712252
+    size_bytes: 362
+  - path: utilities/dyn_dns/dyn-remove-record.rb
+    inode: 68062553
+    mtime_unix: 1767712252
+    size_bytes: 483
+  - path: utilities/ecc_client
+    is_dir: true
+    inode: 68062554
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 1178
+        min: 1178
+        max: 1178
+        mean: 1178
+        median: 1178
+      last_modified: 1767712252
+  - path: utilities/ecc_client/__init__.py
+    inode: 68062555
+    mtime_unix: 1767712252
+  - path: utilities/ecc_client/client.py
+    inode: 68062556
+    mtime_unix: 1767712252
+    size_bytes: 1178
+  - path: utilities/endpoint_dragons.py
+    inode: 68062557
+    mtime_unix: 1767712252
+    size_bytes: 35963
+  - path: utilities/endpoint_scavenge.py
+    inode: 68062558
+    mtime_unix: 1767712252
+    size_bytes: 4732
+  - path: utilities/endpoints.py
+    inode: 68062559
+    mtime_unix: 1767712252
+    size_bytes: 25968
+  - path: utilities/etl_cf.py
+    inode: 68062560
+    mtime_unix: 1767712252
+    size_bytes: 1992
+  - path: utilities/export_org_sites.sh
+    inode: 68062561
+    mtime_unix: 1767712252
+    size_bytes: 941
+  - path: utilities/export_service_levels.py
+    inode: 68062562
+    mtime_unix: 1767712252
+    size_bytes: 2758
+  - path: utilities/export_site_memberships.sh
+    inode: 68062563
+    mtime_unix: 1767712252
+    size_bytes: 1763
+  - path: utilities/export_site_names.py
+    inode: 68062564
+    mtime_unix: 1767712252
+    size_bytes: 618
+  - path: utilities/export_site_owners.py
+    inode: 68062565
+    mtime_unix: 1767712252
+    size_bytes: 1097
+  - path: utilities/find-bindings-converged-between.sh
+    inode: 68062566
+    mtime_unix: 1767712252
+    size_bytes: 1879
+  - path: utilities/get_outdated_bindings.py
+    inode: 68062567
+    mtime_unix: 1767712252
+    size_bytes: 722
+  - path: utilities/git.py
+    inode: 68062568
+    mtime_unix: 1767712252
+    size_bytes: 2626
+  - path: utilities/hostnames.py
+    inode: 68062569
+    mtime_unix: 1767712252
+    size_bytes: 1305
+  - path: utilities/ip_addresses.py
+    inode: 68062570
+    mtime_unix: 1767712252
+    size_bytes: 682
+  - path: utilities/jenkins
+    is_dir: true
+    inode: 68062571
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .py: 1
+      size:
+        total: 3645
+        min: 3645
+        max: 3645
+        mean: 3645
+        median: 3645
+      last_modified: 1767712252
+  - path: utilities/jenkins/jenkins-restart-dead-executors.py
+    inode: 68062572
+    mtime_unix: 1767712252
+    size_bytes: 3645
+  - path: utilities/jq
+    inode: 68062573
+    mtime_unix: 1767712252
+    size_bytes: 142
+  - path: utilities/k8slog.sh
+    inode: 68062574
+    mtime_unix: 1767712252
+    size_bytes: 506
+  - path: utilities/master_failover_util.py
+    inode: 68062575
+    mtime_unix: 1767712252
+    size_bytes: 13913
+  - path: utilities/memberships_check.py
+    inode: 68062576
+    mtime_unix: 1767712252
+    size_bytes: 3529
+  - path: utilities/migrate.py
+    inode: 68062577
+    mtime_unix: 1767712252
+    size_bytes: 7033
+  - path: utilities/migrate_onebox_region.py
+    inode: 68062578
+    mtime_unix: 1767712252
+    size_bytes: 2204
+  - path: utilities/migrations
+    is_dir: true
+    inode: 68062579
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 38
+      total_descendant_dirs: 1
+      extensions:
+        .py: 38
+      size:
+        total: 158452
+        min: 556
+        max: 71394
+        mean: 4282
+        median: 1933
+      last_modified: 1767712252
+  - path: utilities/migrations/10_migrate_NR_accounts_to_pro.py
+    inode: 68062580
+    mtime_unix: 1767712252
+    size_bytes: 1633
+  - path: utilities/migrations/11_set_free_site_cost_to_0.py
+    inode: 68062581
+    mtime_unix: 1767712252
+    size_bytes: 924
+  - path: utilities/migrations/12_downcase_all_hostnames.py
+    inode: 68062582
+    mtime_unix: 1767712252
+    size_bytes: 7261
+  - path: utilities/migrations/13_backfill_domain_count.py
+    inode: 68062583
+    mtime_unix: 1767712252
+    size_bytes: 1107
+  - path: utilities/migrations/14_backfill_is_initialized.py
+    inode: 68062584
+    mtime_unix: 1767712252
+    size_bytes: 71394
+  - path: utilities/migrations/19_grandfathered
+    is_dir: true
+    inode: 68062585
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 7
+      total_descendant_dirs: 0
+      extensions:
+        .csv: 7
+      size:
+        total: 728685
+        min: 267
+        max: 602998
+        mean: 104097
+        median: 11249
+      last_modified: 1767712252
+  - path: utilities/migrations/19_grandfathered/tier-legacy_edu_plus-contract-annual-1.csv
+    inode: 68062586
+    mtime_unix: 1767712252
+    size_bytes: 2428
+  - path: utilities/migrations/19_grandfathered/tier-legacy_edu_plus_pes-contract-annual-1.csv
+    inode: 68062587
+    mtime_unix: 1767712252
+    size_bytes: 267
+  - path: utilities/migrations/19_grandfathered/tier-online_gold-preferred-monthly-1.csv
+    inode: 68062588
+    mtime_unix: 1767712252
+    size_bytes: 87244
+  - path: utilities/migrations/19_grandfathered/tier-partner_diamond-preferred-monthly-1.csv
+    inode: 68062589
+    mtime_unix: 1767712252
+    size_bytes: 1792
+  - path: utilities/migrations/19_grandfathered/tier-partner_gold-preferred-monthly-1.csv
+    inode: 68062590
+    mtime_unix: 1767712252
+    size_bytes: 22707
+  - path: utilities/migrations/19_grandfathered/tier-partner_platinum-preferred-monthly-1.csv
+    inode: 68062591
+    mtime_unix: 1767712252
+    size_bytes: 11249
+  - path: utilities/migrations/19_grandfathered/tier-partner_trial-monthly-1.csv
+    inode: 68062592
+    mtime_unix: 1767712252
+    size_bytes: 602998
+  - path: utilities/migrations/1_test_migration.py
+    inode: 68062593
+    mtime_unix: 1767712252
+    size_bytes: 556
+  - path: utilities/migrations/21_assign_preferred_availability_zone.py
+    inode: 68062594
+    mtime_unix: 1767712252
+    size_bytes: 2849
+  - path: utilities/migrations/23_backfill_org_is_discoverable.py
+    inode: 68062595
+    mtime_unix: 1767712252
+    size_bytes: 1003
+  - path: utilities/migrations/24_cleanup_tier_object_on_org.py
+    inode: 68062596
+    mtime_unix: 1767712252
+    size_bytes: 1198
+  - path: utilities/migrations/26_rename_apigee.py
+    inode: 68062597
+    mtime_unix: 1767712252
+    size_bytes: 1748
+  - path: utilities/migrations/27_backfill_private_ip_on_bindings.py
+    inode: 68062598
+    mtime_unix: 1767712252
+    size_bytes: 2294
+  - path: utilities/migrations/28_backfill_database_runtime_on_bindings.py
+    inode: 68062599
+    mtime_unix: 1767712252
+    size_bytes: 4764
+  - path: utilities/migrations/29_change_sites_upstream_giturl.py
+    inode: 68062600
+    mtime_unix: 1767712252
+    size_bytes: 2214
+  - path: utilities/migrations/2_rename_elite_to_business_xl.py
+    inode: 68062601
+    mtime_unix: 1767712252
+    size_bytes: 1023
+  - path: utilities/migrations/30_change_upstreams_giturl.py
+    inode: 68062602
+    mtime_unix: 1767712252
+    size_bytes: 1648
+  - path: utilities/migrations/31_fix_catalog_entries.py
+    inode: 68062603
+    mtime_unix: 1767712252
+    size_bytes: 1463
+  - path: utilities/migrations/32_backfill_randseed.py
+    inode: 68062604
+    mtime_unix: 1767712252
+    size_bytes: 2080
+  - path: utilities/migrations/33_cleanup_manifest_from_catalog.py
+    inode: 68062605
+    mtime_unix: 1767712252
+    size_bytes: 2331
+  - path: utilities/migrations/34_backfill_unify_dbpassword.py
+    inode: 68062606
+    mtime_unix: 1767712252
+    size_bytes: 3204
+  - path: utilities/migrations/35_remove_pingdom_basic_sites.py
+    inode: 68062607
+    mtime_unix: 1767712252
+    size_bytes: 2429
+  - path: utilities/migrations/36_backfill_database_runtime.py
+    inode: 68062608
+    mtime_unix: 1767712252
+    size_bytes: 2610
+  - path: utilities/migrations/37_dump_hostnames_for_pdocs.py
+    inode: 68062609
+    mtime_unix: 1767712252
+    size_bytes: 1448
+  - path: utilities/migrations/38_backfill_solr8_cluster_values.py
+    inode: 68062610
+    mtime_unix: 1767712252
+    size_bytes: 7284
+  - path: utilities/migrations/39_backfill_pdocs_zone_dnstype.py
+    inode: 68062611
+    mtime_unix: 1767712252
+    size_bytes: 4350
+  - path: utilities/migrations/3_rename_enterprise_xyz_to_elite_xyz.py
+    inode: 68062612
+    mtime_unix: 1767712252
+    size_bytes: 1660
+  - path: utilities/migrations/40_remove_bindings.py
+    inode: 68062613
+    mtime_unix: 1767712252
+    size_bytes: 3259
+  - path: utilities/migrations/41_backfill_pdocs_primary_domain.py
+    inode: 68062614
+    mtime_unix: 1767712252
+    size_bytes: 4363
+  - path: utilities/migrations/42_migrate_heirloom_search_config.py
+    inode: 68062615
+    mtime_unix: 1767712252
+    size_bytes: 3443
+  - path: utilities/migrations/43_backfill_pdocs_frozen.py
+    inode: 68062616
+    mtime_unix: 1767712252
+    size_bytes: 3688
+  - path: utilities/migrations/44_backfill_invite_hash.py
+    inode: 68062617
+    mtime_unix: 1767712252
+    size_bytes: 1343
+  - path: utilities/migrations/45_backfill_auth0_id_table.py
+    inode: 68062618
+    mtime_unix: 1767712252
+    size_bytes: 1443
+  - path: utilities/migrations/46_backfill_primary_auth0_id.py
+    inode: 68062619
+    mtime_unix: 1767712252
+    size_bytes: 1198
+  - path: utilities/migrations/47_backfill_org_created_at.py
+    inode: 68062620
+    mtime_unix: 1767712252
+    size_bytes: 1933
+  - path: utilities/migrations/4_rename_enterprise_to_pantheon_one.py
+    inode: 68062621
+    mtime_unix: 1767712252
+    size_bytes: 1219
+  - path: utilities/migrations/5_rename_user_agency_to_user_org.py
+    inode: 68062622
+    mtime_unix: 1767712252
+    size_bytes: 1648
+  - path: utilities/migrations/6_copy_all_hostnames_to_hostnames_v2.py
+    inode: 68062623
+    mtime_unix: 1767712252
+    size_bytes: 3645
+  - path: utilities/migrations/9_set_user_is_registered.py
+    inode: 68062624
+    mtime_unix: 1767712252
+    size_bytes: 795
+  - path: utilities/migrations/__init__.py
+    inode: 68062625
+    mtime_unix: 1767712252
+  - path: utilities/min_pants_version.sh
+    inode: 68062626
+    mtime_unix: 1767712252
+    size_bytes: 811
+  - path: utilities/misc
+    is_dir: true
+    inode: 68062627
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 1
+        .sh: 2
+      size:
+        total: 11602
+        min: 317
+        max: 8987
+        mean: 3867
+        median: 2298
+      last_modified: 1767712252
+  - path: utilities/misc/freeze-sites.sh
+    inode: 68062628
+    mtime_unix: 1767712252
+    size_bytes: 317
+  - path: utilities/misc/special_mysql_perms.py
+    inode: 68062629
+    mtime_unix: 1767712252
+    size_bytes: 2298
+  - path: utilities/misc/xtrabackup-bootstrap-slave.sh
+    inode: 68062630
+    mtime_unix: 1767712252
+    size_bytes: 8987
+  - path: utilities/notes.sh
+    inode: 68062631
+    mtime_unix: 1767712252
+    size_bytes: 106
+  - path: utilities/operations.py
+    inode: 68062632
+    mtime_unix: 1767712252
+    size_bytes: 1449
+  - path: utilities/pantheon.sh
+    inode: 68062633
+    mtime_unix: 1767712252
+    size_bytes: 208
+  - path: utilities/php-gen2
+    is_dir: true
+    inode: 68062634
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 1
+      extensions:
+        .gitignore: 1
+        .md: 1
+        .py: 1
+        .sh: 4
+      size:
+        total: 24354
+        min: 10
+        max: 9732
+        mean: 3044
+        median: 2416
+      last_modified: 1767712252
+  - path: utilities/php-gen2/.gitignore
+    inode: 68062635
+    mtime_unix: 1767712252
+    size_bytes: 10
+  - path: utilities/php-gen2/Makefile
+    inode: 68062636
+    mtime_unix: 1767712252
+    size_bytes: 247
+  - path: utilities/php-gen2/basic-rollout.sh
+    inode: 68062637
+    mtime_unix: 1767712252
+    size_bytes: 434
+  - path: utilities/php-gen2/check_progress.sh
+    inode: 68062638
+    mtime_unix: 1767712252
+    size_bytes: 3514
+  - path: utilities/php-gen2/inc
+    is_dir: true
+    inode: 68062639
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .sh: 1
+      size:
+        total: 8864
+        min: 8864
+        max: 8864
+        mean: 8864
+        median: 8864
+      last_modified: 1767712252
+  - path: utilities/php-gen2/inc/php_runtime_workloads.sh
+    inode: 68062640
+    mtime_unix: 1767712252
+    size_bytes: 8864
+  - path: utilities/php-gen2/migrate-php-runtime.sh
+    inode: 68062641
+    mtime_unix: 1767712252
+    size_bytes: 5585
+  - path: utilities/php-gen2/runtime-gen-2.md
+    inode: 68062642
+    mtime_unix: 1767712252
+    size_bytes: 3220
+  - path: utilities/php-gen2/site-shelve.py
+    inode: 68062643
+    mtime_unix: 1767712252
+    size_bytes: 9732
+  - path: utilities/php-gen2/split-75.sh
+    inode: 68062644
+    mtime_unix: 1767712252
+    size_bytes: 1612
+  - path: utilities/pingdom_audit.py
+    inode: 68062645
+    mtime_unix: 1767712252
+    size_bytes: 2197
+  - path: utilities/pki.py
+    inode: 68062646
+    mtime_unix: 1767712252
+    size_bytes: 10644
+  - path: utilities/policy_docs_client
+    is_dir: true
+    inode: 68062647
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 1
+      extensions:
+        .py: 3
+      size:
+        total: 18913
+        min: 4254
+        max: 14659
+        mean: 9456
+        median: 9456
+      last_modified: 1767712252
+  - path: utilities/policy_docs_client/__init__.py
+    inode: 68062648
+    mtime_unix: 1767712252
+  - path: utilities/policy_docs_client/client.py
+    inode: 68062649
+    mtime_unix: 1767712252
+    size_bytes: 14659
+  - path: utilities/policy_docs_client/hostname.py
+    inode: 68062650
+    mtime_unix: 1767712252
+    size_bytes: 4254
+  - path: utilities/policy_docs_client/tests
+    is_dir: true
+    inode: 68062651
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 4648
+        min: 4648
+        max: 4648
+        mean: 4648
+        median: 4648
+      last_modified: 1767712252
+  - path: utilities/policy_docs_client/tests/__init__.py
+    inode: 68062652
+    mtime_unix: 1767712252
+  - path: utilities/policy_docs_client/tests/test_client.py
+    inode: 68062653
+    mtime_unix: 1767712252
+    size_bytes: 4648
+  - path: utilities/provision
+    is_dir: true
+    inode: 68062654
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 11
+      total_descendant_dirs: 1
+      extensions:
+        .py: 6
+        .sh: 5
+      size:
+        total: 104247
+        min: 1207
+        max: 34443
+        mean: 10424
+        median: 3013
+      last_modified: 1767712252
+  - path: utilities/provision/__init__.py
+    inode: 68062655
+    mtime_unix: 1767712252
+  - path: utilities/provision/amazon_ec2_raid_ephemeral.sh
+    inode: 68062656
+    mtime_unix: 1767712252
+    size_bytes: 3210
+  - path: utilities/provision/bootstrap.py
+    inode: 68062657
+    mtime_unix: 1767712252
+    size_bytes: 21661
+  - path: utilities/provision/bootstrappable_node.py
+    inode: 68062658
+    mtime_unix: 1767712252
+    size_bytes: 34443
+  - path: utilities/provision/fabfile.py
+    inode: 68062659
+    mtime_unix: 1767712252
+    size_bytes: 5977
+  - path: utilities/provision/fedora_yum_mirrors.sh
+    inode: 68062660
+    mtime_unix: 1767712252
+    size_bytes: 1881
+  - path: utilities/provision/providers
+    is_dir: true
+    inode: 68062661
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 5848
+        min: 2158
+        max: 3690
+        mean: 2924
+        median: 2924
+      last_modified: 1767712252
+  - path: utilities/provision/providers/__init__.py
+    inode: 68062662
+    mtime_unix: 1767712252
+  - path: utilities/provision/providers/ec2.py
+    inode: 68062663
+    mtime_unix: 1767712252
+    size_bytes: 3690
+  - path: utilities/provision/providers/rackspace.py
+    inode: 68062664
+    mtime_unix: 1767712252
+    size_bytes: 2158
+  - path: utilities/provision/provision.py
+    inode: 68062665
+    mtime_unix: 1767712252
+    size_bytes: 29610
+  - path: utilities/provision/rackspace_fix_f20_extlinux_bootloader.sh
+    inode: 68062666
+    mtime_unix: 1767712252
+    size_bytes: 1249
+  - path: utilities/provision/rackspace_raid_data_disks.sh
+    inode: 68062667
+    mtime_unix: 1767712252
+    size_bytes: 2816
+  - path: utilities/provision/rackspace_zfs_data_disks.sh
+    inode: 68062668
+    mtime_unix: 1767712252
+    size_bytes: 2193
+  - path: utilities/provision/tests_builds.py
+    inode: 68062669
+    mtime_unix: 1767712252
+    size_bytes: 1207
+  - path: utilities/pylint_reporter.py
+    inode: 68062670
+    mtime_unix: 1767712252
+    size_bytes: 1450
+  - path: utilities/rackspace.py
+    inode: 68062671
+    mtime_unix: 1767712252
+    size_bytes: 1938
+  - path: utilities/reboot-manager.sh
+    inode: 68062672
+    mtime_unix: 1767712252
+    size_bytes: 6072
+  - path: utilities/rebuild_replication.py
+    inode: 68062673
+    mtime_unix: 1767712252
+    size_bytes: 1681
+  - path: utilities/remediate_db_disk.sh
+    inode: 68062674
+    mtime_unix: 1767712252
+    size_bytes: 2420
+  - path: utilities/remove_pingdom_from_basic.py
+    inode: 68062675
+    mtime_unix: 1767712252
+    size_bytes: 960
+  - path: utilities/rs_invoice.py
+    inode: 68062676
+    mtime_unix: 1767712252
+    size_bytes: 10094
+  - path: utilities/sensu.py
+    inode: 68062677
+    mtime_unix: 1767712252
+    size_bytes: 1757
+  - path: utilities/sensu_playbook_coverage.rb
+    inode: 68062678
+    mtime_unix: 1767712252
+    size_bytes: 2815
+  - path: utilities/service_updates.py
+    inode: 68062679
+    mtime_unix: 1767712252
+    size_bytes: 2213
+  - path: utilities/site_certificates_client
+    is_dir: true
+    inode: 68062680
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 14326
+        min: 14326
+        max: 14326
+        mean: 14326
+        median: 14326
+      last_modified: 1767712252
+  - path: utilities/site_certificates_client/__init__.py
+    inode: 68062681
+    mtime_unix: 1767712252
+  - path: utilities/site_certificates_client/client.py
+    inode: 68062682
+    mtime_unix: 1767712252
+    size_bytes: 14326
+  - path: utilities/site_certs
+    is_dir: true
+    inode: 68062683
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .py: 8
+      size:
+        total: 21424
+        min: 307
+        max: 6321
+        mean: 2678
+        median: 2239
+      last_modified: 1767712252
+  - path: utilities/site_certs/__init__.py
+    inode: 68062684
+    mtime_unix: 1767712252
+    size_bytes: 307
+  - path: utilities/site_certs/common.py
+    inode: 68062685
+    mtime_unix: 1767712252
+    size_bytes: 4456
+  - path: utilities/site_certs/delete_cert.py
+    inode: 68062686
+    mtime_unix: 1767712252
+    size_bytes: 1585
+  - path: utilities/site_certs/get_csr.py
+    inode: 68062687
+    mtime_unix: 1767712252
+    size_bytes: 6321
+  - path: utilities/site_certs/list_certs.py
+    inode: 68062688
+    mtime_unix: 1767712252
+    size_bytes: 1060
+  - path: utilities/site_certs/replace_cert.py
+    inode: 68062689
+    mtime_unix: 1767712252
+    size_bytes: 3764
+  - path: utilities/site_certs/strings.py
+    inode: 68062690
+    mtime_unix: 1767712252
+    size_bytes: 1037
+  - path: utilities/site_certs/upload_cert.py
+    inode: 68062691
+    mtime_unix: 1767712252
+    size_bytes: 2894
+  - path: utilities/sitelaunch_util.py
+    inode: 68062692
+    mtime_unix: 1767712252
+    size_bytes: 6396
+  - path: utilities/sites.py
+    inode: 68062693
+    mtime_unix: 1767712252
+    size_bytes: 53470
+  - path: utilities/status_page_io.py
+    inode: 68062694
+    mtime_unix: 1767712252
+    size_bytes: 1748
+  - path: utilities/stunnels.py
+    inode: 68062695
+    mtime_unix: 1767712252
+    size_bytes: 10947
+  - path: utilities/syn
+    is_dir: true
+    inode: 68062696
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .json: 1
+        .sh: 2
+      size:
+        total: 216556
+        min: 8391
+        max: 199616
+        mean: 72185
+        median: 8549
+      last_modified: 1767712252
+  - path: utilities/syn/syn_make_db.sh
+    inode: 68062697
+    mtime_unix: 1767712252
+    size_bytes: 8391
+  - path: utilities/syn/syn_scan_for_spam.sh
+    inode: 68062698
+    mtime_unix: 1767712252
+    size_bytes: 8549
+  - path: utilities/syn/syn_signatures.json
+    inode: 68062699
+    mtime_unix: 1767712252
+    size_bytes: 199616
+  - path: utilities/tenant_mapper_client
+    is_dir: true
+    inode: 68062700
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 4795
+        min: 4795
+        max: 4795
+        mean: 4795
+        median: 4795
+      last_modified: 1767712252
+  - path: utilities/tenant_mapper_client/__init__.py
+    inode: 68062701
+    mtime_unix: 1767712252
+  - path: utilities/tenant_mapper_client/client.py
+    inode: 68062702
+    mtime_unix: 1767712252
+    size_bytes: 4795
+  - path: utilities/testing_helpers.py
+    inode: 68062703
+    mtime_unix: 1767712252
+    size_bytes: 6564
+  - path: utilities/tests
+    is_dir: true
+    inode: 68062704
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 6
+      total_descendant_dirs: 0
+      extensions:
+        .py: 6
+      size:
+        total: 22679
+        min: 1605
+        max: 9535
+        mean: 4535
+        median: 3825
+      last_modified: 1767712252
+  - path: utilities/tests/__init__.py
+    inode: 68062705
+    mtime_unix: 1767712252
+  - path: utilities/tests/test_hostnames.py
+    inode: 68062706
+    mtime_unix: 1767712252
+    size_bytes: 1605
+  - path: utilities/tests/test_master_failover_util.py
+    inode: 68062707
+    mtime_unix: 1767712252
+    size_bytes: 9535
+  - path: utilities/tests/test_scavenge.py
+    inode: 68062708
+    mtime_unix: 1767712252
+    size_bytes: 2561
+  - path: utilities/tests/test_stunnels.py
+    inode: 68062709
+    mtime_unix: 1767712252
+    size_bytes: 3825
+  - path: utilities/tests/test_with_progress.py
+    inode: 68062710
+    mtime_unix: 1767712252
+    size_bytes: 5153
+  - path: utilities/ucb_training_spinup.py
+    inode: 68062711
+    mtime_unix: 1767712252
+    size_bytes: 5065
+  - path: utilities/upstream.py
+    inode: 68062712
+    mtime_unix: 1767712252
+    size_bytes: 2441
+  - path: utilities/user_profiles
+    is_dir: true
+    inode: 68062713
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 5739
+        min: 5739
+        max: 5739
+        mean: 5739
+        median: 5739
+      last_modified: 1767712252
+  - path: utilities/user_profiles/__init__.py
+    inode: 68062714
+    mtime_unix: 1767712252
+  - path: utilities/user_profiles/input_validation.py
+    inode: 68062715
+    mtime_unix: 1767712252
+    size_bytes: 5739
+  - path: utilities/valhalla
+    is_dir: true
+    inode: 68062716
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 30262
+        min: 6545
+        max: 23717
+        mean: 15131
+        median: 15131
+      last_modified: 1767712252
+  - path: utilities/valhalla/delete_directory.py
+    inode: 68062717
+    mtime_unix: 1767712252
+    size_bytes: 6545
+  - path: utilities/valhalla/valhalla_migrate.py
+    inode: 68062718
+    mtime_unix: 1767712252
+    size_bytes: 23717
+  - path: utilities/vanity_domain_converter
+    is_dir: true
+    inode: 68062719
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .py: 1
+      size:
+        total: 1241
+        min: 555
+        max: 686
+        mean: 620
+        median: 620
+      last_modified: 1767712252
+  - path: utilities/vanity_domain_converter/README.md
+    inode: 68062720
+    mtime_unix: 1767712252
+    size_bytes: 686
+  - path: utilities/vanity_domain_converter/vanity_domain_converter.py
+    inode: 68062721
+    mtime_unix: 1767712252
+    size_bytes: 555
+  - path: utilities/vanity_to_custom_converter
+    is_dir: true
+    inode: 68062722
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .py: 1
+      size:
+        total: 1218
+        min: 568
+        max: 650
+        mean: 609
+        median: 609
+      last_modified: 1767712252
+  - path: utilities/vanity_to_custom_converter/README.md
+    inode: 68062723
+    mtime_unix: 1767712252
+    size_bytes: 650
+  - path: utilities/vanity_to_custom_converter/vanity_to_custom_converter.py
+    inode: 68062724
+    mtime_unix: 1767712252
+    size_bytes: 568
+  - path: utilities/verify_yggdrasil_restore.py
+    inode: 68062725
+    mtime_unix: 1767712252
+    size_bytes: 2532
+  - path: yggdrasil
+    is_dir: true
+    inode: 68062728
+    mtime_unix: 1767712252
+    direct_subdir_count: 10
+    rollup:
+      total_files: 16
+      total_descendant_dirs: 33
+      extensions:
+        .md: 1
+        .py: 14
+      size:
+        total: 1104126
+        min: 1210
+        max: 454649
+        mean: 73608
+        median: 19964
+      last_modified: 1767712252
+  - path: yggdrasil/README.md
+    inode: 68062729
+    mtime_unix: 1767712252
+    size_bytes: 23816
+  - path: yggdrasil/__init__.py
+    inode: 68062730
+    mtime_unix: 1767712252
+  - path: yggdrasil/connection.py
+    inode: 68062731
+    mtime_unix: 1767712252
+    size_bytes: 2144
+  - path: yggdrasil/controllers
+    is_dir: true
+    inode: 68062732
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 41
+      total_descendant_dirs: 1
+      extensions:
+        .py: 41
+      size:
+        total: 792093
+        min: 415
+        max: 155718
+        mean: 19802
+        median: 8184
+      last_modified: 1767712252
+  - path: yggdrasil/controllers/__init__.py
+    inode: 68062733
+    mtime_unix: 1767712252
+  - path: yggdrasil/controllers/accounts.py
+    inode: 68062734
+    mtime_unix: 1767712252
+    size_bytes: 9509
+  - path: yggdrasil/controllers/auth.py
+    inode: 68062735
+    mtime_unix: 1767712252
+    size_bytes: 13649
+  - path: yggdrasil/controllers/auth0.py
+    inode: 68062736
+    mtime_unix: 1767712252
+    size_bytes: 16675
+  - path: yggdrasil/controllers/authorization.py
+    inode: 68062737
+    mtime_unix: 1767712252
+    size_bytes: 4867
+  - path: yggdrasil/controllers/billing.py
+    inode: 68062738
+    mtime_unix: 1767712252
+    size_bytes: 9163
+  - path: yggdrasil/controllers/bindings.py
+    inode: 68062739
+    mtime_unix: 1767712252
+    size_bytes: 31938
+  - path: yggdrasil/controllers/builder.py
+    inode: 68062740
+    mtime_unix: 1767712252
+    size_bytes: 8573
+  - path: yggdrasil/controllers/configurations.py
+    inode: 68062741
+    mtime_unix: 1767712252
+    size_bytes: 12859
+  - path: yggdrasil/controllers/email_rate_limits.py
+    inode: 68062742
+    mtime_unix: 1767712252
+    size_bytes: 2987
+  - path: yggdrasil/controllers/endpoints.py
+    inode: 68062743
+    mtime_unix: 1767712252
+    size_bytes: 12355
+  - path: yggdrasil/controllers/environments.py
+    inode: 68062744
+    mtime_unix: 1767712252
+    size_bytes: 155718
+  - path: yggdrasil/controllers/hostnames.py
+    inode: 68062745
+    mtime_unix: 1767712252
+    size_bytes: 71163
+  - path: yggdrasil/controllers/hostnames_helpers.py
+    inode: 68062746
+    mtime_unix: 1767712252
+    size_bytes: 1170
+  - path: yggdrasil/controllers/instruments.py
+    inode: 68062747
+    mtime_unix: 1767712252
+    size_bytes: 3246
+  - path: yggdrasil/controllers/memberships.py
+    inode: 68062748
+    mtime_unix: 1767712252
+    size_bytes: 46651
+  - path: yggdrasil/controllers/memberships_cassandra.py
+    inode: 68062749
+    mtime_unix: 1767712252
+    size_bytes: 31918
+  - path: yggdrasil/controllers/memberships_mas.py
+    inode: 68062750
+    mtime_unix: 1767712252
+    size_bytes: 12929
+  - path: yggdrasil/controllers/new_relic.py
+    inode: 68062751
+    mtime_unix: 1767712252
+    size_bytes: 2318
+  - path: yggdrasil/controllers/notification_message_failure.py
+    inode: 68062752
+    mtime_unix: 1767712252
+    size_bytes: 2967
+  - path: yggdrasil/controllers/offboarding.py
+    inode: 68062753
+    mtime_unix: 1767712252
+    size_bytes: 2859
+  - path: yggdrasil/controllers/organization_exports.py
+    inode: 68062754
+    mtime_unix: 1767712252
+    size_bytes: 9558
+  - path: yggdrasil/controllers/organization_tags.py
+    inode: 68062755
+    mtime_unix: 1767712252
+    size_bytes: 5287
+  - path: yggdrasil/controllers/organizations.py
+    inode: 68062756
+    mtime_unix: 1767712252
+    size_bytes: 25162
+  - path: yggdrasil/controllers/pantheon_yaml.py
+    inode: 68062757
+    mtime_unix: 1767712252
+    size_bytes: 10702
+  - path: yggdrasil/controllers/products.py
+    inode: 68062758
+    mtime_unix: 1767712252
+    size_bytes: 3295
+  - path: yggdrasil/controllers/quicksilver.py
+    inode: 68062759
+    mtime_unix: 1767712252
+    size_bytes: 5409
+  - path: yggdrasil/controllers/search.py
+    inode: 68062760
+    mtime_unix: 1767712252
+    size_bytes: 7795
+  - path: yggdrasil/controllers/sites.py
+    inode: 68062761
+    mtime_unix: 1767712252
+    size_bytes: 124581
+  - path: yggdrasil/controllers/status_report.py
+    inode: 68062762
+    mtime_unix: 1767712252
+    size_bytes: 5054
+  - path: yggdrasil/controllers/support.py
+    inode: 68062763
+    mtime_unix: 1767712252
+    size_bytes: 5369
+  - path: yggdrasil/controllers/tasks.py
+    inode: 68062764
+    mtime_unix: 1767712252
+    size_bytes: 4037
+  - path: yggdrasil/controllers/tests
+    is_dir: true
+    inode: 68062765
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 34
+      total_descendant_dirs: 0
+      extensions:
+        .py: 34
+      size:
+        total: 733049
+        min: 1057
+        max: 115248
+        mean: 22213
+        median: 9805
+      last_modified: 1767712252
+  - path: yggdrasil/controllers/tests/__init__.py
+    inode: 68062766
+    mtime_unix: 1767712252
+  - path: yggdrasil/controllers/tests/test_accounts.py
+    inode: 68062767
+    mtime_unix: 1767712252
+    size_bytes: 3195
+  - path: yggdrasil/controllers/tests/test_auth.py
+    inode: 68062768
+    mtime_unix: 1767712252
+    size_bytes: 8281
+  - path: yggdrasil/controllers/tests/test_auth0.py
+    inode: 68062769
+    mtime_unix: 1767712252
+    size_bytes: 6108
+  - path: yggdrasil/controllers/tests/test_authorization.py
+    inode: 68062770
+    mtime_unix: 1767712252
+    size_bytes: 4896
+  - path: yggdrasil/controllers/tests/test_bindings.py
+    inode: 68062771
+    mtime_unix: 1767712252
+    size_bytes: 51717
+  - path: yggdrasil/controllers/tests/test_builder.py
+    inode: 68062772
+    mtime_unix: 1767712252
+    size_bytes: 2090
+  - path: yggdrasil/controllers/tests/test_configurations.py
+    inode: 68062773
+    mtime_unix: 1767712252
+    size_bytes: 7187
+  - path: yggdrasil/controllers/tests/test_email_rate_limits.py
+    inode: 68062774
+    mtime_unix: 1767712252
+    size_bytes: 3688
+  - path: yggdrasil/controllers/tests/test_endpoints.py
+    inode: 68062775
+    mtime_unix: 1767712252
+    size_bytes: 16371
+  - path: yggdrasil/controllers/tests/test_environments.py
+    inode: 68062776
+    mtime_unix: 1767712252
+    size_bytes: 87119
+  - path: yggdrasil/controllers/tests/test_hostnames.py
+    inode: 68062777
+    mtime_unix: 1767712252
+    size_bytes: 41524
+  - path: yggdrasil/controllers/tests/test_hostnames_helpers.py
+    inode: 68062778
+    mtime_unix: 1767712252
+    size_bytes: 5013
+  - path: yggdrasil/controllers/tests/test_memberships.py
+    inode: 68062779
+    mtime_unix: 1767712252
+    size_bytes: 102733
+  - path: yggdrasil/controllers/tests/test_memberships_cassandra.py
+    inode: 68062780
+    mtime_unix: 1767712252
+    size_bytes: 13056
+  - path: yggdrasil/controllers/tests/test_memberships_mas.py
+    inode: 68062781
+    mtime_unix: 1767712252
+    size_bytes: 12186
+  - path: yggdrasil/controllers/tests/test_notifications_message_failure.py
+    inode: 68062782
+    mtime_unix: 1767712252
+    size_bytes: 9805
+  - path: yggdrasil/controllers/tests/test_offboarding.py
+    inode: 68062783
+    mtime_unix: 1767712252
+    size_bytes: 22183
+  - path: yggdrasil/controllers/tests/test_organization_exports.py
+    inode: 68062784
+    mtime_unix: 1767712252
+    size_bytes: 27966
+  - path: yggdrasil/controllers/tests/test_organizations.py
+    inode: 68062785
+    mtime_unix: 1767712252
+    size_bytes: 4657
+  - path: yggdrasil/controllers/tests/test_pantheon_yml.py
+    inode: 68062786
+    mtime_unix: 1767712252
+    size_bytes: 16099
+  - path: yggdrasil/controllers/tests/test_products.py
+    inode: 68062787
+    mtime_unix: 1767712252
+    size_bytes: 9542
+  - path: yggdrasil/controllers/tests/test_quicksilver.py
+    inode: 68062788
+    mtime_unix: 1767712252
+    size_bytes: 5772
+  - path: yggdrasil/controllers/tests/test_search.py
+    inode: 68062789
+    mtime_unix: 1767712252
+    size_bytes: 2883
+  - path: yggdrasil/controllers/tests/test_sites.py
+    inode: 68062790
+    mtime_unix: 1767712252
+    size_bytes: 115248
+  - path: yggdrasil/controllers/tests/test_status_report.py
+    inode: 68062791
+    mtime_unix: 1767712252
+    size_bytes: 12512
+  - path: yggdrasil/controllers/tests/test_support.py
+    inode: 68062792
+    mtime_unix: 1767712252
+    size_bytes: 16572
+  - path: yggdrasil/controllers/tests/test_tags.py
+    inode: 68062793
+    mtime_unix: 1767712252
+    size_bytes: 14457
+  - path: yggdrasil/controllers/tests/test_upstreams.py
+    inode: 68062794
+    mtime_unix: 1767712252
+    size_bytes: 11896
+  - path: yggdrasil/controllers/tests/test_user_feature_flags.py
+    inode: 68062795
+    mtime_unix: 1767712252
+    size_bytes: 3080
+  - path: yggdrasil/controllers/tests/test_user_identities.py
+    inode: 68062796
+    mtime_unix: 1767712252
+    size_bytes: 4996
+  - path: yggdrasil/controllers/tests/test_user_keys.py
+    inode: 68062797
+    mtime_unix: 1767712252
+    size_bytes: 6253
+  - path: yggdrasil/controllers/tests/test_user_machine_tokens.py
+    inode: 68062798
+    mtime_unix: 1767712252
+    size_bytes: 1057
+  - path: yggdrasil/controllers/tests/test_users.py
+    inode: 68062799
+    mtime_unix: 1767712252
+    size_bytes: 82907
+  - path: yggdrasil/controllers/upstreams.py
+    inode: 68062800
+    mtime_unix: 1767712252
+    size_bytes: 10479
+  - path: yggdrasil/controllers/user_feature_flags.py
+    inode: 68062801
+    mtime_unix: 1767712252
+    size_bytes: 3361
+  - path: yggdrasil/controllers/user_identities.py
+    inode: 68062802
+    mtime_unix: 1767712252
+    size_bytes: 44305
+  - path: yggdrasil/controllers/user_keys.py
+    inode: 68062803
+    mtime_unix: 1767712252
+    size_bytes: 2732
+  - path: yggdrasil/controllers/user_machine_tokens.py
+    inode: 68062804
+    mtime_unix: 1767712252
+    size_bytes: 2781
+  - path: yggdrasil/controllers/user_sessions.py
+    inode: 68062805
+    mtime_unix: 1767712252
+    size_bytes: 3761
+  - path: yggdrasil/controllers/users.py
+    inode: 68062806
+    mtime_unix: 1767712252
+    size_bytes: 60615
+  - path: yggdrasil/controllers/utils.py
+    inode: 68062807
+    mtime_unix: 1767712252
+    size_bytes: 415
+  - path: yggdrasil/controllers/workflows.py
+    inode: 68062808
+    mtime_unix: 1767712252
+    size_bytes: 3881
+  - path: yggdrasil/deploy.py
+    inode: 68062809
+    mtime_unix: 1767712252
+    size_bytes: 3557
+  - path: yggdrasil/docs
+    is_dir: true
+    inode: 68062810
+    mtime_unix: 1767712252
+    direct_subdir_count: 5
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 7
+      extensions:
+        .md: 1
+      size:
+        total: 528
+        min: 528
+        max: 528
+        mean: 528
+        median: 528
+      last_modified: 1767712252
+  - path: yggdrasil/docs/README.md
+    inode: 68062811
+    mtime_unix: 1767712252
+    size_bytes: 528
+  - path: yggdrasil/docs/component
+    is_dir: true
+    inode: 68062812
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 6
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .puml: 5
+      size:
+        total: 8431
+        min: 774
+        max: 2132
+        mean: 1405
+        median: 1331
+      last_modified: 1767712252
+  - path: yggdrasil/docs/component/README.md
+    inode: 68062813
+    mtime_unix: 1767712252
+    size_bytes: 1349
+  - path: yggdrasil/docs/component/appserver.puml
+    inode: 68062814
+    mtime_unix: 1767712252
+    size_bytes: 2049
+  - path: yggdrasil/docs/component/cacheserver.puml
+    inode: 68062815
+    mtime_unix: 1767712252
+    size_bytes: 814
+  - path: yggdrasil/docs/component/db_domain.puml
+    inode: 68062816
+    mtime_unix: 1767712252
+    size_bytes: 2132
+  - path: yggdrasil/docs/component/dbserver.puml
+    inode: 68062817
+    mtime_unix: 1767712252
+    size_bytes: 1313
+  - path: yggdrasil/docs/component/indexserver_kube.puml
+    inode: 68062818
+    mtime_unix: 1767712252
+    size_bytes: 774
+  - path: yggdrasil/docs/playbooks
+    is_dir: true
+    inode: 68062819
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+      size:
+        total: 2292
+        min: 2292
+        max: 2292
+        mean: 2292
+        median: 2292
+      last_modified: 1767712252
+  - path: yggdrasil/docs/playbooks/remove-proxy.md
+    inode: 68062820
+    mtime_unix: 1767712252
+    size_bytes: 2292
+  - path: yggdrasil/docs/rpc
+    is_dir: true
+    inode: 68062821
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 2
+      extensions:
+        .md: 8
+      size:
+        total: 296
+        min: 5
+        max: 59
+        mean: 37
+        median: 44
+      last_modified: 1767712252
+  - path: yggdrasil/docs/rpc/CreateSite.md
+    inode: 68062822
+    mtime_unix: 1767712252
+    size_bytes: 13
+  - path: yggdrasil/docs/rpc/CreateSiteAndDeployProduct.md
+    inode: 68062823
+    mtime_unix: 1767712252
+    size_bytes: 32
+  - path: yggdrasil/docs/rpc/DeployProduct.md
+    inode: 68062824
+    mtime_unix: 1767712252
+    size_bytes: 16
+  - path: yggdrasil/docs/rpc/MigrateAppserverBinding.md
+    inode: 68062825
+    mtime_unix: 1767712252
+    size_bytes: 57
+  - path: yggdrasil/docs/rpc/MigrateCacheserverBinding.md
+    inode: 68062826
+    mtime_unix: 1767712252
+    size_bytes: 59
+  - path: yggdrasil/docs/rpc/MigrateCodeserverBinding.md
+    inode: 68062827
+    mtime_unix: 1767712252
+    size_bytes: 58
+  - path: yggdrasil/docs/rpc/MigrateDbserverBinding.md
+    inode: 68062828
+    mtime_unix: 1767712252
+    size_bytes: 56
+  - path: yggdrasil/docs/rpc/README.md
+    inode: 68062829
+    mtime_unix: 1767712252
+    size_bytes: 5
+  - path: yggdrasil/docs/rpc/assets
+    is_dir: true
+    inode: 68062830
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 12
+      total_descendant_dirs: 1
+      extensions:
+        .md: 1
+        .plantuml: 11
+      size:
+        total: 9250
+        min: 8
+        max: 1955
+        mean: 770
+        median: 627
+      last_modified: 1767712252
+  - path: yggdrasil/docs/rpc/assets/README.md
+    inode: 68062831
+    mtime_unix: 1767712252
+    size_bytes: 8
+  - path: yggdrasil/docs/rpc/assets/_plantuml_variables.plantuml
+    inode: 68062832
+    mtime_unix: 1767712252
+    size_bytes: 610
+  - path: yggdrasil/docs/rpc/assets/deploy_code.plantuml
+    inode: 68062833
+    mtime_unix: 1767712252
+    size_bytes: 185
+  - path: yggdrasil/docs/rpc/assets/deploy_product.plantuml
+    inode: 68062834
+    mtime_unix: 1767712252
+    size_bytes: 645
+  - path: yggdrasil/docs/rpc/assets/environment_update_pantheon_yml.plantuml
+    inode: 68062835
+    mtime_unix: 1767712252
+    size_bytes: 105
+  - path: yggdrasil/docs/rpc/assets/migrate_appserver_bindings.plantuml
+    inode: 68062836
+    mtime_unix: 1767712252
+    size_bytes: 1271
+  - path: yggdrasil/docs/rpc/assets/migrate_cacheserver_bindings.plantuml
+    inode: 68062837
+    mtime_unix: 1767712252
+    size_bytes: 1272
+  - path: yggdrasil/docs/rpc/assets/migrate_codeserver_bindings.plantuml
+    inode: 68062838
+    mtime_unix: 1767712252
+    size_bytes: 883
+  - path: yggdrasil/docs/rpc/assets/migrate_dbserver_binding.plantuml
+    inode: 68062839
+    mtime_unix: 1767712252
+    size_bytes: 1955
+  - path: yggdrasil/docs/rpc/assets/partials
+    is_dir: true
+    inode: 68062840
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 33
+      total_descendant_dirs: 0
+      extensions:
+        .plantuml: 33
+      size:
+        total: 57594
+        min: 63
+        max: 10957
+        mean: 1799
+        median: 708
+      last_modified: 1767712252
+  - path: yggdrasil/docs/rpc/assets/partials/_add_quicksilver_tasks.plantuml
+    inode: 68062841
+    mtime_unix: 1767712252
+    size_bytes: 150
+  - path: yggdrasil/docs/rpc/assets/partials/_cleanup_appserver_binding.plantuml
+    inode: 68062842
+    mtime_unix: 1767712252
+    size_bytes: 169
+  - path: yggdrasil/docs/rpc/assets/partials/_cleanup_cacheserver_binding.plantuml
+    inode: 68062843
+    mtime_unix: 1767712252
+    size_bytes: 172
+  - path: yggdrasil/docs/rpc/assets/partials/_cleanup_codeserver_binding.plantuml
+    inode: 68062844
+    mtime_unix: 1767712252
+    size_bytes: 170
+  - path: yggdrasil/docs/rpc/assets/partials/_cleanup_dbserver_binding.plantuml
+    inode: 68062845
+    mtime_unix: 1767712252
+    size_bytes: 166
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_any_binding.plantuml
+    inode: 68062846
+    mtime_unix: 1767712252
+    size_bytes: 787
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_appserver_binding.plantuml
+    inode: 68062847
+    mtime_unix: 1767712252
+    size_bytes: 8054
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_cacheserver_binding.plantuml
+    inode: 68062848
+    mtime_unix: 1767712252
+    size_bytes: 3380
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_codeserver_binding.plantuml
+    inode: 68062849
+    mtime_unix: 1767712252
+    size_bytes: 7453
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_dbserver_binding.plantuml
+    inode: 68062850
+    mtime_unix: 1767712252
+    size_bytes: 10957
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_fileserver_binding.plantuml
+    inode: 68062851
+    mtime_unix: 1767712252
+  - path: yggdrasil/docs/rpc/assets/partials/_converge_hostname.plantuml
+    inode: 68062852
+    mtime_unix: 1767712252
+    size_bytes: 667
+  - path: yggdrasil/docs/rpc/assets/partials/_create_environment.plantuml
+    inode: 68062853
+    mtime_unix: 1767712252
+    size_bytes: 3282
+  - path: yggdrasil/docs/rpc/assets/partials/_create_new_binding_or_prepare_slave.plantuml
+    inode: 68062854
+    mtime_unix: 1767712252
+    size_bytes: 4666
+  - path: yggdrasil/docs/rpc/assets/partials/_create_site.plantuml
+    inode: 68062855
+    mtime_unix: 1767712252
+    size_bytes: 3631
+  - path: yggdrasil/docs/rpc/assets/partials/_delayed_converge_environment.plantuml
+    inode: 68062856
+    mtime_unix: 1767712252
+    size_bytes: 1020
+  - path: yggdrasil/docs/rpc/assets/partials/_deploy_environment.plantuml
+    inode: 68062857
+    mtime_unix: 1767712252
+    size_bytes: 1209
+  - path: yggdrasil/docs/rpc/assets/partials/_deploy_pantheon_yml.plantuml
+    inode: 68062858
+    mtime_unix: 1767712252
+    size_bytes: 1859
+  - path: yggdrasil/docs/rpc/assets/partials/_deploy_quicksilver_configuration.plantuml
+    inode: 68062859
+    mtime_unix: 1767712252
+    size_bytes: 750
+  - path: yggdrasil/docs/rpc/assets/partials/_detect_framework.plantuml
+    inode: 68062860
+    mtime_unix: 1767712252
+    size_bytes: 438
+  - path: yggdrasil/docs/rpc/assets/partials/_environment_adjust_binding_count.plantuml
+    inode: 68062861
+    mtime_unix: 1767712252
+    size_bytes: 846
+  - path: yggdrasil/docs/rpc/assets/partials/_promote_new_binding_and_remove_migrated_binding.plantuml
+    inode: 68062862
+    mtime_unix: 1767712252
+    size_bytes: 407
+  - path: yggdrasil/docs/rpc/assets/partials/_provision_product.plantuml
+    inode: 68062863
+    mtime_unix: 1767712252
+    size_bytes: 662
+  - path: yggdrasil/docs/rpc/assets/partials/_save_policy_docs.plantuml
+    inode: 68062864
+    mtime_unix: 1767712252
+    size_bytes: 510
+  - path: yggdrasil/docs/rpc/assets/partials/_secure_runtime_access.plantuml
+    inode: 68062865
+    mtime_unix: 1767712252
+    size_bytes: 255
+  - path: yggdrasil/docs/rpc/assets/partials/_setup_workflow.plantuml
+    inode: 68062866
+    mtime_unix: 1767712252
+    size_bytes: 63
+  - path: yggdrasil/docs/rpc/assets/partials/_sites_controller.plantuml
+    inode: 68062867
+    mtime_unix: 1767712252
+    size_bytes: 1899
+  - path: yggdrasil/docs/rpc/assets/partials/_sync_code.plantuml
+    inode: 68062868
+    mtime_unix: 1767712252
+    size_bytes: 800
+  - path: yggdrasil/docs/rpc/assets/partials/_take_screenshot.plantuml
+    inode: 68062869
+    mtime_unix: 1767712252
+    size_bytes: 357
+  - path: yggdrasil/docs/rpc/assets/partials/_update_env_task.plantuml
+    inode: 68062870
+    mtime_unix: 1767712252
+    size_bytes: 102
+  - path: yggdrasil/docs/rpc/assets/partials/_update_pantheon_yml.plantuml
+    inode: 68062871
+    mtime_unix: 1767712252
+    size_bytes: 1901
+  - path: yggdrasil/docs/rpc/assets/partials/_verify_migration_is_possible.plantuml
+    inode: 68062872
+    mtime_unix: 1767712252
+    size_bytes: 511
+  - path: yggdrasil/docs/rpc/assets/partials/_verify_upgrade_is_possible.plantuml
+    inode: 68062873
+    mtime_unix: 1767712252
+    size_bytes: 301
+  - path: yggdrasil/docs/rpc/assets/site_creation.plantuml
+    inode: 68062874
+    mtime_unix: 1767712252
+    size_bytes: 169
+  - path: yggdrasil/docs/rpc/assets/sync_code.plantuml
+    inode: 68062875
+    mtime_unix: 1767712252
+    size_bytes: 379
+  - path: yggdrasil/docs/rpc/assets/upgrade_dbserver_version.plantuml
+    inode: 68062876
+    mtime_unix: 1767712252
+    size_bytes: 1768
+  - path: yggdrasil/docs/topology
+    is_dir: true
+    inode: 68062878
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+      size:
+        total: 2684
+        min: 2684
+        max: 2684
+        mean: 2684
+        median: 2684
+      last_modified: 1767712252
+  - path: yggdrasil/docs/topology/README.md
+    inode: 68062879
+    mtime_unix: 1767712252
+    size_bytes: 2684
+  - path: yggdrasil/docs/upstream_updates
+    is_dir: true
+    inode: 68062880
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .plantuml: 2
+      size:
+        total: 3210
+        min: 1426
+        max: 1784
+        mean: 1605
+        median: 1605
+      last_modified: 1767712252
+  - path: yggdrasil/docs/upstream_updates/apply_upstream_updates.plantuml
+    inode: 68062881
+    mtime_unix: 1767712252
+    size_bytes: 1784
+  - path: yggdrasil/docs/upstream_updates/get_upstream_updates.plantuml
+    inode: 68062882
+    mtime_unix: 1767712252
+    size_bytes: 1426
+  - path: yggdrasil/install_schema_seed_data.py
+    inode: 68062883
+    mtime_unix: 1767712252
+    size_bytes: 21942
+  - path: yggdrasil/lib
+    is_dir: true
+    inode: 68062884
+    mtime_unix: 1767712252
+    direct_subdir_count: 4
+    rollup:
+      total_files: 27
+      total_descendant_dirs: 8
+      extensions:
+        .py: 27
+      size:
+        total: 206302
+        min: 703
+        max: 39341
+        mean: 7934
+        median: 4636
+      last_modified: 1767712252
+  - path: yggdrasil/lib/__init__.py
+    inode: 68062885
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/api_gateway
+    is_dir: true
+    inode: 68062886
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 9
+      total_descendant_dirs: 1
+      extensions:
+        .py: 9
+      size:
+        total: 27360
+        min: 1382
+        max: 9277
+        mean: 3420
+        median: 2638
+      last_modified: 1767712252
+  - path: yggdrasil/lib/api_gateway/__init__.py
+    inode: 68062887
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/api_gateway/blocking_gateway.py
+    inode: 68062888
+    mtime_unix: 1767712252
+    size_bytes: 2366
+  - path: yggdrasil/lib/api_gateway/caching_gateway.py
+    inode: 68062889
+    mtime_unix: 1767712252
+    size_bytes: 2959
+  - path: yggdrasil/lib/api_gateway/circuit_breaker_gateway.py
+    inode: 68062890
+    mtime_unix: 1767712252
+    size_bytes: 2910
+  - path: yggdrasil/lib/api_gateway/django_gateway.py
+    inode: 68062891
+    mtime_unix: 1767712252
+    size_bytes: 1599
+  - path: yggdrasil/lib/api_gateway/graphql_gateway.py
+    inode: 68062892
+    mtime_unix: 1767712252
+    size_bytes: 4899
+  - path: yggdrasil/lib/api_gateway/handle_gateway_errors.py
+    inode: 68062893
+    mtime_unix: 1767712252
+    size_bytes: 1968
+  - path: yggdrasil/lib/api_gateway/jsonapi_gateway.py
+    inode: 68062894
+    mtime_unix: 1767712252
+    size_bytes: 9277
+  - path: yggdrasil/lib/api_gateway/single_service_gateway.py
+    inode: 68062895
+    mtime_unix: 1767712252
+    size_bytes: 1382
+  - path: yggdrasil/lib/api_gateway/tests
+    is_dir: true
+    inode: 68062896
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 6
+      total_descendant_dirs: 0
+      extensions:
+        .py: 6
+      size:
+        total: 25082
+        min: 268
+        max: 8894
+        mean: 5016
+        median: 5955
+      last_modified: 1767712252
+  - path: yggdrasil/lib/api_gateway/tests/__init__.py
+    inode: 68062897
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/api_gateway/tests/test_blocking_gateway.py
+    inode: 68062898
+    mtime_unix: 1767712252
+    size_bytes: 268
+  - path: yggdrasil/lib/api_gateway/tests/test_caching_gateway.py
+    inode: 68062899
+    mtime_unix: 1767712252
+    size_bytes: 5955
+  - path: yggdrasil/lib/api_gateway/tests/test_circuit_breaker_gateway.py
+    inode: 68062900
+    mtime_unix: 1767712252
+    size_bytes: 8866
+  - path: yggdrasil/lib/api_gateway/tests/test_jsonapi_gateway.py
+    inode: 68062901
+    mtime_unix: 1767712252
+    size_bytes: 8894
+  - path: yggdrasil/lib/api_gateway/tests/test_single_service_gateway.py
+    inode: 68062902
+    mtime_unix: 1767712252
+    size_bytes: 1099
+  - path: yggdrasil/lib/auth.py
+    inode: 68062903
+    mtime_unix: 1767712252
+    size_bytes: 707
+  - path: yggdrasil/lib/auth0_jwt.py
+    inode: 68062904
+    mtime_unix: 1767712252
+    size_bytes: 4686
+  - path: yggdrasil/lib/cache.py
+    inode: 68062905
+    mtime_unix: 1767712252
+    size_bytes: 1564
+  - path: yggdrasil/lib/datastore.py
+    inode: 68062906
+    mtime_unix: 1767712252
+    size_bytes: 10889
+  - path: yggdrasil/lib/exceptions.py
+    inode: 68062907
+    mtime_unix: 1767712252
+    size_bytes: 7075
+  - path: yggdrasil/lib/experiments.py
+    inode: 68062908
+    mtime_unix: 1767712252
+    size_bytes: 703
+  - path: yggdrasil/lib/google_auth.py
+    inode: 68062909
+    mtime_unix: 1767712252
+    size_bytes: 4437
+  - path: yggdrasil/lib/google_jwt.py
+    inode: 68062910
+    mtime_unix: 1767712252
+    size_bytes: 3231
+  - path: yggdrasil/lib/heliosca.py
+    inode: 68062911
+    mtime_unix: 1767712252
+    size_bytes: 9542
+  - path: yggdrasil/lib/jenkins_helpers.py
+    inode: 68062912
+    mtime_unix: 1767712252
+    size_bytes: 8543
+  - path: yggdrasil/lib/jwt_verifier.py
+    inode: 68062913
+    mtime_unix: 1767712252
+    size_bytes: 4826
+  - path: yggdrasil/lib/mas_jwt.py
+    inode: 68062914
+    mtime_unix: 1767712252
+    size_bytes: 2745
+  - path: yggdrasil/lib/mas_migration_cohort.py
+    inode: 68062915
+    mtime_unix: 1767712252
+    size_bytes: 3005
+  - path: yggdrasil/lib/membership_authorization_service.py
+    inode: 68062916
+    mtime_unix: 1767712252
+    size_bytes: 39341
+  - path: yggdrasil/lib/monitoring.py
+    inode: 68062917
+    mtime_unix: 1767712252
+    size_bytes: 773
+  - path: yggdrasil/lib/notifications.py
+    inode: 68062918
+    mtime_unix: 1767712252
+    size_bytes: 27921
+  - path: yggdrasil/lib/pantheon_yml
+    is_dir: true
+    inode: 68062919
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 1
+      extensions:
+        .py: 4
+      size:
+        total: 28556
+        min: 6276
+        max: 15339
+        mean: 9518
+        median: 6941
+      last_modified: 1767712252
+  - path: yggdrasil/lib/pantheon_yml/__init__.py
+    inode: 68062920
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/pantheon_yml/pantheon_yml_defaults.py
+    inode: 68062921
+    mtime_unix: 1767712252
+    size_bytes: 6276
+  - path: yggdrasil/lib/pantheon_yml/pantheon_yml_parser.py
+    inode: 68062922
+    mtime_unix: 1767712252
+    size_bytes: 6941
+  - path: yggdrasil/lib/pantheon_yml/pantheon_yml_v1_schema.py
+    inode: 68062923
+    mtime_unix: 1767712252
+    size_bytes: 15339
+  - path: yggdrasil/lib/pantheon_yml/tests
+    is_dir: true
+    inode: 68062924
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .py: 5
+      size:
+        total: 34807
+        min: 1175
+        max: 18091
+        mean: 8701
+        median: 7770
+      last_modified: 1767712252
+  - path: yggdrasil/lib/pantheon_yml/tests/__init__.py
+    inode: 68062925
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/pantheon_yml/tests/pantheon_yml_default_fixtures.py
+    inode: 68062926
+    mtime_unix: 1767712252
+    size_bytes: 4334
+  - path: yggdrasil/lib/pantheon_yml/tests/pantheon_yml_fixtures.py
+    inode: 68062927
+    mtime_unix: 1767712252
+    size_bytes: 18091
+  - path: yggdrasil/lib/pantheon_yml/tests/test_pantheon_yml_defaults.py
+    inode: 68062928
+    mtime_unix: 1767712252
+    size_bytes: 1175
+  - path: yggdrasil/lib/pantheon_yml/tests/test_pantheon_yml_parser.py
+    inode: 68062929
+    mtime_unix: 1767712252
+    size_bytes: 11207
+  - path: yggdrasil/lib/password_salter.py
+    inode: 68062930
+    mtime_unix: 1767712252
+    size_bytes: 3868
+  - path: yggdrasil/lib/proxy_sql_config
+    is_dir: true
+    inode: 68062931
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 2
+      extensions:
+        .py: 2
+      size:
+        total: 2412
+        min: 2412
+        max: 2412
+        mean: 2412
+        median: 2412
+      last_modified: 1767712252
+  - path: yggdrasil/lib/proxy_sql_config/__init__.py
+    inode: 68062932
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/proxy_sql_config/build_proxy_sql_config.py
+    inode: 68062933
+    mtime_unix: 1767712252
+    size_bytes: 2412
+  - path: yggdrasil/lib/proxy_sql_config/templates
+    is_dir: true
+    inode: 68062934
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 6
+      total_descendant_dirs: 0
+      extensions:
+        .j2: 6
+      size:
+        total: 4366
+        min: 216
+        max: 1831
+        mean: 727
+        median: 580
+      last_modified: 1767712252
+  - path: yggdrasil/lib/proxy_sql_config/templates/admin_variables.j2
+    inode: 68062935
+    mtime_unix: 1767712252
+    size_bytes: 326
+  - path: yggdrasil/lib/proxy_sql_config/templates/mysql_replication_hostgroups.j2
+    inode: 68062936
+    mtime_unix: 1767712252
+    size_bytes: 216
+  - path: yggdrasil/lib/proxy_sql_config/templates/mysql_servers.j2
+    inode: 68062937
+    mtime_unix: 1767712252
+    size_bytes: 517
+  - path: yggdrasil/lib/proxy_sql_config/templates/mysql_users.j2
+    inode: 68062938
+    mtime_unix: 1767712252
+    size_bytes: 643
+  - path: yggdrasil/lib/proxy_sql_config/templates/mysql_variables.j2
+    inode: 68062939
+    mtime_unix: 1767712252
+    size_bytes: 833
+  - path: yggdrasil/lib/proxy_sql_config/templates/proxysql_config_template.j2
+    inode: 68062940
+    mtime_unix: 1767712252
+    size_bytes: 1831
+  - path: yggdrasil/lib/proxy_sql_config/tests
+    is_dir: true
+    inode: 68062941
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 8
+      total_descendant_dirs: 0
+      extensions:
+        .py: 8
+      size:
+        total: 28480
+        min: 1384
+        max: 4961
+        mean: 4068
+        median: 4581
+      last_modified: 1767712252
+  - path: yggdrasil/lib/proxy_sql_config/tests/__init__.py
+    inode: 68062942
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/proxy_sql_config/tests/fixtures.py
+    inode: 68062943
+    mtime_unix: 1767712252
+    size_bytes: 4762
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_build_proxy_sql_config_mid_migration.py
+    inode: 68062944
+    mtime_unix: 1767712252
+    size_bytes: 4181
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_build_proxy_sql_config_with_primary.py
+    inode: 68062945
+    mtime_unix: 1767712252
+    size_bytes: 3983
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_build_proxy_sql_config_with_primary_replica.py
+    inode: 68062946
+    mtime_unix: 1767712252
+    size_bytes: 4581
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_build_proxy_sql_config_with_primary_replica_mz_replica.py
+    inode: 68062947
+    mtime_unix: 1767712252
+    size_bytes: 4961
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_build_proxy_sql_config_with_primary_replica_promote_true.py
+    inode: 68062948
+    mtime_unix: 1767712252
+    size_bytes: 4628
+  - path: yggdrasil/lib/proxy_sql_config/tests/test_invalid_proxy_sql_config.py
+    inode: 68062949
+    mtime_unix: 1767712252
+    size_bytes: 1384
+  - path: yggdrasil/lib/redirectagent.py
+    inode: 68062950
+    mtime_unix: 1767712252
+    size_bytes: 4732
+  - path: yggdrasil/lib/response_filter.py
+    inode: 68062951
+    mtime_unix: 1767712252
+    size_bytes: 3144
+  - path: yggdrasil/lib/support_gateway.py
+    inode: 68062952
+    mtime_unix: 1767712252
+    size_bytes: 8813
+  - path: yggdrasil/lib/test_datastore.py
+    inode: 68062953
+    mtime_unix: 1767712252
+    size_bytes: 4586
+  - path: yggdrasil/lib/tests
+    is_dir: true
+    inode: 68062954
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 16
+      total_descendant_dirs: 0
+      extensions:
+        .py: 16
+      size:
+        total: 148753
+        min: 1192
+        max: 58918
+        mean: 9916
+        median: 4770
+      last_modified: 1767712252
+  - path: yggdrasil/lib/tests/__init__.py
+    inode: 68062955
+    mtime_unix: 1767712252
+  - path: yggdrasil/lib/tests/test_auth0_auth.py
+    inode: 68062956
+    mtime_unix: 1767712252
+    size_bytes: 4431
+  - path: yggdrasil/lib/tests/test_cache.py
+    inode: 68062957
+    mtime_unix: 1767712252
+    size_bytes: 2924
+  - path: yggdrasil/lib/tests/test_experiments.py
+    inode: 68062958
+    mtime_unix: 1767712252
+    size_bytes: 1192
+  - path: yggdrasil/lib/tests/test_google_auth.py
+    inode: 68062959
+    mtime_unix: 1767712252
+    size_bytes: 5070
+  - path: yggdrasil/lib/tests/test_jenkins_helpers.py
+    inode: 68062960
+    mtime_unix: 1767712252
+    size_bytes: 12518
+  - path: yggdrasil/lib/tests/test_jwt_verifier.py
+    inode: 68062961
+    mtime_unix: 1767712252
+    size_bytes: 4770
+  - path: yggdrasil/lib/tests/test_mas_gateway.py
+    inode: 68062962
+    mtime_unix: 1767712252
+    size_bytes: 58918
+  - path: yggdrasil/lib/tests/test_mas_migration_cohort.py
+    inode: 68062963
+    mtime_unix: 1767712252
+    size_bytes: 3309
+  - path: yggdrasil/lib/tests/test_notifications.py
+    inode: 68062964
+    mtime_unix: 1767712252
+    size_bytes: 11645
+  - path: yggdrasil/lib/tests/test_password_salter.py
+    inode: 68062965
+    mtime_unix: 1767712252
+    size_bytes: 1942
+  - path: yggdrasil/lib/tests/test_response_filter.py
+    inode: 68062966
+    mtime_unix: 1767712252
+    size_bytes: 1644
+  - path: yggdrasil/lib/tests/test_utils.py
+    inode: 68062967
+    mtime_unix: 1767712252
+    size_bytes: 18583
+  - path: yggdrasil/lib/tests/test_vcs_service.py
+    inode: 68062968
+    mtime_unix: 1767712252
+    size_bytes: 14218
+  - path: yggdrasil/lib/tests/test_zones.py
+    inode: 68062969
+    mtime_unix: 1767712252
+    size_bytes: 1721
+  - path: yggdrasil/lib/tests/test_zuora_payment.py
+    inode: 68062970
+    mtime_unix: 1767712252
+    size_bytes: 5868
+  - path: yggdrasil/lib/utils.py
+    inode: 68062971
+    mtime_unix: 1767712252
+    size_bytes: 16728
+  - path: yggdrasil/lib/vcs_service.py
+    inode: 68062972
+    mtime_unix: 1767712252
+    size_bytes: 4876
+  - path: yggdrasil/lib/workspace_security.py
+    inode: 68062973
+    mtime_unix: 1767712252
+    size_bytes: 2079
+  - path: yggdrasil/lib/zones.py
+    inode: 68062974
+    mtime_unix: 1767712252
+    size_bytes: 1052
+  - path: yggdrasil/lib/zuora_payment.py
+    inode: 68062975
+    mtime_unix: 1767712252
+    size_bytes: 26436
+  - path: yggdrasil/models
+    is_dir: true
+    inode: 68062976
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 32
+      total_descendant_dirs: 1
+      extensions:
+        .py: 32
+      size:
+        total: 297738
+        min: 695
+        max: 94126
+        mean: 9604
+        median: 3749
+      last_modified: 1767712252
+  - path: yggdrasil/models/__init__.py
+    inode: 68062977
+    mtime_unix: 1767712252
+  - path: yggdrasil/models/bindings.py
+    inode: 68062978
+    mtime_unix: 1767712252
+    size_bytes: 15604
+  - path: yggdrasil/models/cache_entry.py
+    inode: 68062979
+    mtime_unix: 1767712252
+    size_bytes: 695
+  - path: yggdrasil/models/cms_modules.py
+    inode: 68062980
+    mtime_unix: 1767712252
+    size_bytes: 3749
+  - path: yggdrasil/models/dns_zones.py
+    inode: 68062981
+    mtime_unix: 1767712252
+    size_bytes: 909
+  - path: yggdrasil/models/email_rate_limits.py
+    inode: 68062982
+    mtime_unix: 1767712252
+    size_bytes: 1040
+  - path: yggdrasil/models/endpoints.py
+    inode: 68062983
+    mtime_unix: 1767712252
+    size_bytes: 6042
+  - path: yggdrasil/models/environment_runtime_settings.py
+    inode: 68062984
+    mtime_unix: 1767712252
+    size_bytes: 15214
+  - path: yggdrasil/models/environments.py
+    inode: 68062985
+    mtime_unix: 1767712252
+    size_bytes: 20158
+  - path: yggdrasil/models/failed_login_attempts.py
+    inode: 68062986
+    mtime_unix: 1767712252
+    size_bytes: 1325
+  - path: yggdrasil/models/feature_flags.py
+    inode: 68062987
+    mtime_unix: 1767712252
+    size_bytes: 973
+  - path: yggdrasil/models/hostnames.py
+    inode: 68062988
+    mtime_unix: 1767712252
+    size_bytes: 11096
+  - path: yggdrasil/models/instruments.py
+    inode: 68062989
+    mtime_unix: 1767712252
+    size_bytes: 3049
+  - path: yggdrasil/models/memberships.py
+    inode: 68062990
+    mtime_unix: 1767712252
+    size_bytes: 15787
+  - path: yggdrasil/models/notification_message_failure.py
+    inode: 68062991
+    mtime_unix: 1767712252
+    size_bytes: 1956
+  - path: yggdrasil/models/organization_exports.py
+    inode: 68062992
+    mtime_unix: 1767712252
+    size_bytes: 1550
+  - path: yggdrasil/models/organization_tags.py
+    inode: 68062993
+    mtime_unix: 1767712252
+    size_bytes: 4752
+  - path: yggdrasil/models/organizations.py
+    inode: 68062994
+    mtime_unix: 1767712252
+    size_bytes: 8980
+  - path: yggdrasil/models/password_reset_tokens.py
+    inode: 68062995
+    mtime_unix: 1767712252
+    size_bytes: 2562
+  - path: yggdrasil/models/sessions.py
+    inode: 68062996
+    mtime_unix: 1767712252
+    size_bytes: 5416
+  - path: yggdrasil/models/site_attributes.py
+    inode: 68062997
+    mtime_unix: 1767712252
+    size_bytes: 1293
+  - path: yggdrasil/models/sites.py
+    inode: 68062998
+    mtime_unix: 1767712252
+    size_bytes: 6651
+  - path: yggdrasil/models/styx_clusters.py
+    inode: 68062999
+    mtime_unix: 1767712252
+    size_bytes: 2023
+  - path: yggdrasil/models/tasks.py
+    inode: 68063000
+    mtime_unix: 1767712252
+    size_bytes: 39064
+  - path: yggdrasil/models/tests
+    is_dir: true
+    inode: 68063001
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 18
+      total_descendant_dirs: 0
+      extensions:
+        .py: 18
+      size:
+        total: 228231
+        min: 1891
+        max: 77672
+        mean: 13425
+        median: 6334
+      last_modified: 1767712252
+  - path: yggdrasil/models/tests/__init__.py
+    inode: 68063002
+    mtime_unix: 1767712252
+  - path: yggdrasil/models/tests/test_bindings.py
+    inode: 68063003
+    mtime_unix: 1767712252
+    size_bytes: 19307
+  - path: yggdrasil/models/tests/test_endpoints.py
+    inode: 68063004
+    mtime_unix: 1767712252
+    size_bytes: 8768
+  - path: yggdrasil/models/tests/test_environments.py
+    inode: 68063005
+    mtime_unix: 1767712252
+    size_bytes: 23159
+  - path: yggdrasil/models/tests/test_feature_flags.py
+    inode: 68063006
+    mtime_unix: 1767712252
+    size_bytes: 2169
+  - path: yggdrasil/models/tests/test_hostnames.py
+    inode: 68063007
+    mtime_unix: 1767712252
+    size_bytes: 3379
+  - path: yggdrasil/models/tests/test_memberships.py
+    inode: 68063008
+    mtime_unix: 1767712252
+    size_bytes: 16395
+  - path: yggdrasil/models/tests/test_organization_tags.py
+    inode: 68063009
+    mtime_unix: 1767712252
+    size_bytes: 6955
+  - path: yggdrasil/models/tests/test_organizations.py
+    inode: 68063010
+    mtime_unix: 1767712252
+    size_bytes: 3288
+  - path: yggdrasil/models/tests/test_sessions.py
+    inode: 68063011
+    mtime_unix: 1767712252
+    size_bytes: 6745
+  - path: yggdrasil/models/tests/test_sites.py
+    inode: 68063012
+    mtime_unix: 1767712252
+    size_bytes: 2823
+  - path: yggdrasil/models/tests/test_tasks.py
+    inode: 68063013
+    mtime_unix: 1767712252
+    size_bytes: 42990
+  - path: yggdrasil/models/tests/test_upstreams.py
+    inode: 68063014
+    mtime_unix: 1767712252
+    size_bytes: 6334
+  - path: yggdrasil/models/tests/test_user_feature_flags.py
+    inode: 68063015
+    mtime_unix: 1767712252
+    size_bytes: 2045
+  - path: yggdrasil/models/tests/test_user_profiles.py
+    inode: 68063016
+    mtime_unix: 1767712252
+    size_bytes: 1948
+  - path: yggdrasil/models/tests/test_user_tracking.py
+    inode: 68063017
+    mtime_unix: 1767712252
+    size_bytes: 1891
+  - path: yggdrasil/models/tests/test_users.py
+    inode: 68063018
+    mtime_unix: 1767712252
+    size_bytes: 2363
+  - path: yggdrasil/models/tests/test_workflows.py
+    inode: 68063019
+    mtime_unix: 1767712252
+    size_bytes: 77672
+  - path: yggdrasil/models/upstreams.py
+    inode: 68063020
+    mtime_unix: 1767712252
+    size_bytes: 6221
+  - path: yggdrasil/models/user_feature_flags.py
+    inode: 68063021
+    mtime_unix: 1767712252
+    size_bytes: 1071
+  - path: yggdrasil/models/user_id_by_auth0_id.py
+    inode: 68063022
+    mtime_unix: 1767712252
+    size_bytes: 1899
+  - path: yggdrasil/models/user_profiles.py
+    inode: 68063023
+    mtime_unix: 1767712252
+    size_bytes: 8186
+  - path: yggdrasil/models/user_tracking.py
+    inode: 68063024
+    mtime_unix: 1767712252
+    size_bytes: 1281
+  - path: yggdrasil/models/users.py
+    inode: 68063025
+    mtime_unix: 1767712252
+    size_bytes: 3211
+  - path: yggdrasil/models/workflow_logs.py
+    inode: 68063026
+    mtime_unix: 1767712252
+    size_bytes: 11855
+  - path: yggdrasil/models/workflows.py
+    inode: 68063027
+    mtime_unix: 1767712252
+    size_bytes: 94126
+  - path: yggdrasil/observers
+    is_dir: true
+    inode: 68063028
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 7
+      total_descendant_dirs: 1
+      extensions:
+        .py: 7
+      size:
+        total: 34011
+        min: 587
+        max: 10551
+        mean: 5668
+        median: 6574
+      last_modified: 1767712252
+  - path: yggdrasil/observers/__init__.py
+    inode: 68063029
+    mtime_unix: 1767712252
+  - path: yggdrasil/observers/debug_log.py
+    inode: 68063030
+    mtime_unix: 1767712252
+    size_bytes: 587
+  - path: yggdrasil/observers/memberships.py
+    inode: 68063031
+    mtime_unix: 1767712252
+    size_bytes: 10551
+  - path: yggdrasil/observers/notifications.py
+    inode: 68063032
+    mtime_unix: 1767712252
+    size_bytes: 7327
+  - path: yggdrasil/observers/observable.py
+    inode: 68063033
+    mtime_unix: 1767712252
+    size_bytes: 2048
+  - path: yggdrasil/observers/pmail.py
+    inode: 68063034
+    mtime_unix: 1767712252
+    size_bytes: 5822
+  - path: yggdrasil/observers/tests
+    is_dir: true
+    inode: 68063035
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 5
+      total_descendant_dirs: 0
+      extensions:
+        .py: 5
+      size:
+        total: 49564
+        min: 5774
+        max: 19911
+        mean: 12391
+        median: 11939
+      last_modified: 1767712252
+  - path: yggdrasil/observers/tests/__init__.py
+    inode: 68063036
+    mtime_unix: 1767712252
+  - path: yggdrasil/observers/tests/events_test_helpers.py
+    inode: 68063037
+    mtime_unix: 1767712252
+    size_bytes: 15188
+  - path: yggdrasil/observers/tests/test_membership_events.py
+    inode: 68063038
+    mtime_unix: 1767712252
+    size_bytes: 8691
+  - path: yggdrasil/observers/tests/test_notifications.py
+    inode: 68063039
+    mtime_unix: 1767712252
+    size_bytes: 5774
+  - path: yggdrasil/observers/tests/test_tracking_events.py
+    inode: 68063040
+    mtime_unix: 1767712252
+    size_bytes: 19911
+  - path: yggdrasil/observers/tracking_events.py
+    inode: 68063041
+    mtime_unix: 1767712252
+    size_bytes: 7676
+  - path: yggdrasil/reload_connection_pool.py
+    inode: 68063042
+    mtime_unix: 1767712252
+    size_bytes: 2193
+  - path: yggdrasil/rest
+    is_dir: true
+    inode: 68063043
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 37
+      total_descendant_dirs: 1
+      extensions:
+        .py: 37
+      size:
+        total: 788341
+        min: 548
+        max: 299488
+        mean: 21898
+        median: 4089
+      last_modified: 1767712252
+  - path: yggdrasil/rest/__init__.py
+    inode: 68063044
+    mtime_unix: 1767712252
+  - path: yggdrasil/rest/accounts.py
+    inode: 68063045
+    mtime_unix: 1767712252
+    size_bytes: 20140
+  - path: yggdrasil/rest/backups.py
+    inode: 68063046
+    mtime_unix: 1767712252
+    size_bytes: 1311
+  - path: yggdrasil/rest/bindings.py
+    inode: 68063047
+    mtime_unix: 1767712252
+    size_bytes: 15316
+  - path: yggdrasil/rest/cronjobs.py
+    inode: 68063048
+    mtime_unix: 1767712252
+    size_bytes: 10908
+  - path: yggdrasil/rest/dictionary.py
+    inode: 68063049
+    mtime_unix: 1767712252
+    size_bytes: 2392
+  - path: yggdrasil/rest/dns_zones.py
+    inode: 68063050
+    mtime_unix: 1767712252
+    size_bytes: 3618
+  - path: yggdrasil/rest/endpoints.py
+    inode: 68063051
+    mtime_unix: 1767712252
+    size_bytes: 22719
+  - path: yggdrasil/rest/error.py
+    inode: 68063052
+    mtime_unix: 1767712252
+    size_bytes: 1767
+  - path: yggdrasil/rest/features.py
+    inode: 68063053
+    mtime_unix: 1767712252
+    size_bytes: 1977
+  - path: yggdrasil/rest/healthcheck.py
+    inode: 68063054
+    mtime_unix: 1767712252
+    size_bytes: 1684
+  - path: yggdrasil/rest/helpers.py
+    inode: 68063055
+    mtime_unix: 1767712252
+    size_bytes: 9900
+  - path: yggdrasil/rest/hostnames.py
+    inode: 68063056
+    mtime_unix: 1767712252
+    size_bytes: 12855
+  - path: yggdrasil/rest/instruments.py
+    inode: 68063057
+    mtime_unix: 1767712252
+    size_bytes: 6101
+  - path: yggdrasil/rest/invites.py
+    inode: 68063058
+    mtime_unix: 1767712252
+    size_bytes: 3008
+  - path: yggdrasil/rest/loadbalancers.py
+    inode: 68063059
+    mtime_unix: 1767712252
+    size_bytes: 3878
+  - path: yggdrasil/rest/mas.py
+    inode: 68063060
+    mtime_unix: 1767712252
+    size_bytes: 2382
+  - path: yggdrasil/rest/notifications.py
+    inode: 68063061
+    mtime_unix: 1767712252
+    size_bytes: 2455
+  - path: yggdrasil/rest/organizations.py
+    inode: 68063062
+    mtime_unix: 1767712252
+    size_bytes: 111404
+  - path: yggdrasil/rest/plans.py
+    inode: 68063063
+    mtime_unix: 1767712252
+    size_bytes: 2520
+  - path: yggdrasil/rest/postback.py
+    inode: 68063064
+    mtime_unix: 1767712252
+    size_bytes: 17980
+  - path: yggdrasil/rest/products.py
+    inode: 68063065
+    mtime_unix: 1767712252
+    size_bytes: 6274
+  - path: yggdrasil/rest/responses.py
+    inode: 68063066
+    mtime_unix: 1767712252
+    size_bytes: 2120
+  - path: yggdrasil/rest/routing_domains.py
+    inode: 68063067
+    mtime_unix: 1767712252
+    size_bytes: 2496
+  - path: yggdrasil/rest/site_logs.py
+    inode: 68063068
+    mtime_unix: 1767712252
+    size_bytes: 12612
+  - path: yggdrasil/rest/site_lookup.py
+    inode: 68063069
+    mtime_unix: 1767712252
+    size_bytes: 2352
+  - path: yggdrasil/rest/sites.py
+    inode: 68063070
+    mtime_unix: 1767712252
+    size_bytes: 299488
+  - path: yggdrasil/rest/styx_clusters.py
+    inode: 68063071
+    mtime_unix: 1767712252
+    size_bytes: 4300
+  - path: yggdrasil/rest/tasks.py
+    inode: 68063072
+    mtime_unix: 1767712252
+    size_bytes: 9138
+  - path: yggdrasil/rest/test.py
+    inode: 68063073
+    mtime_unix: 1767712252
+    size_bytes: 548
+  - path: yggdrasil/rest/tests
+    is_dir: true
+    inode: 68063074
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 46
+      total_descendant_dirs: 0
+      extensions:
+        .py: 46
+      size:
+        total: 899184
+        min: 459
+        max: 191105
+        mean: 19981
+        median: 5313
+      last_modified: 1767712252
+  - path: yggdrasil/rest/tests/__init__.py
+    inode: 68063075
+    mtime_unix: 1767712252
+  - path: yggdrasil/rest/tests/test_accounts.py
+    inode: 68063076
+    mtime_unix: 1767712252
+    size_bytes: 32104
+  - path: yggdrasil/rest/tests/test_authorizations.py
+    inode: 68063077
+    mtime_unix: 1767712252
+    size_bytes: 6574
+  - path: yggdrasil/rest/tests/test_authorize.py
+    inode: 68063078
+    mtime_unix: 1767712252
+    size_bytes: 2471
+  - path: yggdrasil/rest/tests/test_configuration_service.py
+    inode: 68063079
+    mtime_unix: 1767712252
+    size_bytes: 5313
+  - path: yggdrasil/rest/tests/test_dictionary.py
+    inode: 68063080
+    mtime_unix: 1767712252
+    size_bytes: 1351
+  - path: yggdrasil/rest/tests/test_dns_zones.py
+    inode: 68063081
+    mtime_unix: 1767712252
+    size_bytes: 459
+  - path: yggdrasil/rest/tests/test_endpoints.py
+    inode: 68063082
+    mtime_unix: 1767712252
+    size_bytes: 14987
+  - path: yggdrasil/rest/tests/test_helpers.py
+    inode: 68063083
+    mtime_unix: 1767712252
+    size_bytes: 7027
+  - path: yggdrasil/rest/tests/test_hostnames.py
+    inode: 68063084
+    mtime_unix: 1767712252
+    size_bytes: 4073
+  - path: yggdrasil/rest/tests/test_humans.py
+    inode: 68063085
+    mtime_unix: 1767712252
+    size_bytes: 4882
+  - path: yggdrasil/rest/tests/test_job_runner_workflows.py
+    inode: 68063086
+    mtime_unix: 1767712252
+    size_bytes: 21995
+  - path: yggdrasil/rest/tests/test_loadbalancers.py
+    inode: 68063087
+    mtime_unix: 1767712252
+    size_bytes: 1562
+  - path: yggdrasil/rest/tests/test_mas.py
+    inode: 68063088
+    mtime_unix: 1767712252
+    size_bytes: 879
+  - path: yggdrasil/rest/tests/test_memberships.py
+    inode: 68063089
+    mtime_unix: 1767712252
+    size_bytes: 87676
+  - path: yggdrasil/rest/tests/test_notifications.py
+    inode: 68063090
+    mtime_unix: 1767712252
+    size_bytes: 2572
+  - path: yggdrasil/rest/tests/test_offboarding.py
+    inode: 68063091
+    mtime_unix: 1767712252
+    size_bytes: 13601
+  - path: yggdrasil/rest/tests/test_organizations.py
+    inode: 68063092
+    mtime_unix: 1767712252
+    size_bytes: 151367
+  - path: yggdrasil/rest/tests/test_plans.py
+    inode: 68063093
+    mtime_unix: 1767712252
+    size_bytes: 2238
+  - path: yggdrasil/rest/tests/test_products.py
+    inode: 68063094
+    mtime_unix: 1767712252
+    size_bytes: 12027
+  - path: yggdrasil/rest/tests/test_register_subscription.py
+    inode: 68063095
+    mtime_unix: 1767712252
+    size_bytes: 4095
+  - path: yggdrasil/rest/tests/test_request.py
+    inode: 68063096
+    mtime_unix: 1767712252
+    size_bytes: 1489
+  - path: yggdrasil/rest/tests/test_routing_domains.py
+    inode: 68063097
+    mtime_unix: 1767712252
+    size_bytes: 2517
+  - path: yggdrasil/rest/tests/test_site_env_settings.py
+    inode: 68063098
+    mtime_unix: 1767712252
+    size_bytes: 17548
+  - path: yggdrasil/rest/tests/test_site_logs.py
+    inode: 68063099
+    mtime_unix: 1767712252
+    size_bytes: 15728
+  - path: yggdrasil/rest/tests/test_sites.py
+    inode: 68063100
+    mtime_unix: 1767712252
+    size_bytes: 191105
+  - path: yggdrasil/rest/tests/test_sites_billing.py
+    inode: 68063101
+    mtime_unix: 1767712252
+    size_bytes: 4865
+  - path: yggdrasil/rest/tests/test_ssh_keys_v1.py
+    inode: 68063102
+    mtime_unix: 1767712252
+    size_bytes: 17820
+  - path: yggdrasil/rest/tests/test_styx_clusters.py
+    inode: 68063104
+    mtime_unix: 1767712252
+    size_bytes: 485
+  - path: yggdrasil/rest/tests/test_tasks.py
+    inode: 68063105
+    mtime_unix: 1767712252
+    size_bytes: 4818
+  - path: yggdrasil/rest/tests/test_tiers.py
+    inode: 68063106
+    mtime_unix: 1767712252
+    size_bytes: 817
+  - path: yggdrasil/rest/tests/test_upstreams.py
+    inode: 68063107
+    mtime_unix: 1767712252
+    size_bytes: 73011
+  - path: yggdrasil/rest/tests/test_usage_metrics.py
+    inode: 68063108
+    mtime_unix: 1767712252
+    size_bytes: 1043
+  - path: yggdrasil/rest/tests/test_user_feature_flags.py
+    inode: 68063109
+    mtime_unix: 1767712252
+    size_bytes: 6369
+  - path: yggdrasil/rest/tests/test_users.py
+    inode: 68063110
+    mtime_unix: 1767712252
+    size_bytes: 94079
+  - path: yggdrasil/rest/tests/test_webtokens.py
+    inode: 68063111
+    mtime_unix: 1767712252
+    size_bytes: 18603
+  - path: yggdrasil/rest/tests/test_workflow.py
+    inode: 68063112
+    mtime_unix: 1767712252
+    size_bytes: 11430
+  - path: yggdrasil/rest/tests/test_workspaces.py
+    inode: 68063113
+    mtime_unix: 1767712252
+    size_bytes: 1098
+  - path: yggdrasil/rest/tests/test_zuora_associate_site_billing_account.py
+    inode: 68063114
+    mtime_unix: 1767712252
+    size_bytes: 10050
+  - path: yggdrasil/rest/tests/test_zuora_create_billing_account.py
+    inode: 68063115
+    mtime_unix: 1767712252
+    size_bytes: 3748
+  - path: yggdrasil/rest/tests/test_zuora_create_payment_method.py
+    inode: 68063116
+    mtime_unix: 1767712252
+    size_bytes: 4438
+  - path: yggdrasil/rest/tests/test_zuora_delete_billing_account.py
+    inode: 68063117
+    mtime_unix: 1767712252
+    size_bytes: 3128
+  - path: yggdrasil/rest/tests/test_zuora_disassociate_site_billing_account.py
+    inode: 68063118
+    mtime_unix: 1767712252
+    size_bytes: 5575
+  - path: yggdrasil/rest/tests/test_zuora_move_subscription.py
+    inode: 68063119
+    mtime_unix: 1767712252
+    size_bytes: 8793
+  - path: yggdrasil/rest/tests/test_zuora_replace_payment_method.py
+    inode: 68063120
+    mtime_unix: 1767712252
+    size_bytes: 3122
+  - path: yggdrasil/rest/tests/test_zuora_update_site_plan.py
+    inode: 68063121
+    mtime_unix: 1767712252
+    size_bytes: 20252
+  - path: yggdrasil/rest/tiers.py
+    inode: 68063122
+    mtime_unix: 1767712252
+    size_bytes: 2069
+  - path: yggdrasil/rest/upstreams.py
+    inode: 68063123
+    mtime_unix: 1767712252
+    size_bytes: 16662
+  - path: yggdrasil/rest/usage_metrics.py
+    inode: 68063124
+    mtime_unix: 1767712252
+    size_bytes: 1438
+  - path: yggdrasil/rest/users.py
+    inode: 68063125
+    mtime_unix: 1767712252
+    size_bytes: 96874
+  - path: yggdrasil/rest/webtokens.py
+    inode: 68063126
+    mtime_unix: 1767712252
+    size_bytes: 6167
+  - path: yggdrasil/rest/workflow.py
+    inode: 68063127
+    mtime_unix: 1767712252
+    size_bytes: 68656
+  - path: yggdrasil/rest/workspaces.py
+    inode: 68063128
+    mtime_unix: 1767712252
+    size_bytes: 2832
+  - path: yggdrasil/run-tests
+    inode: 68063129
+    mtime_unix: 1767712252
+    size_bytes: 1210
+  - path: yggdrasil/schema.py
+    inode: 68063130
+    mtime_unix: 1767712252
+    size_bytes: 19964
+  - path: yggdrasil/scripts
+    is_dir: true
+    inode: 68063131
+    mtime_unix: 1767712252
+    direct_subdir_count: 2
+    rollup:
+      total_files: 17
+      total_descendant_dirs: 2
+      extensions:
+        .py: 16
+        .sh: 1
+      size:
+        total: 88537
+        min: 873
+        max: 14216
+        mean: 5533
+        median: 3585
+      last_modified: 1767712252
+  - path: yggdrasil/scripts/__init__.py
+    inode: 68063132
+    mtime_unix: 1767712252
+  - path: yggdrasil/scripts/audit_memberships.py
+    inode: 68063133
+    mtime_unix: 1767712252
+    size_bytes: 10976
+  - path: yggdrasil/scripts/bct_scrub_region.py
+    inode: 68063134
+    mtime_unix: 1767712252
+    size_bytes: 6031
+  - path: yggdrasil/scripts/del_old_endpoints.py
+    inode: 68063135
+    mtime_unix: 1767712252
+    size_bytes: 1495
+  - path: yggdrasil/scripts/delete_sites_with_empty_name_field.py
+    inode: 68063136
+    mtime_unix: 1767712252
+    size_bytes: 1545
+  - path: yggdrasil/scripts/export_memberships_to_mas.py
+    inode: 68063137
+    mtime_unix: 1767712252
+    size_bytes: 4118
+  - path: yggdrasil/scripts/helpers.py
+    inode: 68063138
+    mtime_unix: 1767712252
+    size_bytes: 2588
+  - path: yggdrasil/scripts/lib
+    is_dir: true
+    inode: 68063139
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 1
+      total_descendant_dirs: 0
+      extensions:
+        .py: 1
+      size:
+        total: 0
+      last_modified: 1767712252
+  - path: yggdrasil/scripts/lib/__init__.py
+    inode: 68063140
+    mtime_unix: 1767712252
+  - path: yggdrasil/scripts/migrate_default_pool.py
+    inode: 68063141
+    mtime_unix: 1767712252
+    size_bytes: 12269
+  - path: yggdrasil/scripts/scan_tables.py
+    inode: 68063142
+    mtime_unix: 1767712252
+    size_bytes: 968
+  - path: yggdrasil/scripts/setup_ca_cert.sh
+    inode: 68063143
+    mtime_unix: 1767712252
+    size_bytes: 1045
+  - path: yggdrasil/scripts/tests
+    is_dir: true
+    inode: 68063144
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .py: 3
+      size:
+        total: 9557
+        min: 947
+        max: 8610
+        mean: 4778
+        median: 4778
+      last_modified: 1767712252
+  - path: yggdrasil/scripts/tests/__init__.py
+    inode: 68063145
+    mtime_unix: 1767712252
+  - path: yggdrasil/scripts/tests/test_util_onebox_fixtures.py
+    inode: 68063146
+    mtime_unix: 1767712252
+    size_bytes: 947
+  - path: yggdrasil/scripts/tests/test_workflow_metrics.py
+    inode: 68063147
+    mtime_unix: 1767712252
+    size_bytes: 8610
+  - path: yggdrasil/scripts/upstreams_data.py
+    inode: 68063148
+    mtime_unix: 1767712252
+    size_bytes: 3142
+  - path: yggdrasil/scripts/util_onebox_fixtures.py
+    inode: 68063149
+    mtime_unix: 1767712252
+    size_bytes: 4028
+  - path: yggdrasil/scripts/util_onebox_org_fixtures.py
+    inode: 68063150
+    mtime_unix: 1767712252
+    size_bytes: 8272
+  - path: yggdrasil/scripts/util_rebuild_endpoint_load.py
+    inode: 68063151
+    mtime_unix: 1767712252
+    size_bytes: 873
+  - path: yggdrasil/scripts/util_test_indexes.py
+    inode: 68063152
+    mtime_unix: 1767712252
+    size_bytes: 3034
+  - path: yggdrasil/scripts/workflow_audit.py
+    inode: 68063153
+    mtime_unix: 1767712252
+    size_bytes: 13937
+  - path: yggdrasil/scripts/workflow_metrics.py
+    inode: 68063154
+    mtime_unix: 1767712252
+    size_bytes: 14216
+  - path: yggdrasil/test_helpers.py
+    inode: 68063155
+    mtime_unix: 1767712252
+    size_bytes: 10663
+  - path: yggdrasil/tests
+    is_dir: true
+    inode: 68063156
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 25
+      total_descendant_dirs: 1
+      extensions:
+        .py: 25
+      size:
+        total: 372977
+        min: 66
+        max: 106030
+        mean: 14919
+        median: 5993
+      last_modified: 1767712252
+  - path: yggdrasil/tests/__init__.py
+    inode: 68063157
+    mtime_unix: 1767712252
+    size_bytes: 66
+  - path: yggdrasil/tests/fixtures.py
+    inode: 68063158
+    mtime_unix: 1767712252
+    size_bytes: 49713
+  - path: yggdrasil/tests/manual
+    is_dir: true
+    inode: 68063159
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 3
+      total_descendant_dirs: 0
+      extensions:
+        .md: 1
+        .py: 2
+      size:
+        total: 73439
+        min: 134
+        max: 65876
+        mean: 24479
+        median: 7429
+      last_modified: 1767712252
+  - path: yggdrasil/tests/manual/README.md
+    inode: 68063160
+    mtime_unix: 1767712252
+    size_bytes: 134
+  - path: yggdrasil/tests/manual/smoketest.py
+    inode: 68063161
+    mtime_unix: 1767712252
+    size_bytes: 7429
+  - path: yggdrasil/tests/manual/test_integration.py
+    inode: 68063162
+    mtime_unix: 1767712252
+    size_bytes: 65876
+  - path: yggdrasil/tests/test_change_db_version.py
+    inode: 68063163
+    mtime_unix: 1767712252
+    size_bytes: 3006
+  - path: yggdrasil/tests/test_change_environment_php_runtime_generation.py
+    inode: 68063164
+    mtime_unix: 1767712252
+    size_bytes: 10448
+  - path: yggdrasil/tests/test_change_object_cache_version.py
+    inode: 68063165
+    mtime_unix: 1767712252
+    size_bytes: 5993
+  - path: yggdrasil/tests/test_change_site_service_level.py
+    inode: 68063166
+    mtime_unix: 1767712252
+    size_bytes: 1865
+  - path: yggdrasil/tests/test_check_db_version.py
+    inode: 68063167
+    mtime_unix: 1767712252
+    size_bytes: 2797
+  - path: yggdrasil/tests/test_cleanup_hostnames.py
+    inode: 68063168
+    mtime_unix: 1767712252
+    size_bytes: 6427
+  - path: yggdrasil/tests/test_clear_redis_cache.py
+    inode: 68063169
+    mtime_unix: 1767712252
+    size_bytes: 2828
+  - path: yggdrasil/tests/test_clone_database_workflow.py
+    inode: 68063170
+    mtime_unix: 1767712252
+    size_bytes: 10484
+  - path: yggdrasil/tests/test_converge_binding_workflow.py
+    inode: 68063171
+    mtime_unix: 1767712252
+    size_bytes: 6056
+  - path: yggdrasil/tests/test_environment.py
+    inode: 68063172
+    mtime_unix: 1767712252
+    size_bytes: 4515
+  - path: yggdrasil/tests/test_get_rows_by_index.py
+    inode: 68063173
+    mtime_unix: 1767712252
+    size_bytes: 5895
+  - path: yggdrasil/tests/test_logs.py
+    inode: 68063174
+    mtime_unix: 1767712252
+    size_bytes: 3980
+  - path: yggdrasil/tests/test_migrate_binding_for_site.py
+    inode: 68063175
+    mtime_unix: 1767712252
+    size_bytes: 14383
+  - path: yggdrasil/tests/test_request.py
+    inode: 68063176
+    mtime_unix: 1767712252
+    size_bytes: 15060
+  - path: yggdrasil/tests/test_responses.py
+    inode: 68063177
+    mtime_unix: 1767712252
+    size_bytes: 4269
+  - path: yggdrasil/tests/test_site.py
+    inode: 68063178
+    mtime_unix: 1767712252
+    size_bytes: 3452
+  - path: yggdrasil/tests/test_sync_code_workflow.py
+    inode: 68063179
+    mtime_unix: 1767712252
+    size_bytes: 15166
+  - path: yggdrasil/tests/test_tasks.py
+    inode: 68063180
+    mtime_unix: 1767712252
+    size_bytes: 19181
+  - path: yggdrasil/tests/test_unverified_user_add.py
+    inode: 68063181
+    mtime_unix: 1767712252
+    size_bytes: 2252
+  - path: yggdrasil/tests/test_yggdrasil.py
+    inode: 68063182
+    mtime_unix: 1767712252
+    size_bytes: 106030
+  - path: yggdrasil/tests/test_yggdrasil_binding_configurators.py
+    inode: 68063183
+    mtime_unix: 1767712252
+    size_bytes: 35143
+  - path: yggdrasil/tests/test_yggdrasil_endpoints.py
+    inode: 68063184
+    mtime_unix: 1767712252
+    size_bytes: 41811
+  - path: yggdrasil/tests/test_yggdrasil_notifications.py
+    inode: 68063185
+    mtime_unix: 1767712252
+    size_bytes: 2157
+  - path: yggdrasil/web
+    is_dir: true
+    inode: 68063186
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 2
+      total_descendant_dirs: 0
+      extensions:
+        .py: 2
+      size:
+        total: 10524
+        min: 10524
+        max: 10524
+        mean: 10524
+        median: 10524
+      last_modified: 1767712252
+  - path: yggdrasil/web/__init__.py
+    inode: 68063187
+    mtime_unix: 1767712252
+  - path: yggdrasil/web/request.py
+    inode: 68063188
+    mtime_unix: 1767712252
+    size_bytes: 10524
+  - path: yggdrasil/yggdict_models
+    is_dir: true
+    inode: 68063189
+    mtime_unix: 1767712252
+    direct_subdir_count: 1
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 1
+      extensions:
+        .py: 4
+      size:
+        total: 1522
+        min: 272
+        max: 728
+        mean: 507
+        median: 522
+      last_modified: 1767712252
+  - path: yggdrasil/yggdict_models/__init__.py
+    inode: 68063190
+    mtime_unix: 1767712252
+  - path: yggdrasil/yggdict_models/loadbalancers.py
+    inode: 68063191
+    mtime_unix: 1767712252
+    size_bytes: 728
+  - path: yggdrasil/yggdict_models/model.py
+    inode: 68063192
+    mtime_unix: 1767712252
+    size_bytes: 522
+  - path: yggdrasil/yggdict_models/routing_domains.py
+    inode: 68063193
+    mtime_unix: 1767712252
+    size_bytes: 272
+  - path: yggdrasil/yggdict_models/tests
+    is_dir: true
+    inode: 68063194
+    mtime_unix: 1767712252
+    rollup:
+      total_files: 4
+      total_descendant_dirs: 0
+      extensions:
+        .py: 4
+      size:
+        total: 2153
+        min: 433
+        max: 1282
+        mean: 717
+        median: 438
+      last_modified: 1767712252
+  - path: yggdrasil/yggdict_models/tests/__init__.py
+    inode: 68063195
+    mtime_unix: 1767712252
+  - path: yggdrasil/yggdict_models/tests/test_loadbalancers.py
+    inode: 68063196
+    mtime_unix: 1767712252
+    size_bytes: 433
+  - path: yggdrasil/yggdict_models/tests/test_model.py
+    inode: 68063197
+    mtime_unix: 1767712252
+    size_bytes: 1282
+  - path: yggdrasil/yggdict_models/tests/test_routing_domains.py
+    inode: 68063198
+    mtime_unix: 1767712252
+    size_bytes: 438
+  - path: yggdrasil/yggdrasil.py
+    inode: 68063199
+    mtime_unix: 1767712252
+    size_bytes: 119145
+  - path: yggdrasil/yggdrasil_binding_configurators.py
+    inode: 68063200
+    mtime_unix: 1767712252
+    size_bytes: 68621
+  - path: yggdrasil/yggdrasil_dns_pipe.py
+    inode: 68063201
+    mtime_unix: 1767712252
+    size_bytes: 13014
+  - path: yggdrasil/yggdrasil_notifications.py
+    inode: 68063202
+    mtime_unix: 1767712252
+    size_bytes: 2534
+  - path: yggdrasil/yggdrasil_rest.py
+    inode: 68063203
+    mtime_unix: 1767712252
+    size_bytes: 48293
+  - path: yggdrasil/yggdrasil_tasks.py
+    inode: 68063204
+    mtime_unix: 1767712252
+    size_bytes: 312381
+  - path: yggdrasil/yggdrasil_workflows.py
+    inode: 68063205
+    mtime_unix: 1767712252
+    size_bytes: 454649
+  - path: yggdrasil-rest-requirements.txt
+    inode: 68062726
+    mtime_unix: 1767712252
+    size_bytes: 1297
+  - path: yggdrasil-rest.tac
+    inode: 68062727
+    mtime_unix: 1767712252
+    size_bytes: 1640
 skipped:
   - path: .git
     is_dir: true
     reason: blocked by filter
     rule: basename:.git
-  - path: internal/build
-    is_dir: true
-    reason: blocked by filter
-    rule: basename:build
